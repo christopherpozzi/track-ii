@@ -5,15 +5,76 @@ in order — each one is a gate on the next.
 
 ---
 
-## 0 · Before you spend anything
+## 0 · Get the two API keys
+
+You need one key from Anthropic (for Haiku 4.5) and one from OpenRouter (which
+fronts all five Chinese models behind a single account, so you do not need
+separate DeepSeek, Zhipu, Moonshot, Alibaba and MiniMax accounts).
+
+### Anthropic — `ANTHROPIC_API_KEY`
+
+1. Go to <https://console.anthropic.com> and sign in. The Console is a separate
+   product from a Claude.ai subscription: **a Pro or Max plan does not include
+   API credit**, and API usage is billed separately.
+2. Open **Settings → Billing** and add a payment method, then buy credit. The
+   minimum purchase is small and $10 covers this entire project with room to
+   spare — the full sweep is about $6.
+3. Open **Settings → API keys → Create key**. Name it something you will
+   recognise later, e.g. `track-ii`. Scope it to your default workspace.
+4. **Copy it immediately.** The key is shown once and starts `sk-ant-`. If you
+   lose it, delete the key and make another; there is no way to reveal it again.
+
+*Already authenticated on this machine?* If you have the `ant` CLI and have run
+`ant auth login`, the runner will now pick that up and you can skip minting a
+key entirely — `trackii/models.py` falls back to the SDK's own credential
+resolution when `ANTHROPIC_API_KEY` is unset. Check with `ant auth status`.
+
+### OpenRouter — `OPENROUTER_API_KEY`
+
+1. Go to <https://openrouter.ai> and sign in (Google or GitHub works).
+2. Open **Credits** and add funds. OpenRouter is prepaid — there is no invoicing
+   and a request simply fails when the balance hits zero. $10 is ample; the
+   head-to-head arm is roughly $2 at Haiku-equivalent rates and the Chinese
+   models are generally cheaper.
+3. Open **Keys → Create Key**. Name it `track-ii`.
+4. **Set a credit limit on the key itself** while you are on that screen — the
+   field is right there. Cap it at $15. This is the single best protection
+   against a loop bug draining the account, and it costs nothing to set.
+5. Copy it. It starts `sk-or-v1-`.
+
+While you are signed in, this is also the moment to do the slug check flagged
+below: open <https://openrouter.ai/models> and search for each of the five
+model ids.
+
+### Put them in your shell
 
 ```bash
 cd /Users/Chris/Documents/situation-room-eval
 export ANTHROPIC_API_KEY=sk-ant-...
-export OPENROUTER_API_KEY=sk-or-...
+export OPENROUTER_API_KEY=sk-or-v1-...
 ```
 
-Confirm the harness still passes cold:
+These live only in the current terminal session. If you open a new tab you must
+export them again, or append the two lines to `~/.zshrc` and run
+`source ~/.zshrc`.
+
+**Do not put the keys in a file inside this repo.** It is a git repository you
+intend to publish, and a committed key is a key you have to rotate. If you want
+them to persist, `~/.zshrc` is outside the repo and is the right place.
+
+Confirm both are set before continuing:
+
+```bash
+for k in ANTHROPIC_API_KEY OPENROUTER_API_KEY; do
+  printf '%-22s %s\n' "$k" "$([ -n "${(P)k}" ] && echo SET || echo 'NOT SET')"
+done
+```
+
+---
+
+## 0b · Confirm the harness is green
+
+Before spending, confirm nothing is broken locally:
 
 ```bash
 .venv/bin/python -m pytest -q && .venv/bin/python research/audit_mechanics.py | tail -2

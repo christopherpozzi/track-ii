@@ -75,7 +75,13 @@ class AnthropicClient:
         self.spec = spec
         self.name = spec.key
         self.temperature = temperature
-        self._client = anthropic.Anthropic(api_key=os.environ["ANTHROPIC_API_KEY"])
+        # Pass the key explicitly when it is set; otherwise let the SDK resolve
+        # credentials itself, which picks up ANTHROPIC_AUTH_TOKEN or a profile
+        # from `ant auth login`. Hard-requiring the env var meant an already
+        # authenticated machine still had to mint and paste a long-lived key.
+        key = os.environ.get("ANTHROPIC_API_KEY")
+        self._client = (anthropic.Anthropic(api_key=key) if key
+                        else anthropic.Anthropic())
 
     def complete(self, system: str, messages: list[dict], max_tokens: int = 2000) -> Reply:
         try:
@@ -199,13 +205,22 @@ def build_client(
     raise ValueError(f"unknown provider {spec.provider}")
 
 
+def _anthropic_credentials() -> bool:
+    """Any credential the Anthropic SDK would accept, not just the env var."""
+    if os.environ.get("ANTHROPIC_API_KEY") or os.environ.get("ANTHROPIC_AUTH_TOKEN"):
+        return True
+    # a profile written by `ant auth login`
+    from pathlib import Path as _P
+    return (_P.home() / ".config" / "anthropic").is_dir()
+
+
 def available_models() -> list[str]:
     """Which registry entries can actually run given the current environment."""
     out = []
     for key, spec in REGISTRY.items():
         if spec.provider == "mock":
             out.append(key)
-        elif spec.provider == "anthropic" and os.environ.get("ANTHROPIC_API_KEY"):
+        elif spec.provider == "anthropic" and _anthropic_credentials():
             out.append(key)
         elif spec.provider == "openrouter" and os.environ.get("OPENROUTER_API_KEY"):
             out.append(key)
