@@ -128,7 +128,7 @@ This is the part most benchmarks skip.
 
 ## Findings
 
-Not yet run against live models — the harness is complete and verified offline, and the results in `site/` are from the offline mock. See [FINDINGS.md](FINDINGS.md) once populated.
+Not yet run against live models — the harness is complete and verified offline, and the results in `site/` are from the deterministic offline mock. Live results populate the same report and microsite.
 
 The mock's flat 78% across all three frames is the null control doing its job: a frame-blind player shows exactly zero framing tax.
 
@@ -261,8 +261,12 @@ in [`RESEARCH_PLAN.md`](RESEARCH_PLAN.md) §5A.
 ```bash
 ./research/fetch.sh < research/manifest_all.txt
 shasum -c research/CORPUS.sha256
-grep -o '.\{80\}中国的出口管制不是禁止出口.\{80\}' corpus/mofcom_2410.txt
+tr '\n' ' ' < corpus/nss_2025.txt | grep -o '.\{90\}align their export controls.\{40\}'
 ```
+
+The `tr` matters. Documents extracted from PDFs wrap mid-sentence, so a plain
+`grep` for a quotation that spans a line break returns nothing — which looks
+exactly like a fabricated citation. Normalise the whitespace first.
 
 Government documents (US public domain, PRC official texts) are committed here.
 Third-party copyrighted extractions are **not redistributed** — the manifest and

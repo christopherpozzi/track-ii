@@ -337,7 +337,7 @@ CSS = """
 *{box-sizing:border-box}
 .viz-root{color-scheme:light;
 --surface-1:#fbfaf6;--surface-2:#f2f0e9;
---text-primary:#14140f;--text-secondary:#55534c;--text-muted:#86837a;
+--text-primary:#14140f;--text-secondary:#55534c;--text-muted:#64625b;
 --rule:#e2dfd5;--rule-ink:#14140f;
 --series-1:#2a78d6;--series-2:#eb6834;--series-3:#1baf7a;
 --serif:Georgia,"Iowan Old Style","Times New Roman",Times,serif;
@@ -1473,12 +1473,13 @@ def appendix_view(case: Case, an) -> str:
         "<p>The exchange also fixes the <i>orientation</i>, which is usually "
         "the harder half to source. Each side conceded the issue it valued "
         "less:</p>",
-        "<table><thead><tr><th>&nbsp;</th><th>conceded</th><th>won</th>"
-        "<th>therefore values</th></tr></thead><tbody>"
-        "<tr><td>United States</td><td>EDA &mdash; semiconductors</td>"
-        "<td>rare-earth magnets</td><td><b>minerals &gt; semiconductors</b></td></tr>"
-        "<tr><td>China</td><td>magnets &mdash; minerals</td><td>EDA relief</td>"
-        "<td><b>semiconductors &gt; minerals</b></td></tr></tbody></table>",
+        # via table(), which wraps in .scroll -- a hand-written <table> here
+        # overflowed the viewport on narrow screens with no way to scroll it
+        table(["", "conceded", "won", "therefore values"],
+              [["United States", "EDA &mdash; semiconductors", "rare-earth magnets",
+                "minerals > semiconductors"],
+               ["China", "magnets &mdash; minerals", "EDA relief",
+                "semiconductors > minerals"]]),
         _ev("China accounted for over 90 percent of global production of "
             "neodymium (rare earth) magnets in 2024.",
             "International Energy Agency, via Peterson Institute for "
@@ -1564,7 +1565,7 @@ def appendix_view(case: Case, an) -> str:
         "mentions <b>&lsquo;export control&rsquo; once</b> &mdash; and that once "
         "is an offer to allies, not a restriction on China.</p>",
         _ev("&hellip;more favorable treatment on commercial matters, technology "
-            "sharing, and defense procurement &mdash; those countries that "
+            "sharing, and defense procurement &mdash; those counties [sic] that "
             "willingly take more responsibility for security in their "
             "neighborhoods and align their export controls with ours.",
             "The White House, National Security Strategy, November 2025, p. 13",
