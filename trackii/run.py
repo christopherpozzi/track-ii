@@ -208,7 +208,9 @@ def build_jobs(case: Case, experiment: str, models: list[str], seeds: int) -> li
 
 def main(argv: list[str] | None = None) -> int:
     p = argparse.ArgumentParser(description="Track II experiment runner")
-    p.add_argument("experiment",
+    # nargs="?" so `--list` works without naming an experiment -- it only
+    # prints the registry and exits.
+    p.add_argument("experiment", nargs="?",
                    choices=["frames", "head", "swap", "nocomm", "games", "all",
                             "validate"])
     p.add_argument("--models", default="mock",
@@ -226,6 +228,9 @@ def main(argv: list[str] | None = None) -> int:
     p.add_argument("--out", default=str(ROOT / "results" / "results.jsonl"))
     p.add_argument("--list", action="store_true", help="list runnable models and exit")
     args = p.parse_args(argv)
+
+    if args.experiment is None and not args.list:
+        p.error("an experiment is required (or use --list)")
 
     if args.list:
         print("Registry:")
