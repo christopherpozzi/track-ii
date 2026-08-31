@@ -60,13 +60,28 @@ check("every relative link resolves", not bad, f"{bad or 'none'}")
 print("\n=== 4. SOURCES.md quotations are recoverable ===")
 corpus = pathlib.Path("corpus")
 present = {p.name for p in corpus.glob("*.txt")}
+# Every quotation that appears on the site or in SOURCES.md. If one of these
+# stops matching, either the corpus changed or a quotation drifted -- both are
+# things a reader would find and neither should ship.
 quotes = [
     ("中国的出口管制不是禁止出口", "mofcom_2410.txt"),
+    ("美方管制清单物项超过3000项", "mofcom_2410.txt"),
+    ("并就双方可在相关产业开展合作提出建议", "mofcom_2410.txt"),
+    ("但美方态度消极", "mofcom_2410.txt"),
     ("和平统一的可能性完全丧失", "prc_anti_secession_law.txt"),
     ("决不承诺放弃使用武力", "pc20_zh.txt"),
+    ("坚决打赢关键核心技术攻坚战", "pc20_zh.txt"),
     ("不断策动对台军售", "taiwan_wp_zh.txt"),
+    ("把台湾当作遏制中国发展进步", "taiwan_wp_zh.txt"),
     ("align their export controls with ours", "nss_2025.txt"),
     ("China shall", "phase_one.txt"),
+    ("China Slaps Sanctions on 13 US Military Firms", "uscc_full.txt"),
+    ("troubling divergence has emerged", "uscc_full.txt"),
+    ("negotiating national security decisions in exchange for trade concessions",
+     "crs_export_controls_semi.txt"),
+    ("much better position to endure", "rand_quarantine.txt"),
+    ("inaction is tantamount to accepting", "rand_quarantine.txt"),
+    ("they found an offramp", "csis_lights_out.txt"),
 ]
 for q, f in quotes:
     if f not in present:

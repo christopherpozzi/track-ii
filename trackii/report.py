@@ -477,6 +477,15 @@ max-width:none}
 .takeaway{font:400 clamp(1.15rem,2.3vw,1.42rem)/1.42 var(--serif);
 color:var(--text-primary);border-left:2px solid var(--rule-ink);
 padding:4px 0 4px 20px;margin:26px 0 0;max-width:26em;letter-spacing:-.008em}
+.pq{margin:1.3rem 0;padding:0 0 0 1.05rem;border-left:2px solid var(--series-1)}
+.pq blockquote{margin:0 0 .4rem;font-family:var(--serif);font-size:1.05rem;
+ line-height:1.5;font-style:italic;color:var(--text-primary)}
+.pq blockquote.zh{font-family:'Songti SC','Noto Serif CJK SC',serif;
+ font-style:normal;line-height:1.75}
+.pq figcaption{font:500 .72rem/1.5 var(--sans);letter-spacing:.02em;
+ color:var(--text-muted)}
+.pq figcaption a{color:inherit;text-decoration:underline;
+ text-underline-offset:2px;text-decoration-thickness:.5px}
 .ev{margin:1.1rem 0;padding:0 0 0 1rem;border-left:2px solid var(--rule)}
 .ev blockquote{margin:0 0 .5rem;font-family:var(--serif);
  font-size:1.02rem;line-height:1.55;color:var(--text-primary)}
@@ -892,6 +901,17 @@ def summary_view(agg: dict, case: Case, an, title: str, is_mock: bool) -> str:
         "<i>within</i> each instance and then averaged, so instance difficulty "
         "cancels; ± is the spread across instances.</p>"
     )
+    # The Mandarin frame is not a translation check. The divergence is documented.
+    body.append(_pq(
+        "A troubling divergence has emerged between China&rsquo;s "
+        "English-language and Chinese-language propaganda about Taiwan &hellip; "
+        "Whereas Chinese statements aimed at international audiences downplay "
+        "the possibility of an invasion, China&rsquo;s domestic propaganda has "
+        "stated that Taiwan&rsquo;s &lsquo;provocations&rsquo; could justify "
+        "military action in the near future.",
+        "USCC 2025 Report to Congress, pp. 15&ndash;16 &mdash; why the Mandarin "
+        "frame predicts a direction, not just a translation",
+        "https://www.uscc.gov/annual-report/2025-annual-report-congress"))
     secs.append(_sec("01\u00a0\u00b7\u00a0 Framing", "".join(body)))
 
     # -- 2. hard errors -----------------------------------------------------
@@ -924,6 +944,13 @@ def summary_view(agg: dict, case: Case, an, title: str, is_mock: bool) -> str:
         "understands instantly &mdash; the strategic-reasoning equivalent of a "
         "jailbreak rate.</p>",
     ]
+    # Impasse is scored as a failure because in a crisis it is a choice.
+    body.append(_pq(
+        "Once a quarantine is imposed, ambiguity is no longer a possibility "
+        "&hellip; inaction is tantamount to accepting the PRC&rsquo;s actions.",
+        "RAND RRA1279-1 &mdash; why holding out for a better split is not a "
+        "neutral outcome",
+        "https://www.rand.org/pubs/research_reports/RRA1279-1.html"))
     secs.append(_sec("02\u00a0\u00b7\u00a0 Hard errors", "".join(body)))
 
     # -- 3. value creation --------------------------------------------------
@@ -952,6 +979,14 @@ def summary_view(agg: dict, case: Case, an, title: str, is_mock: bool) -> str:
         "both sides preferred the same settlement and at least one traded it "
         "away.</p>",
     ]
+    # The same quantity this eval scores, measured on human teams.
+    body.append(_pq(
+        "In some games, the teams went to a high level of violence. In other "
+        "games, they found an offramp to limit the level of escalation and "
+        "violence.",
+        "CSIS, on the free-play rounds of a 26-iteration blockade wargame "
+        "&mdash; identical setups, divergent outcomes",
+        "https://www.csis.org/analysis/lights-out-wargaming-blockade-taiwan"))
     secs.append(_sec("03\u00a0\u00b7\u00a0 Value", "".join(body)))
 
     # -- 4. no-communication ablation --------------------------------------
@@ -982,6 +1017,19 @@ def summary_view(agg: dict, case: Case, an, title: str, is_mock: bool) -> str:
     else:
         body.append('<p class="empty">No ablation data in this run — '
                     "<code>python -m trackii.run nocomm</code>.</p>")
+    # A real instance of an integrative offer made and left on the table.
+    body.append(_pq(
+        "\u4e2d\u65b9\u4e00\u76f4\u4e0e\u7f8e\u65b9\u5c31\u4e0a\u8ff0"
+        "\u63aa\u65bd\u8fdb\u884c\u78cb\u5546\u6c9f\u901a\uff0c\u2026"
+        "\u5e76\u5c31\u53cc\u65b9\u53ef\u5728\u76f8\u5173\u4ea7\u4e1a"
+        "\u5f00\u5c55\u5408\u4f5c\u63d0\u51fa\u5efa\u8bae\u3002\u4f46"
+        "\u7f8e\u65b9\u6001\u5ea6\u6d88\u6781\u3002",
+        "MOFCOM spokesperson, 12 October 2025 &mdash; an integrative offer made "
+        "and declined, which is what this arm is built to detect",
+        "https://www.gov.cn/zhengce/202510/content_7044134.htm", zh=True,
+        trans="China has consulted the US side throughout on these measures &hellip; "
+              "and proposed that the two sides cooperate in the relevant "
+              "industries. But the US side was unresponsive."))
     secs.append(_sec("04\u00a0\u00b7\u00a0 Ablation", "".join(body)))
 
     # -- 5. control battery -------------------------------------------------
@@ -1041,6 +1089,13 @@ def summary_view(agg: dict, case: Case, an, title: str, is_mock: bool) -> str:
             "Mandarin frame exist to close that gap.</p>")
     else:
         body.append('<p class="empty">No cross-lab data in this run.</p>')
+    body.append(_pq(
+        "China&rsquo;s primary concern is likely U.S. technology-related export "
+        "controls, particularly those targeting semiconductors and equipment "
+        "needed to make the most advanced chips.",
+        "Council on Foreign Relations, December 2024 &mdash; the issue this "
+        "case now seats its log-roll on",
+        "https://www.cfr.org/articles/unpacking-chinas-four-red-lines-and-its-warning-trump"))
     secs.append(_sec("05\u00a0\u00b7\u00a0 Head to head", "".join(body)))
 
     # -- 7. label swap ------------------------------------------------------
@@ -1061,6 +1116,21 @@ def summary_view(agg: dict, case: Case, an, title: str, is_mock: bool) -> str:
         body.append(grouped_bars(models, ss, sv, caption="Efficiency under label swap"))
     else:
         body.append('<p class="empty">No label-swap data in this run.</p>')
+    # What the swap probes: a model's priors about who these actors are.
+    body.append(_pq(
+        "\u5916\u90e8\u52bf\u529b\u6253\u201c\u53f0\u6e7e\u724c\u201d"
+        "\uff0c\u662f\u628a\u53f0\u6e7e\u5f53\u4f5c\u904f\u5236\u4e2d"
+        "\u56fd\u53d1\u5c55\u8fdb\u6b65\u3001\u963b\u6320\u4e2d\u534e"
+        "\u6c11\u65cf\u4f1f\u5927\u590d\u5174\u7684\u68cb\u5b50",
+        "\u300a\u53f0\u6e7e\u95ee\u9898\u4e0e\u65b0\u65f6\u4ee3\u4e2d"
+        "\u56fd\u7edf\u4e00\u4e8b\u4e1a\u300b white paper, 2022, "
+        "\u4e09(\u56db) &mdash; each side arrives with priors about what the "
+        "other is really doing",
+        "https://bw.china-embassy.gov.cn/sgxw/202208/t20220810_10740353.htm",
+        zh=True,
+        trans="External forces playing the &lsquo;Taiwan card&rsquo; are "
+              "treating Taiwan as a chess piece to contain China&rsquo;s "
+              "development and obstruct the rejuvenation of the Chinese nation."))
     secs.append(_sec("06\u00a0\u00b7\u00a0 Label swap", "".join(body)))
 
     # -- 8. the case --------------------------------------------------------
@@ -1252,6 +1322,38 @@ def role_view(case: Case, role: str, an) -> str:
         f"<b>{case.batnas[role]}</b> points to this side is worse than no deal "
         f"at all. Signing one is a hard error, and it is stated in the prompt "
         f"in exactly those terms.</p>")
+    # A quote grounding what this seat's real-world counterpart actually says.
+    # The schedules are synthetic; the ordinal structure is not, and this is
+    # where a reader most needs reminding which is which.
+    grounding = {
+        "DELTA": _pq(
+            "&hellip;more favorable treatment on commercial matters, technology "
+            "sharing, and defense procurement &mdash; those counties [sic] that "
+            "willingly take more responsibility for security in their "
+            "neighborhoods and align their export controls with ours.",
+            "The White House, National Security Strategy, November 2025 &mdash; "
+            "in 33 pages this is the <i>only</i> mention of export controls, and "
+            "it is an offer to allies rather than a restriction on Beijing",
+            "https://www.whitehouse.gov/wp-content/uploads/2025/12/2025-National-Security-Strategy.pdf"),
+        "OMEGA": _pq(
+            "\u4e2d\u56fd\u7684\u51fa\u53e3\u7ba1\u5236\u4e0d\u662f"
+            "\u7981\u6b62\u51fa\u53e3\uff0c\u5bf9\u7b26\u5408\u89c4"
+            "\u5b9a\u7684\u7533\u8bf7\u5c06\u4e88\u4ee5\u8bb8\u53ef"
+            "\u3002\u2026\u7f8e\u65b9\u7ba1\u5236\u6e05\u5355\u7269"
+            "\u9879\u8d85\u8fc73000\u9879\uff0c\u800c\u4e2d\u65b9"
+            "\u51fa\u53e3\u7ba1\u5236\u6e05\u5355\u7269\u9879\u4ec5"
+            "900\u4f59\u9879\u3002",
+            "\u5546\u52a1\u90e8 MOFCOM spokesperson, 12 October 2025 &mdash; "
+            "Beijing frames its own controls as reversible licensing, and counts "
+            "them against Washington&rsquo;s",
+            "https://www.gov.cn/zhengce/202510/content_7044134.htm", zh=True,
+            trans="China&rsquo;s export controls are not an export ban; "
+                  "applications meeting the requirements will be licensed. "
+                  "&hellip; The US control list runs to over 3,000 items; "
+                  "China&rsquo;s to just over 900."),
+    }
+    if role in grounding:
+        head.append(grounding[role])
     secs.append(_sec("Role sheet", "".join(head)))
 
     # -- the point schedule ------------------------------------------------
@@ -1321,6 +1423,25 @@ def _gloss(items: list[tuple[str, str]]) -> str:
         for t, d in items
     )
     return f'<dl class="gloss">{rows}</dl>'
+
+
+def _pq(quote: str, cite: str, url: str = "", zh: bool = False,
+        trans: str = "") -> str:
+    """A pull quote for the narrative sections.
+
+    Lighter than _ev: no tier or confidence badge, because these are here to
+    ground an argument the reader is already following, not to carry a coded
+    cell. The full evidence with locators lives in the appendix.
+    """
+    e = lambda t: _esc(_html.unescape(t))
+    cls = " zh" if zh else ""
+    out = [f'<figure class="pq"><blockquote class="{cls.strip()}">&ldquo;'
+           f"{e(quote)}&rdquo;</blockquote>"]
+    if trans:
+        out.append(f"<blockquote>&ldquo;{e(trans)}&rdquo;</blockquote>")
+    link = f'<a href="{_esc(url)}">{e(cite)}</a>' if url else e(cite)
+    out.append(f"<figcaption>{link}</figcaption></figure>")
+    return "".join(out)
 
 
 def _ev(quote: str, cite: str, url: str, tier: str, conf: str,
@@ -1557,7 +1678,19 @@ def appendix_view(case: Case, an) -> str:
         "&mdash; but a <b>specific pending package: released, deferred, or "
         "held</b>. That increment is what the record shows actually being "
         "used as leverage, and it is what a negotiator could plausibly "
-        "settle in a single round.</p>"
+        "settle in a single round.</p>",
+        "<p>One correction worth stating plainly, because an earlier draft of "
+        "this appendix got it wrong. Beijing is <i>not</i> purely rhetorical on "
+        "arms sales:</p>",
+        _ev("China Slaps Sanctions on 13 US Military Firms over Taiwan Arms Sale",
+            "Reuters, 5 December 2024, as cited in the USCC 2025 Report",
+            "https://www.uscc.gov/annual-report/2025-annual-report-congress",
+            "A", "High"),
+        "<p>The claim that Beijing announces no countermeasures was wrong and is "
+        "withdrawn. What survives is a difference in <i>price</i>: sanctioning US "
+        "defence firms already barred from the Chinese market costs Beijing "
+        "almost nothing, where the gallium and germanium bans cost Chinese "
+        "exporters real revenue. The ranking holds; the reasoning changed.</p>",
 
         "<h3>The executive and Congress do not weight this the same way</h3>",
         "<p>The design treats one seat as &lsquo;the United States&rsquo;. The "
@@ -1579,6 +1712,16 @@ def appendix_view(case: Case, an) -> str:
         "USCC&rsquo;s 223 export-control mentions belong to the "
         "<b>congressional</b> actor, which this design routes through the "
         "walk-away value rather than the point schedule.</p>",
+        _ev("Some former U.S. officials have expressed concerns about what they "
+            "have described as negotiating national security decisions in "
+            "exchange for trade concessions or government revenue&hellip; "
+            "contradicting past U.S. practice to reject PRC efforts to negotiate "
+            "on such terms.",
+            "Congressional Research Service R48642",
+            "https://www.everycrsreport.com/reports/R48642.html", "C", "High"),
+        "<p>That objection is precisely why Congress enters through the "
+        "walk-away value: it is a constraint on what the executive can sign, not "
+        "a preference the executive holds.</p>",
 
         "<h3>The crisis case understates its own asymmetry</h3>",
         _ev("Quarantine is not a low-risk, slow-moving action, equivalent to "
@@ -1611,6 +1754,50 @@ def appendix_view(case: Case, an) -> str:
         "November 2025 and May 2026 are publicised approvingly by both "
         "militaries&rsquo; own outlets, which is a stronger compatibility "
         "signal than the hedge it replaced.</p>",
+        _ev("The Economic Balance of Power Between Taiwan and China Favors the "
+            "PRC &hellip; the PRC has effectively every advantage over Taiwan, "
+            "and if the confrontation were to go on for a prolonged period, the "
+            "PRC is in a much better position to endure whatever consequences "
+            "might develop.",
+            "RAND RRA1279-1, Findings",
+            "https://www.rand.org/pubs/research_reports/RRA1279-1.html",
+            "D", "High"),
+        _ev("Only 13 percent of surveyed U.S. experts and 9 percent of Taiwan "
+            "experts were &lsquo;completely confident&rsquo; that the United "
+            "States would intervene militarily.",
+            "CSIS ChinaPower, on a quarantine scenario",
+            "https://features.csis.org/chinapower/china-quarantine-taiwan/",
+            "D", "Moderate"),
+        "<p>Two independent sources &mdash; one on material capacity, one on "
+        "expected US behaviour &mdash; pointing the same way. That is why the "
+        "crisis case gives the Chinese seat the better no-deal position, and why "
+        "the gap was widened rather than left as authored.</p>",
+
+        "<h3>The compatible issues both survived scrutiny</h3>",
+        "<p>Nearly every other structural claim in these cases was weakened by "
+        "the record. These two were not.</p>",
+        _ev("The two sides agreed that effective communication and exchanges "
+            "between the two militaries can help frontline troops perform tasks "
+            "in a more professional manner, deepen mutual understanding and "
+            "avoid misperception and miscalculation.",
+            "PRC Ministry of National Defence, on the November 2025 Military "
+            "Maritime Consultative Agreement working group",
+            "http://eng.mod.gov.cn/2025xb/N/T/16423311.html", "A", "High"),
+        "<p>Beijing&rsquo;s own defence ministry publicising military cooperation "
+        "with the United States is a stronger compatibility signal than any "
+        "third-party assessment.</p>",
+        _ev("The renewed Agreement narrows its scope to basic research and "
+            "intergovernmental collaboration in specific pre-identified areas "
+            "&hellip; Sensitive and emerging technologies have been explicitly "
+            "excluded.",
+            "US Department of State, on the amended Science and Technology "
+            "Agreement, 13 December 2024",
+            "https://2021-2025.state.gov/amendment-and-extension-of-the-u-s-prc-science-and-technology-agreement-sta/",
+            "A", "High"),
+        "<p>Both governments signed. Small positive value to each with a hard "
+        "ceiling is exactly what a minor compatible issue encodes &mdash; and in "
+        "the package deal it is now the only place a model can find free joint "
+        "value, since precursors turned out to carry a price.</p>",
 
         "<h3>The compatible issue is falsified</h3>",
         "<p>Fentanyl precursor enforcement was chosen as the compatible issue: "
