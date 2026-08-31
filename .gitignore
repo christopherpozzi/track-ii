@@ -35,3 +35,8 @@ corpus/wotr_*.txt
 research/*.pdf
 research/*.html
 research/*_flat.txt
+
+# Results. The committed mock lets the site build with no API keys; live runs
+# are committed compressed under results/live/. Raw working files are not.
+results/*.jsonl
+!results/mock.jsonl

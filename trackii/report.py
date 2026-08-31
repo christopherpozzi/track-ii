@@ -13,6 +13,7 @@ Usage:  python -m trackii.report results/results.jsonl -o site/index.html
 from __future__ import annotations
 
 import argparse
+import gzip
 import html as _html
 import json
 import re
@@ -44,12 +45,23 @@ SERIES = ["var(--series-1)", "var(--series-2)", "var(--series-3)"]
 # ---------------------------------------------------------------------------
 
 def load(path: Path) -> list[dict]:
+    """Read one JSONL file, or every JSONL under a directory.
+
+    Accepts .gz transparently: live transcripts are large and natural-language,
+    so they are committed compressed while the working files stay plain.
+    """
+    # rglob, not glob: live runs are archived under results/live/, and a
+    # non-recursive walk would silently ignore exactly the records that matter.
+    paths = (sorted(list(path.rglob("*.jsonl")) + list(path.rglob("*.jsonl.gz")))
+             if path.is_dir() else [path])
     recs = []
-    with open(path) as f:
-        for line in f:
-            line = line.strip()
-            if line:
-                recs.append(json.loads(line))
+    for q in paths:
+        opener = gzip.open if q.suffix == ".gz" else open
+        with opener(q, "rt") as f:
+            for line in f:
+                line = line.strip()
+                if line:
+                    recs.append(json.loads(line))
     return recs
 
 
@@ -2387,8 +2399,9 @@ def build_html(bundles: list[dict], title: str) -> str:
 
 def main(argv: list[str] | None = None) -> int:
     ap = argparse.ArgumentParser(description="Build the Track II report")
-    ap.add_argument("results", nargs="?",
-                    default=str(ROOT / "results" / "results.jsonl"))
+    # A directory loads every .jsonl and .jsonl.gz under it, so the default
+    # picks up the committed mock plus whatever live runs exist.
+    ap.add_argument("results", nargs="?", default=str(ROOT / "results"))
     ap.add_argument("-o", "--out", default=str(ROOT / "site" / "index.html"))
     ap.add_argument("--case", action="append", default=None,
                     help="case YAML; repeatable. Defaults to every case in cases/.")
@@ -2400,6 +2413,9 @@ def main(argv: list[str] | None = None) -> int:
     path = Path(args.results)
     if not path.exists():
         print(f"no results at {path}")
+        return 1
+    if path.is_dir() and not any(path.rglob("*.jsonl*")):
+        print(f"no .jsonl or .jsonl.gz files in {path}")
         return 1
 
     recs = load(path)

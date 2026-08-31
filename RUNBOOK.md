@@ -212,15 +212,43 @@ Each pairing runs in **both seat assignments**, so seat effects cancel.
 
 ---
 
-## 5 · Build the final report
+## 5 · Archive the results and build the final report
+
+Every record carries its own provenance — `run_id`, `run_started`,
+`harness_commit`, `live`, `temperature`, and a `case_digest` over the payoff
+structure. Before aggregating, confirm you are not mixing incomparable runs:
 
 ```bash
-cat results/live_haiku.jsonl results/live_head.jsonl results/smoke_*.jsonl \
-  > results/combined.jsonl
-.venv/bin/python -m trackii.report results/combined.jsonl
+cd results && .venv/../.venv/bin/python - <<'PY'
+import json, collections, pathlib, gzip
+c = collections.Counter()
+for p in pathlib.Path(".").glob("**/*.jsonl*"):
+    o = gzip.open if p.suffix == ".gz" else open
+    for line in o(p, "rt"):
+        r = json.loads(line)
+        if r.get("kind") == "negotiation":
+            c[(r.get("case_family"), r.get("case_digest"), r.get("live"))] += 1
+for k, v in sorted(c.items()):
+    print(f"{v:5d}  family={k[0]}  digest={k[1]}  live={k[2]}")
+PY
+cd ..
+```
+
+**One digest per case family.** Two means two different payoff structures are in
+the mix, and they must not be aggregated. `live=False` rows are the mock.
+
+Then archive the live runs compressed and rebuild:
+
+```bash
+gzip -9 results/live_haiku.jsonl results/live_head.jsonl results/smoke_*.jsonl
+mv results/*.jsonl.gz results/live/
+.venv/bin/python -m trackii.report        # loads everything under results/
 .venv/bin/python research/audit_docs.py | tail -2
 open site/index.html
 ```
+
+`results/live/*.jsonl.gz` is committed — it is the evidence. Raw `.jsonl`
+working files are gitignored. See `results/README.md`.
 
 Check the Quarantine still leads, every model appears in the top-centre
 switcher, and no view is empty.

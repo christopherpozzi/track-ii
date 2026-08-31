@@ -41,6 +41,43 @@ DEFAULT_CASE = ROOT / "cases" / "package_deal.yaml"
 DEFAULT_BATTERY = ROOT / "cases" / "solved_games.yaml"
 
 
+def _run_provenance(models: list[str], temperature: float) -> dict:
+    """Stamped onto every record so a result can always be attributed.
+
+    Without this, mock and live records are hard to tell apart once they share
+    a file -- and the runner appends, so sharing a file is the easy mistake.
+    """
+    import platform
+    import subprocess
+    import uuid
+    try:
+        commit = subprocess.run(["git", "rev-parse", "--short", "HEAD"],
+                                cwd=ROOT, capture_output=True, text=True,
+                                timeout=5).stdout.strip() or None
+    except Exception:  # noqa: BLE001 -- provenance is best-effort
+        commit = None
+    return {
+        "run_id": uuid.uuid4().hex[:12],
+        "run_started": time.strftime("%Y-%m-%dT%H:%M:%SZ", time.gmtime()),
+        "harness_commit": commit,
+        "live": any(REGISTRY[m].provider != "mock" for m in models),
+        "temperature": temperature,
+        "python": platform.python_version(),
+    }
+
+
+def _case_digest(case: Case) -> str:
+    """Hash of the payoff structure. Results are only comparable within one."""
+    import hashlib
+    blob = json.dumps(
+        {"id": case.id, "batnas": case.batnas,
+         "issues": [{"id": i.id, "role": i.design_role,
+                     "points": {o: i.points[o] for o in i.option_ids}}
+                    for i in case.issues]},
+        sort_keys=True)
+    return hashlib.sha256(blob.encode()).hexdigest()[:12]
+
+
 def _writer(path: Path):
     path.parent.mkdir(parents=True, exist_ok=True)
     f = open(path, "a")
@@ -69,8 +106,10 @@ def run_negotiations(
     temperature: float,
     judge_key: str | None,
     verbose: bool = True,
+    prov: dict | None = None,
 ) -> None:
     an = analyze(case)
+    prov = dict(prov or {}, case_digest=_case_digest(case))
     write, fh = _writer(out)
     judge_client = None
     if judge_key:
@@ -91,6 +130,7 @@ def run_negotiations(
 
             rec = {
                 "kind": "negotiation",
+                **prov,
                 "experiment": job["experiment"],
                 "case_family": case.family,
                 **res.to_dict(),
@@ -123,7 +163,7 @@ def run_negotiations(
 
 def run_battery(
     battery: Battery, models: list[str], seeds: int, out: Path, temperature: float,
-    verbose: bool = True,
+    verbose: bool = True, prov: dict | None = None,
 ) -> None:
     write, fh = _writer(out)
     try:
@@ -134,7 +174,7 @@ def run_battery(
         for n, (mkey, gid, frame, s) in enumerate(jobs, 1):
             client = build_client(mkey, seed=s, temperature=temperature)
             rec = run_game(battery, gid, frame, client)
-            rec.update({"kind": "solved_game", "seed": s})
+            rec.update({"kind": "solved_game", "seed": s, **(prov or {})})
             write(rec)
             if verbose:
                 mark = "OK  " if rec["correct"] else "MISS"
@@ -272,13 +312,17 @@ def main(argv: list[str] | None = None) -> int:
         return 1
 
     out = Path(args.out)
+    prov = _run_provenance(models, args.temperature)
+    print(f"run {prov['run_id']}  {'LIVE' if prov['live'] else 'mock'}  "
+          f"harness {prov['harness_commit'] or '?'}  -> {out}")
     experiments = (["games", "frames", "nocomm", "head", "swap"]
                    if args.experiment == "all" else [args.experiment])
 
     for exp in experiments:
         print(f"\n=== {exp} ===")
         if exp == "games":
-            run_battery(battery, models, args.seeds, out, args.temperature)
+            run_battery(battery, models, args.seeds, out, args.temperature,
+                        prov=prov)
             continue
         for c in cases:
             jobs = build_jobs(c, exp, models, args.seeds)
@@ -287,7 +331,8 @@ def main(argv: list[str] | None = None) -> int:
                 continue
             if len(cases) > 1:
                 print(f"  -- {c.id} --")
-            run_negotiations(c, jobs, out, args.rounds, args.temperature, args.judge)
+            run_negotiations(c, jobs, out, args.rounds, args.temperature,
+                             args.judge, prov=prov)
 
     print(f"\nwrote {out}")
     return 0
