@@ -1,6 +1,10 @@
 # Proposal: sourced revisions to the case structure
 
-**Status: proposal. No case file has been changed.** Evidence, locators and
+**Status: IMPLEMENTED.** This began as a proposal and was accepted. The case
+files now follow the record; what changed, and the evidence for each change, is
+in [`CHANGELOG.md`](CHANGELOG.md). The analysis below is preserved as written —
+including the four retractions in §0 and the Tier 3 downgrade in §2A — because
+the reasoning is the argument, not just its conclusion. Evidence, locators and
 per-cell confidence: [`SOURCES.md`](SOURCES.md). Working extraction log:
 [`research/NOTES.md`](research/NOTES.md).
 

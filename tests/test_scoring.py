@@ -25,7 +25,7 @@ def test_case_validates():
 
 
 def test_outcome_space_size():
-    assert AN.n_packages == 5 * 4 * 5 * 3 * 4 * 3 == 3600
+    assert AN.n_packages == 5 * 4 * 5 * 3 * 3 * 4 * 3 == 10800
 
 
 def test_payoffs_are_additive():
@@ -93,15 +93,16 @@ def test_impasse_falls_back_to_batnas():
 def test_below_batna_is_detected():
     """A package that guts DELTA must be flagged as a hard error."""
     pkg = {
-        "export_controls": "e5",
-        "security_commitment": "s4",
+        "semiconductor_controls": "s5",   # controls rescinded
+        "critical_minerals": "m1",        # minerals barred
         "tariffs": "t5",
-        "precursors": "n1",
-        "market_access": "m4",
-        "joint_research": "c1",
+        "precursors": "p3",
+        "security_commitment": "c3",
+        "market_access": "k4",
+        "joint_research": "j1",           # the one thing both sides want
     }
     s = score_outcome(CASE, AN, pkg, agreement=True)
-    assert s[f"points_{A}"] == 20 < CASE.batnas[A]
+    assert s[f"points_{A}"] == 5 < CASE.batnas[A]
     assert s[f"below_batna_{A}"] is True
     assert s["any_below_batna"] is True
     # ...and it is not flagged for the side that did well.
@@ -110,22 +111,27 @@ def test_below_batna_is_detected():
 
 def test_fixed_pie_error_on_compatible_issue():
     """Splitting the difference on a compatible issue destroys joint value."""
+    # joint_research is the compatible issue: both sides peak at j1. Since the
+    # sourced review demoted precursors to a lever, this is now the only one.
     good = {i.id: i.best_for(A) for i in CASE.issues}
-    good["precursors"] = "n1"
+    good["joint_research"] = "j1"
     bad = dict(good)
-    bad["precursors"] = "n2"          # the classic fixed-pie concession
+    bad["joint_research"] = "j2"       # the classic fixed-pie concession
     sg = score_outcome(CASE, AN, good, agreement=True)
     sb = score_outcome(CASE, AN, bad, agreement=True)
     assert sb["compatible_issues_missed"] > sg["compatible_issues_missed"]
-    assert sb["joint"] == sg["joint"] - 13
+    assert sb["joint"] == sg["joint"] - 6
     assert sb["compatible_capture"] < sg["compatible_capture"]
 
 
 def test_log_roll_creates_joint_value():
-    base = {"tariffs": "t3", "precursors": "n1", "market_access": "m3",
-            "joint_research": "c1"}
-    trade = {**base, "export_controls": "e5", "security_commitment": "s1"}
-    split = {**base, "export_controls": "e3", "security_commitment": "s2"}
+    # The log-roll now runs semiconductor controls against critical minerals,
+    # which is the pair the record documents (SOURCES.md).
+    base = {"tariffs": "t3", "precursors": "p2", "security_commitment": "c2",
+            "market_access": "k2", "joint_research": "j1"}
+    # each issue settles the way the side that cares more about it wants
+    trade = {**base, "semiconductor_controls": "s5", "critical_minerals": "m4"}
+    split = {**base, "semiconductor_controls": "s3", "critical_minerals": "m2"}
     st = score_outcome(CASE, AN, trade, agreement=True)
     ss = score_outcome(CASE, AN, split, agreement=True)
     assert st["joint"] > ss["joint"]
@@ -134,27 +140,28 @@ def test_log_roll_creates_joint_value():
 
 
 def test_log_roll_needs_a_side_payment_to_be_pareto_improving():
-    """The trade adds joint value but costs DELTA 2 points on its own.
+    """The trade adds joint value but costs DELTA 9 points on its own.
 
     This is the case's central lesson: creating value and claiming it are
     separate moves. A model that refuses the trade because it is locally worse
     off has failed to see that the distributive issue can fund the gap.
     """
-    base = {"precursors": "n1", "market_access": "m3", "joint_research": "c1"}
-    trade = {**base, "export_controls": "e5", "security_commitment": "s1",
-             "tariffs": "t3"}
-    split = {**base, "export_controls": "e3", "security_commitment": "s2",
-             "tariffs": "t3"}
+    base = {"precursors": "p2", "security_commitment": "c2",
+            "market_access": "k2", "joint_research": "j1", "tariffs": "t3"}
+    trade = {**base, "semiconductor_controls": "s5", "critical_minerals": "m4"}
+    # the interior settlement DELTA most prefers: it does better here than
+    # under the wholesale trade, which is exactly why a side payment is needed
+    split = {**base, "semiconductor_controls": "s2", "critical_minerals": "m3"}
     st = score_outcome(CASE, AN, trade, agreement=True)
     ss = score_outcome(CASE, AN, split, agreement=True)
 
-    assert st["joint"] - ss["joint"] == 10        # value created
-    assert st[f"points_{A}"] == ss[f"points_{A}"] - 2   # DELTA locally worse off
-    assert st[f"points_{B}"] == ss[f"points_{B}"] + 12  # OMEGA captures the gain
+    assert st["joint"] - ss["joint"] == 14        # value created
+    assert st[f"points_{A}"] == ss[f"points_{A}"] - 9   # DELTA locally worse off
+    assert st[f"points_{B}"] == ss[f"points_{B}"] + 23  # OMEGA captures the gain
 
-    # Shifting one notch on tariffs more than repays DELTA, and OMEGA still
-    # comes out ahead of the split. Both sides gain; the deal is available.
-    funded = {**trade, "tariffs": "t2"}
+    # Two notches on tariffs more than repay DELTA's 9, and OMEGA still comes
+    # out ahead of the split. Both sides gain; the deal is available.
+    funded = {**trade, "tariffs": "t1"}
     sf = score_outcome(CASE, AN, funded, agreement=True)
     assert sf[f"points_{A}"] > ss[f"points_{A}"]
     assert sf[f"points_{B}"] > ss[f"points_{B}"]
@@ -168,7 +175,7 @@ def test_distributive_issue_is_zero_sum():
 
 
 def test_surplus_share_is_symmetric_and_bounded():
-    for p in itertools.islice(CASE.packages(), 0, 3600, 137):
+    for p in itertools.islice(CASE.packages(), 0, 10800, 137):
         s = score_outcome(CASE, AN, p, agreement=True)
         share = s[f"surplus_share_{A}"]
         if share is not None:

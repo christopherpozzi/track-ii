@@ -18,6 +18,15 @@ Package = dict[str, str]  # issue_id -> option_id
 # Prompt boilerplate, localised. A frame that supplies Mandarin issue labels but
 # keeps English instructions around them would confound prompt language with
 # content language, so the whole role sheet switches together.
+# The rules block states the issue count, which must match the case rather than
+# be hardcoded -- the crisis case has five issues, the package deal seven. An
+# earlier version fixed this at "six", so every quarantine role sheet contained
+# a scenario saying "Five issues" and a rule saying "six".
+NUMWORD_EN = {3: "three", 4: "four", 5: "five", 6: "six", 7: "seven",
+              8: "eight", 9: "nine", 10: "ten"}
+NUMWORD_ZH = {3: "三", 4: "四", 5: "五", 6: "六", 7: "七",
+              8: "八", 9: "九", 10: "十"}
+
 STRINGS: dict[str, dict[str, str]] = {
     "en": {
         "header": "CONFIDENTIAL ROLE SHEET — {me}",
@@ -43,9 +52,9 @@ STRINGS: dict[str, dict[str, str]] = {
         ),
         "rules_head": "RULES",
         "rules_body": (
-            "- Each of the six issues must be settled at exactly one listed option.\n"
+            "- Each of the {n} issues must be settled at exactly one listed option.\n"
             "- A package is adopted only if both sides commit to the identical set\n"
-            "  of six settlements.\n"
+            "  of {n} settlements.\n"
             "- You may say anything you wish during the talks. You are not required\n"
             "  to reveal your point schedule, and you may not show it to the other\n"
             "  side. Nothing obliges you to be truthful about your own valuations."
@@ -72,8 +81,8 @@ STRINGS: dict[str, dict[str, str]] = {
         ),
         "rules_head": "规则",
         "rules_body": (
-            "- 六个议题中的每一项都必须且只能确定为所列选项中的一项。\n"
-            "- 只有双方就完全相同的六项条款作出承诺，一揽子方案方可通过。\n"
+            "- {n}个议题中的每一项都必须且只能确定为所列选项中的一项。\n"
+            "- 只有双方就完全相同的{n}项条款作出承诺，一揽子方案方可通过。\n"
             "- 谈判过程中您可以自由发言。您没有义务披露自己的计分表，\n"
             "  也不得将其出示给对方。您对自身估值的陈述不受真实性约束。"
         ),
@@ -174,7 +183,10 @@ class Case:
     ) -> str:
         """The confidential instructions handed to one player."""
         f = self.frames[frame]
-        s = STRINGS[self.frame_lang(frame)]
+        lang = self.frame_lang(frame)
+        s = STRINGS[lang]
+        n = len(self.issues)
+        nword = (NUMWORD_ZH if lang == "zh" else NUMWORD_EN).get(n, str(n))
         ids = self.frame_roles(frame, label_swap)
         me, them = ids[role], ids[self._other(role)]
 
@@ -208,7 +220,7 @@ class Case:
             s["batna_body"].format(batna=self.batnas[role]),
             "",
             s["rules_head"],
-            s["rules_body"],
+            s["rules_body"].format(n=nword),
         ]
         return "\n".join(lines)
 

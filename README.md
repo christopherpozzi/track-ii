@@ -86,7 +86,7 @@ Nothing in the headline metrics is graded by a language model. All of it is arit
 |---|---|
 | **Pareto efficiency ratio** | joint value achieved ÷ maximum joint value available |
 | **Below-BATNA acceptance** | signed a deal worse than its own stated walk-away value — a hard error |
-| **Impasse despite a ZOPA** | talks collapsed although 2,624 of 3,600 packages beat both walk-away values — a hard error |
+| **Impasse despite a ZOPA** | talks collapsed although 8,150 of 10,800 packages beat both walk-away values — a hard error |
 | **Log-roll capture** | traded the issue it cares less about for the one it cares more about |
 | **Compatible-issue capture** | two issues have the same preferred settlement on *both* sides; splitting them is pure waste (fixed-pie bias) |
 | **Distributive share** | share claimed on the one exactly zero-sum issue |
@@ -115,7 +115,7 @@ The control is what makes the headline causally interpretable. On its own it is 
 
 This is the part most benchmarks skip.
 
-- **The case is validated before any model is called.** `trackii/validate.py` brute-forces all 3,600 packages and asserts 15 properties: the ZOPA is non-empty but not trivial, both sides can be pushed below BATNA, the frontier is non-degenerate and has a distributive dimension, each compatible issue really is compatible, the distributive issue is exactly zero-sum, the log-roll creates joint value, that surplus is compensable via the distributive issue, and the split-the-difference baseline leaves real headroom (it scores 78.8%, so the eval can actually discriminate).
+- **The case is validated before any model is called.** `trackii/validate.py` brute-forces all 10,800 packages and asserts 15 properties: the ZOPA is non-empty but not trivial, both sides can be pushed below BATNA, the frontier is non-degenerate and has a distributive dimension, each compatible issue really is compatible, the distributive issue is exactly zero-sum, the log-roll creates joint value, that surplus is compensable via the distributive issue, and the split-the-difference baseline leaves real headroom (it scores 88%, so the eval can actually discriminate).
 - **The answer key is re-derived, not asserted.** `trackii/solved_games.py` ships solvers for dominance, pure and mixed Nash, IESDS, and backward induction, and every stated answer must match the solver output before the battery runs. Writing this caught a real error: my first `commitment_value` game gave the committing player the same payoff either way, so the stated answer was simply wrong.
 - **The frame invariant is structural, not aspirational.** Payoffs live in exactly one place. Frames cannot alter them, only label them. Sequential games are asserted to contain no digits in their prose, so every number comes from the shared outcome table.
 - **There is a null control.** The mock client ignores prompt content, making it frame-blind by construction, and a test asserts it scores *identically* across all three frames. If the harness itself leaked a framing artifact — prompt lengths, option ordering, seed consumption — that test would fail.
@@ -137,7 +137,7 @@ The mock's flat 78% across all three frames is the null control doing its job: a
 | | **The Package Deal** | **The Quarantine** |
 |---|---|---|
 | Situation | US–PRC grand bargain, no time pressure | Taiwan Strait quarantine, live crisis |
-| Issues | 6 (3,600 packages) | 5 (1,200 packages) |
+| Issues | 7 (10,800 packages) | 5 (1,200 packages) |
 | BATNAs | Moderate and asymmetric | **Low for both** — no deal means the crisis continues |
 | Headline failure | Below-BATNA acceptance | **Impasse** — holding out means choosing the crisis |
 | Distributive issue | Section 301 tariffs | The public statement: face, not substance |
@@ -167,7 +167,7 @@ tests/                  87 tests
 
 ## Design notes
 
-- The outcome space is 5×4×5×3×4×3 = 3,600 packages, small enough to enumerate exactly. The frontier is brute-forced, never approximated.
+- The outcome space is 5×4×5×3×3×4×3 = 10,800 packages, small enough to enumerate exactly. The frontier is brute-forced, never approximated.
 - Free-form dialogue, structured commitment: models talk however they like and commit through a parsed JSON package.
 - Who speaks first and who closes are randomised per run and recorded, because the last mover in a take-it-or-leave-it close holds an advantage that would otherwise contaminate the model comparison.
 - Full transcripts are logged, so the *why* is auditable — the thing games alone don't give you.
@@ -186,7 +186,7 @@ MIT.
 **They are synthetic.** They are authored, not measured — not derived from any
 licensed DRRC/PON exercise, any dataset, any expert elicitation, or any
 published source. They are **not** a claim about real-world preferences: that
-Taiwan arms sales carry 40 points for DELTA does not assert what Washington
+semiconductor controls carry 40 points for OMEGA does not assert what Beijing
 actually values relative to tariffs.
 
 The method is to design backwards from the metrics. Each issue is assigned a
@@ -249,7 +249,7 @@ in [`RESEARCH_PLAN.md`](RESEARCH_PLAN.md) §5A.
 
 | | |
 |---|---|
-| [`SOURCES.md`](SOURCES.md) | The 12-cell matrix — direction and intensity for six issues on both sides — with quotations, citation locators, evidence tier and per-cell confidence. **9 confirmed, 2 partial, 1 contradicted.** |
+| [`SOURCES.md`](SOURCES.md) | The 12-cell matrix — direction and intensity for each issue on both sides — with quotations, citation locators, evidence tier and per-cell confidence. **9 confirmed, 2 partial, 1 contradicted**, and the case files were then rewritten to follow the record. |
 | [`PROPOSAL.md`](PROPOSAL.md) | What the findings imply for the case files, and why no payoff was changed. Includes four retracted claims of my own. |
 | [`RESEARCH_PLAN.md`](RESEARCH_PLAN.md) | The method: evidence hierarchy, coding protocol, retrieval protocol, effort tiers, approval gate. |
 | [`research/CONCORDANCE.txt`](research/CONCORDANCE.txt) | How far independent sources agree, per cell. 37 judgements, 68% overall. Regenerate with `research/concordance.py`. |

@@ -44,17 +44,19 @@ Pointing this apparatus at LLMs is not itself new — Abdelnabi et al. (NeurIPS 
 
 **In one sentence:** two models negotiate a six-issue diplomatic package under private point schedules, and the deal they reach is scored against the computable Pareto frontier.
 
-## The case
+## The cases
 
-The flagship case is a US–PRC omnibus package: export controls, arms sales to Taiwan, Section 301 tariffs, fentanyl precursor enforcement, market access and data rules, and joint climate cooperation. Six issues, 3,600 possible packages, and — in the DRRC tradition — deliberate traps in the payoff structure:
+The flagship is **The Quarantine**: a live crisis in which Beijing has declared a maritime inspection regime around Taiwan and Washington has surged two carrier groups. Five issues, 1,200 packages, walk-away values deliberately low on both sides because no-agreement means the crisis continues. It leads because it is the better-evidenced of the two — CSIS and RAND independently corroborate the premise, the inspection axis, the low walk-away values, and the direction of their asymmetry.
 
-- **A compatible issue.** Both sides' point schedules peak on the *same* settlement of precursor enforcement. Neither knows this. A negotiator with fixed-pie bias treats it as contested and splits the difference, burning 13 points of joint value for nothing at all.
-- **A log-roll pair.** Export controls are worth more to Beijing than to Washington; Taiwan arms sales are worth more to Washington than to Beijing. Trading them wholesale creates joint value — but it leaves Washington two points *worse off* than splitting both, so it only closes if funded by a side payment on tariffs. That is what real integrative bargaining looks like, and it is a sharper test than a free lunch.
+The second is **The Package Deal**, a US–PRC omnibus: semiconductor export controls, critical minerals controls, Section 301 tariffs, fentanyl precursor enforcement, a pending Taiwan arms package, investment screening, and science cooperation. Seven issues, 10,800 packages. Both carry the same deliberate traps in the payoff structure:
+
+- **A compatible issue.** Both sides' point schedules peak on the *same* settlement. Neither knows this. A negotiator with fixed-pie bias treats it as contested and splits the difference, burning joint value for nothing at all.
+- **A log-roll pair.** Semiconductor controls are worth more to Beijing than to Washington; critical-minerals controls are worth more to Washington than to Beijing. Trading them wholesale creates 14 points of joint value — but leaves Washington nine points *worse off* than the split it most prefers, so it only closes if funded by a side payment on tariffs. That is what real integrative bargaining looks like, and it is a sharper test than a free lunch. This pairing is not authored: it is the one the record documents, after BIS rescinded EDA licence requirements in July 2025 against Beijing resuming rare-earth magnet licensing.
 - **A purely distributive issue.** Tariffs are exactly zero-sum: joint value is constant at 20 whatever the settlement. This is where value claiming is measured, cleanly separated from value creation.
 - **A non-monotonic issue.** Washington's optimum on market access is the *second* option, not an endpoint — catching models that assume preferences are linearly opposed instead of reading their own sheet.
 - **Asymmetric BATNAs.** Washington can credibly walk from far more packages than Beijing can. The Nash solution correspondingly hands Washington the entire distributive issue, which is the right game-theoretic answer and one most human negotiators miss.
 
-Split the difference on all six issues and you capture 78.8% of the available joint value. That gap is what the eval measures against.
+Split the difference on every issue and you capture 88% of the available joint value in the package deal, 85% in the crisis. That gap is what the eval measures against.
 
 ## Two metrics that need no interpretation
 
@@ -62,7 +64,7 @@ Most of the output is continuous — efficiency ratios, surplus shares, log-roll
 
 **Below-BATNA acceptance.** The role sheet states the walk-away value in points, explicitly, in the prompt. A model that signs a package worth less than that to its own side has made an unambiguous error, detectable by arithmetic, with no judge and no interpretation. *"This model signed a deal worse than walking away in 18% of runs"* is a sentence a policymaker understands instantly — the strategic-reasoning equivalent of a jailbreak rate.
 
-**Impasse despite a ZOPA.** In this case 2,624 of 3,600 packages beat both sides' walk-away values. Collapsing the talks anyway is a failure with a denominator.
+**Impasse despite a ZOPA.** In the package deal 8,150 of 10,800 packages beat both sides' walk-away values. Collapsing the talks anyway is a failure with a denominator.
 
 Neither can be argued with, and neither requires anyone to agree about foreign policy.
 
@@ -86,7 +88,7 @@ The control is what makes the headline interpretable. Alone it is a scripted eva
 
 The explainer warns against vibe-coded benches that don't faithfully represent the concept they claim to test. That warning shaped the build more than anything else.
 
-**The case is validated before any model is called.** The validator brute-forces all 3,600 packages and asserts fifteen properties: the ZOPA is non-empty but not trivial, both sides can be pushed below BATNA, the frontier is non-degenerate and carries a distributive dimension, each compatible issue really is compatible, the distributive issue is exactly zero-sum, the log-roll genuinely creates joint value, that surplus is compensable via the distributive issue, and the naive baseline leaves enough headroom for the eval to discriminate.
+**The case is validated before any model is called.** The validator brute-forces all 10,800 packages and asserts fifteen properties: the ZOPA is non-empty but not trivial, both sides can be pushed below BATNA, the frontier is non-degenerate and carries a distributive dimension, each compatible issue really is compatible, the distributive issue is exactly zero-sum, the log-roll genuinely creates joint value, that surplus is compensable via the distributive issue, and the naive baseline leaves enough headroom for the eval to discriminate.
 
 **The answer key is re-derived, not asserted.** The battery ships solvers for dominance, pure and mixed Nash, iterated elimination, and backward induction, and every stated answer must match solver output before anything runs. This caught a real error in my own work: my first Schelling commitment game gave the committing player 6 points whether or not it destroyed its retreat option, so commitment bought nothing and my stated answer was wrong. The game needed the opponent moving first. A hand-checked answer key would have shipped that.
 

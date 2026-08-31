@@ -54,7 +54,7 @@
 # the author's judgment. Independent expert ranking of issue intensities per
 # side would strengthen it and has not been done.
 
-id: quarantine_v1
+id: quarantine_v2
 title: The Quarantine
 version: 1
 roles: [DELTA, OMEGA]
@@ -62,8 +62,8 @@ roles: [DELTA, OMEGA]
 # Deliberately low relative to the ~120-point maxima. No agreement is not a
 # comfortable walk-away here; it is a continuing crisis both sides lose from.
 batnas:
-  DELTA: 34
-  OMEGA: 36
+  DELTA: 30
+  OMEGA: 42
 
 issues:
   - id: quarantine_scope
@@ -94,8 +94,8 @@ issues:
   - id: deconfliction_channel
     design_role: compatible                 # both sides peak at h1
     options:
-      - {id: h1, points: {DELTA: 14, OMEGA: 16}}
-      - {id: h2, points: {DELTA: 7, OMEGA: 8}}
+      - {id: h1, points: {DELTA: 18, OMEGA: 20}}
+      - {id: h2, points: {DELTA: 9, OMEGA: 10}}
       - {id: h3, points: {DELTA: 0, OMEGA: 0}}
 
   - id: public_framing
@@ -152,13 +152,13 @@ frames:
       OMEGA: {name: "Republic of Vanuatu", short: "Vanuatu"}
     issues:
       quarantine_scope:
-        name: "Scope of the exclusion zone"
+        name: "Cargo classes subject to the exclusion zone"
         options:
-          q1: "Exclusion zone maintained in full"
-          q2: "Exclusion zone narrowed to the disputed banks"
-          q3: "Inspections continue, transit otherwise unrestricted"
-          q4: "Exclusion suspended pending arbitration"
-          q5: "Exclusion zone lifted entirely"
+          q1: "All cargo classes subject to boarding, including relief supplies"
+          q2: "Relief and medical cargo exempted; all else inspected"
+          q3: "Relief, medical and fuel cargo exempted"
+          q4: "All commercial cargo exempted; fisheries cargo inspected"
+          q5: "All cargo classes released; exclusion zone lifted"
       naval_posture:
         name: "Patrol vessel posture"
         options:
@@ -208,13 +208,13 @@ frames:
       OMEGA: {name: "中华人民共和国", short: "中方"}
     issues:
       quarantine_scope:
-        name: "检查制度的适用范围"
+        name: "检查制度适用的货物类别"
         options:
-          q1: "全面维持检查制度，所有船舶均须接受登临检查"
-          q2: "检查范围缩减至军民两用物资与军事货物"
-          q3: "继续实施检查，但商业船舶通行不受阻碍"
-          q4: "在谈判期间暂停检查制度九十天"
-          q5: "立即全面解除检查制度"
+          q1: "各类货物一律登临检查，粮食与燃料亦不例外"
+          q2: "人道主义与医疗物资予以豁免，其余货物一律检查"
+          q3: "人道主义、医疗物资及能源货物予以豁免"
+          q4: "民用货物全部豁免，仅检查军民两用及军事货物"
+          q5: "各类货物全部放行，检查制度予以解除"
       naval_posture:
         name: "美军海上兵力态势"
         options:
@@ -262,13 +262,13 @@ frames:
       OMEGA: {name: "People's Republic of China", short: "China"}
     issues:
       quarantine_scope:
-        name: "Scope of the quarantine"
+        name: "Cargo classes subject to the quarantine"
         options:
-          q1: "Quarantine maintained in full, all traffic subject to boarding"
-          q2: "Quarantine narrowed to dual-use and military cargo"
-          q3: "Inspections continue, commercial traffic otherwise unimpeded"
-          q4: "Quarantine suspended for ninety days pending talks"
-          q5: "Quarantine lifted entirely and immediately"
+          q1: "All cargo classes subject to boarding, including food and fuel"
+          q2: "Humanitarian and medical cargo exempted; all else inspected"
+          q3: "Humanitarian, medical and energy cargo exempted"
+          q4: "All civilian cargo exempted; dual-use and military cargo inspected"
+          q5: "All cargo classes released; inspection regime lifted"
       naval_posture:
         name: "US naval posture"
         options:

@@ -1424,8 +1424,17 @@ def appendix_view(case: Case, an) -> str:
         "structure</b> &mdash; which issue plays which role, and which side "
         "cares more &mdash; was tested against primary sources. Thirty-six "
         "documents, 4.6 million characters, downloaded and read in full. "
-        "<b>Nine of twelve cells confirmed, two partial, one contradicted.</b>"
-        "</p>",
+        "<b>Nine of twelve cells confirmed, two partial, one contradicted "
+        "&mdash; and where the record and the design disagreed, the case now "
+        "follows the record.</b></p>",
+        '<div class="warnbox"><p><b>What changed as a result.</b> The log-roll '
+        "was re-seated from export-controls-against-Taiwan onto the pair the "
+        "record documents: semiconductors against critical minerals. Fentanyl "
+        "precursors were re-priced from a compatible issue to a lever Beijing "
+        "withholds. Taiwan arms sales were demoted to a low-range side issue and "
+        "re-laddered around a specific pending package. In the crisis case the "
+        "walk-away gap was widened, the hotline upgraded, and the scope ladder "
+        "rebuilt around cargo classes. Every change is sourced below.</p></div>",
 
         "<h3>Both sides rank export controls first</h3>",
         "<p>The case as shipped gives Washington its widest range on Taiwan arms "
@@ -1504,6 +1513,18 @@ def appendix_view(case: Case, an) -> str:
         "two arms form a symmetric pair, which is withdrawn. If Beijing&rsquo;s "
         "restriction was always meant to be temporary, relinquishing it says "
         "little about how it prices minerals against chips.</p>",
+        "<p><b>Implemented.</b> The case now carries "
+        "<code>semiconductor_controls</code> (China the intense side, so the "
+        "United States concedes) against <code>critical_minerals</code> (the "
+        "United States the intense side, so China concedes). Both ladders are "
+        "taken from the instruments the two governments actually use &mdash; "
+        "Entity List, foreign direct product rule, performance thresholds, "
+        "general licence, rescission on one side; outright bar, case-by-case "
+        "licensing, general licence against end-use certification, suspension "
+        "on the other. Orientation is carried at Tier B, and the asymmetry the "
+        "counter-evidence established &mdash; minerals leverage decays as it is "
+        "used, the semiconductor choke point does not &mdash; is recorded in the "
+        "case file as a mis-specification a static schedule cannot express.</p>",
 
         "<h3>Taiwan arms sales sit below the statutory threshold</h3>",
         _ev("\u201c\u53f0\u72ec\u201d\u5206\u88c2\u52bf\u529b\u4ee5\u4efb"
@@ -1528,6 +1549,14 @@ def appendix_view(case: Case, an) -> str:
         "of <span lang=\"zh\">\u4ee5\u53f0\u5236\u534e</span> &mdash; "
         "using Taiwan to contain China &mdash; which makes Taiwan pressure "
         "instrumental to the technology contest rather than prior to it.</p>",
+        "<p><b>Implemented.</b> <code>security_commitment</code> was the "
+        "widest issue on the United States&rsquo; sheet. It is now a "
+        "<b>low-range side issue</b>, and its ladder is no longer the "
+        "US&ndash;Taiwan relationship &mdash; which neither party trades "
+        "&mdash; but a <b>specific pending package: released, deferred, or "
+        "held</b>. That increment is what the record shows actually being "
+        "used as leverage, and it is what a negotiator could plausibly "
+        "settle in a single round.</p>"
 
         "<h3>The executive and Congress do not weight this the same way</h3>",
         "<p>The design treats one seat as &lsquo;the United States&rsquo;. The "
@@ -1571,6 +1600,16 @@ def appendix_view(case: Case, an) -> str:
         "worsens as the quarantine runs. And the negotiable object is <i>which "
         "cargoes move</i>, not whether the quarantine ends, which is a sourced "
         "specification for a ladder the design currently authors.</p>",
+        "<p><b>Implemented.</b> The crisis case now runs a wider walk-away "
+        "gap, and <code>quarantine_scope</code> is laddered by <b>cargo "
+        "class</b> &mdash; all cargo boarded, humanitarian exempt, "
+        "humanitarian and energy exempt, all civilian cargo exempt, "
+        "regime lifted &mdash; which is the object RAND says is actually "
+        "negotiable. The hotline was also upgraded: it was priced against "
+        "Beijing&rsquo;s 2022 suspension, but the MMCA working groups of "
+        "November 2025 and May 2026 are publicised approvingly by both "
+        "militaries&rsquo; own outlets, which is a stronger compatibility "
+        "signal than the hedge it replaced.</p>",
 
         "<h3>The compatible issue is falsified</h3>",
         "<p>Fentanyl precursor enforcement was chosen as the compatible issue: "
@@ -1591,7 +1630,9 @@ def appendix_view(case: Case, an) -> str:
             "https://www.brookings.edu/articles/what-happened-when-trump-met-xi/",
             "A", "High"),
         '<p class="takeaway">Imposed for non-cooperation, relaxed for '
-        "cooperation. That is a price, not a shared preference &mdash; so the "
+        "cooperation. That is a price, not a shared preference. <b>Implemented:</b> "
+        "<code>precursors</code> is now an exactly zero-sum lever Beijing "
+        "holds and sells, not a shared goal &mdash; so the "
         "case&rsquo;s compatible issue is not compatible.</p>",
 
         "<h3>The Mandarin frame predicts a direction</h3>",
@@ -1872,21 +1913,39 @@ def appendix_view(case: Case, an) -> str:
 
         "<h3>The case design</h3>",
         _gloss([
-            ("Schedules are authored; the ordinal structure has now been tested",
-             "Cardinal magnitudes and walk-away levels remain authored. The "
-             "ordinal structure was checked against 23 primary documents "
-             "(see Evidence): <b>nine of twelve cells confirmed, two partial, "
-             "one contradicted</b>. Single coder, so no reliability statistics. "
-             "No expert elicitation has been done."),
-            ("Three findings are known and not yet fixed",
-             "Both sides in fact rank export controls first, so the log-roll "
-             "pair does not have opposed intensity; fentanyl precursor "
-             "enforcement is bought rather than shared, so the compatible issue "
-             "is not compatible; and Taiwan arms sales sit below the "
-             "Anti-Secession Law's stated triggers. The payoffs were left "
-             "unchanged rather than re-tuned on one coder's evidence days before "
-             "a deadline. The validator fails on exactly these checks when the "
-             "findings are applied &mdash; which is the intended behaviour."),
+            ("Schedules are authored; the ordinal structure was tested and then "
+             "corrected",
+             "Cardinal magnitudes and walk-away levels remain authored, and "
+             "always will be. The ordinal structure was checked against 43 "
+             "primary documents (see Evidence): <b>nine of twelve cells "
+             "confirmed, two partial, one contradicted</b>, and the case files "
+             "were rewritten to follow the record where they disagreed. Single "
+             "coder, so no reliability statistics. No expert elicitation has "
+             "been done."),
+            ("The corrected log-roll rests on weaker evidence than the design it "
+             "replaced implies",
+             "Membership is Tier A &mdash; export controls are traded against "
+             "each other, and the July 2025 exchange is documented. "
+             "<b>Orientation is only Tier B.</b> That exchange reversed a "
+             "six-week-old escalation, so it is equally readable as mutual "
+             "de-escalation rather than a trade, and Beijing&rsquo;s minerals "
+             "restriction may have been temporary by design. The intensity "
+             "ordering now in the case file is the better-supported of two "
+             "readings, not a demonstrated fact."),
+            ("The two log-roll arms are not symmetric, and a static schedule "
+             "cannot say so",
+             "US semiconductor leverage is durable; PRC minerals leverage decays "
+             "with use, because each use accelerates diversification, and US "
+             "buffers already run months to a year. The case prices both arms at "
+             "a fixed point in time. Modelling the decay would need a repeated "
+             "game, which this design is not."),
+            ("Demoting Taiwan is a judgement about tradeability, not about value",
+             "The evidence that arms sales sit below the Anti-Secession Law&rsquo;s "
+             "triggers, carry no USCC recommendation, and did not arise at Busan "
+             "supports treating them as a <i>low-range side issue in a "
+             "negotiation</i>. It does not support any claim that Beijing or "
+             "Washington cares little about Taiwan. A red line is not a cheap "
+             "issue; it is an issue that is not on the table."),
             ("Fidelity and instrument quality pull apart here",
              "Applying the sourced findings narrows the in-ZOPA joint spread "
              "from 75 points to 31 and nearly doubles the Pareto frontier: the "
@@ -2162,8 +2221,15 @@ def main(argv: list[str] | None = None) -> int:
     if args.case:
         case_paths = [Path(c) for c in args.case]
     else:
+        # The Quarantine leads. It is the better-evidenced of the two: CSIS and
+        # RAND independently corroborate the premise, the inspection axis, the
+        # low walk-away values and the direction of their asymmetry, where the
+        # package deal carries a demoted side issue and a re-seated log-roll.
+        LEAD = ["quarantine", "package_deal"]
+        found = [p for p in (ROOT / "cases").glob("*.yaml") if p.stem != "solved_games"]
         case_paths = sorted(
-            p for p in (ROOT / "cases").glob("*.yaml") if p.stem != "solved_games"
+            found, key=lambda p: (LEAD.index(p.stem) if p.stem in LEAD else len(LEAD),
+                                  p.stem)
         )
     cases = [Case.load(p) for p in case_paths]
 
@@ -2183,8 +2249,13 @@ def main(argv: list[str] | None = None) -> int:
             "agg": aggregate(sub + battery),
             "detail": per_model(sub + battery),
         })
-    # Cases with runs first, so the site opens on something populated.
-    bundles.sort(key=lambda b: -b["agg"]["n_negotiations"])
+    # Populated cases first so the site opens on something with data, but the
+    # LEAD order decides among them -- otherwise whichever case happened to get
+    # more runs would take the front page.
+    lead = {p.stem: n for n, p in enumerate(case_paths)}
+    bundles.sort(key=lambda b: (b["agg"]["n_negotiations"] == 0,
+                                lead.get(b["case"].id.replace("_v2","").replace("_v1",""), 99),
+                                lead.get(b["case"].family, 99)))
     body = build_html(bundles, args.title)
 
     out = Path(args.out)

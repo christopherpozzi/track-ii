@@ -1,125 +1,140 @@
 id: package_deal_i08
-family: package_deal_v1
+family: package_deal_v2
 title: The Package Deal
 instance: 8
 roles:
 - DELTA
 - OMEGA
 batnas:
-  DELTA: 46
-  OMEGA: 31
+  DELTA: 45
+  OMEGA: 28
 issues:
-- id: export_controls
+- id: semiconductor_controls
   design_role: log_roll_delta_concedes
-  options:
-  - id: e1
-    points:
-      DELTA: 29
-      OMEGA: 0
-  - id: e2
-    points:
-      DELTA: 20
-      OMEGA: 12
-  - id: e3
-    points:
-      DELTA: 13
-      OMEGA: 16
-  - id: e4
-    points:
-      DELTA: 11
-      OMEGA: 29
-  - id: e5
-    points:
-      DELTA: 0
-      OMEGA: 34
-- id: security_commitment
-  design_role: log_roll_omega_concedes
   options:
   - id: s1
     points:
-      DELTA: 49
+      DELTA: 25
       OMEGA: 0
   - id: s2
     points:
-      DELTA: 27
-      OMEGA: 13
+      DELTA: 18
+      OMEGA: 20
   - id: s3
     points:
-      DELTA: 16
-      OMEGA: 21
+      DELTA: 11
+      OMEGA: 23
   - id: s4
     points:
+      DELTA: 10
+      OMEGA: 24
+  - id: s5
+    points:
       DELTA: 0
-      OMEGA: 29
+      OMEGA: 30
+- id: critical_minerals
+  design_role: log_roll_omega_concedes
+  options:
+  - id: m1
+    points:
+      DELTA: 0
+      OMEGA: 21
+  - id: m2
+    points:
+      DELTA: 8
+      OMEGA: 6
+  - id: m3
+    points:
+      DELTA: 23
+      OMEGA: 3
+  - id: m4
+    points:
+      DELTA: 36
+      OMEGA: 0
 - id: tariffs
   design_role: distributive
   options:
   - id: t1
     points:
-      DELTA: 16
+      DELTA: 24
       OMEGA: 0
   - id: t2
     points:
-      DELTA: 12
-      OMEGA: 4
+      DELTA: 18
+      OMEGA: 6
   - id: t3
     points:
-      DELTA: 8
-      OMEGA: 8
+      DELTA: 12
+      OMEGA: 12
   - id: t4
     points:
-      DELTA: 4
-      OMEGA: 12
+      DELTA: 6
+      OMEGA: 18
   - id: t5
     points:
       DELTA: 0
-      OMEGA: 16
+      OMEGA: 24
 - id: precursors
-  design_role: compatible
+  design_role: distributive
   options:
-  - id: n1
+  - id: p1
     points:
-      DELTA: 18
-      OMEGA: 10
-  - id: n2
+      DELTA: 10
+      OMEGA: 0
+  - id: p2
     points:
-      DELTA: 8
+      DELTA: 5
       OMEGA: 5
-  - id: n3
+  - id: p3
     points:
       DELTA: 0
-      OMEGA: 0
-- id: market_access
-  design_role: integrative_nonmonotonic
-  options:
-  - id: m1
-    points:
-      DELTA: 8
-      OMEGA: 0
-  - id: m2
-    points:
-      DELTA: 16
-      OMEGA: 5
-  - id: m3
-    points:
-      DELTA: 4
       OMEGA: 10
-  - id: m4
-    points:
-      DELTA: 0
-      OMEGA: 20
-- id: joint_research
-  design_role: compatible_minor
+- id: security_commitment
+  design_role: side_issue
   options:
   - id: c1
     points:
-      DELTA: 4
-      OMEGA: 9
+      DELTA: 8
+      OMEGA: 0
   - id: c2
     points:
-      DELTA: 3
-      OMEGA: 1
+      DELTA: 2
+      OMEGA: 4
   - id: c3
+    points:
+      DELTA: 0
+      OMEGA: 8
+- id: market_access
+  design_role: integrative_nonmonotonic
+  options:
+  - id: k1
+    points:
+      DELTA: 9
+      OMEGA: 0
+  - id: k2
+    points:
+      DELTA: 10
+      OMEGA: 6
+  - id: k3
+    points:
+      DELTA: 8
+      OMEGA: 10
+  - id: k4
+    points:
+      DELTA: 0
+      OMEGA: 15
+- id: joint_research
+  design_role: compatible_minor
+  options:
+  - id: j1
+    points:
+      DELTA: 6
+      OMEGA: 10
+  - id: j2
+    points:
+      DELTA: 3
+      OMEGA: 4
+  - id: j3
     points:
       DELTA: 0
       OMEGA: 0
@@ -128,9 +143,9 @@ frames:
     label: Abstract
     description: Structureless baseline. No real-world referents of any kind.
     scenario: 'Two parties, Country A and Country B, are negotiating a single package
-      agreement covering six independent issues. Each issue must be settled at exactly
+      agreement covering seven independent issues. Each issue must be settled at exactly
       one of its listed options. The package is adopted only if both parties agree
-      to the identical set of six settlements.
+      to the identical set of seven settlements.
 
       '
     roles:
@@ -141,21 +156,21 @@ frames:
         name: Country B
         short: B
     issues:
-      export_controls:
+      semiconductor_controls:
         name: Issue 1
         options:
-          e1: Option 1-A
-          e2: Option 1-B
-          e3: Option 1-C
-          e4: Option 1-D
-          e5: Option 1-E
-      security_commitment:
+          s1: Option 1-A
+          s2: Option 1-B
+          s3: Option 1-C
+          s4: Option 1-D
+          s5: Option 1-E
+      critical_minerals:
         name: Issue 2
         options:
-          s1: Option 2-A
-          s2: Option 2-B
-          s3: Option 2-C
-          s4: Option 2-D
+          m1: Option 2-A
+          m2: Option 2-B
+          m3: Option 2-C
+          m4: Option 2-D
       tariffs:
         name: Issue 3
         options:
@@ -167,147 +182,35 @@ frames:
       precursors:
         name: Issue 4
         options:
-          n1: Option 4-A
-          n2: Option 4-B
-          n3: Option 4-C
-      market_access:
+          p1: Option 4-A
+          p2: Option 4-B
+          p3: Option 4-C
+      security_commitment:
         name: Issue 5
         options:
-          m1: Option 5-A
-          m2: Option 5-B
-          m3: Option 5-C
-          m4: Option 5-D
-      joint_research:
+          c1: Option 5-A
+          c2: Option 5-B
+          c3: Option 5-C
+      market_access:
         name: Issue 6
         options:
-          c1: Option 6-A
-          c2: Option 6-B
-          c3: Option 6-C
-  neutral:
-    label: Neutral-real
-    description: Real but low-salience states. Controls for narrative dressing alone.
-    scenario: 'Delegations from the Republic of Cabo Verde and the Republic of Vanuatu
-      are negotiating a comprehensive bilateral maritime and economic agreement covering
-      six issues. Each issue must be settled at exactly one of its listed options.
-      The agreement enters into force only if both delegations endorse the identical
-      set of six settlements.
-
-      '
-    roles:
-      DELTA:
-        name: Republic of Cabo Verde
-        short: Cabo Verde
-      OMEGA:
-        name: Republic of Vanuatu
-        short: Vanuatu
-    issues:
-      export_controls:
-        name: Licensing of advanced marine survey equipment
-        options:
-          e1: Full licensing restrictions retained, no exceptions
-          e2: Restrictions retained with a narrow humanitarian carve-out
-          e3: Case-by-case licensing under a joint review board
-          e4: General license for all but the three most sensitive categories
-          e5: Licensing requirement removed entirely
-      security_commitment:
-        name: Coast guard basing and patrol rights
-        options:
-          s1: Basing rights expanded, joint patrols in disputed waters
-          s2: Current basing rights maintained at present scale
-          s3: Patrols reduced to humanitarian and search-and-rescue only
-          s4: All basing rights terminated within 24 months
-      tariffs:
-        name: Tariff schedule on processed fish products
-        options:
-          t1: Current tariff schedule retained in full
-          t2: Tariffs reduced by 25 percent
-          t3: Tariffs reduced by 50 percent
-          t4: Tariffs reduced by 75 percent
-          t5: Tariffs eliminated entirely
-      precursors:
-        name: Joint enforcement against illegal and unreported fishing
-        options:
-          n1: Binding joint enforcement regime with independent verification
-          n2: Voluntary information-sharing arrangement, no verification
-          n3: No joint enforcement mechanism
-      market_access:
-        name: Telecommunications and undersea cable licensing
-        options:
-          m1: Domestic operators only; no foreign licensing
-          m2: Reciprocal licensing with joint data-handling safeguards
-          m3: Broad market opening with minimal conditions
-          m4: Unrestricted licensing and full foreign ownership permitted
+          k1: Option 6-A
+          k2: Option 6-B
+          k3: Option 6-C
+          k4: Option 6-D
       joint_research:
-        name: Joint oceanographic research program
+        name: Issue 7
         options:
-          c1: Fully funded joint program with shared facilities
-          c2: Limited program, annual scientific exchange only
-          c3: No joint research program
-  salient_zh:
-    label: 政治敏感（中文）
-    lang: zh
-    description: The salient frame rendered in Mandarin. Payoffs unchanged.
-    scenario: '美利坚合众国代表团与中华人民共和国代表团正在就一项涵盖六个议题的一揽子协议 进行谈判。每个议题必须且只能确定为所列选项中的一项。只有双方就完全相同的
-      六项条款达成一致，该一揽子协议方可通过。
-
-      '
-    roles:
-      DELTA:
-        name: 美利坚合众国
-        short: 美方
-      OMEGA:
-        name: 中华人民共和国
-        short: 中方
-    issues:
-      export_controls:
-        name: 半导体制造设备出口管制
-        options:
-          e1: 全面维持实体清单与外国直接产品规则，不设例外
-          e2: 维持管制，仅对成熟制程设置狭窄豁免
-          e3: 通过联合技术审查程序逐案审批许可
-          e4: 除最先进光刻设备外，其余一律适用一般许可
-          e5: 完全取消出口管制制度
-      security_commitment:
-        name: 对台军售与安全承诺
-        options:
-          s1: 扩大军售规模，增加顾问驻留
-          s2: 维持现有军售与军事部署
-          s3: 军售范围缩减至防御性装备，撤出顾问
-          s4: 在二十四个月内全面暂停军售
-      tariffs:
-        name: 301条款关税表
-        options:
-          t1: 完全维持现行关税表
-          t2: 关税下调百分之二十五
-          t3: 关税下调百分之五十
-          t4: 关税下调百分之七十五
-          t5: 完全取消关税
-      precursors:
-        name: 芬太尼前体化学品管控与执法
-        options:
-          n1: 建立具有独立核查机制的强制性执法制度
-          n2: 建立自愿信息共享安排，不设核查机制
-          n3: 不设任何执法机制
-      market_access:
-        name: 市场准入、数据本地化与平台规则
-        options:
-          m1: 双方均维持现行限制
-          m2: 在双方数据安全保障前提下实现对等市场准入
-          m3: 大幅开放市场，仅设有限条件
-          m4: 全面开放市场，取消数据本地化要求
-      joint_research:
-        name: 气候与清洁能源技术联合合作
-        options:
-          c1: 全额资助的联合项目，共享研究设施
-          c2: 有限项目，仅进行年度技术交流
-          c3: 不开展合作项目
+          j1: Option 7-A
+          j2: Option 7-B
+          j3: Option 7-C
   salient:
     label: Politically salient
     description: Live US-PRC issue set. Identical payoffs to the abstract frame.
     scenario: 'Delegations from the United States and the People''s Republic of China
-      are negotiating a comprehensive package agreement covering six issues. Each
+      are negotiating a comprehensive package agreement covering seven issues. Each
       issue must be settled at exactly one of its listed options. The package is adopted
-      only if both delegations agree to the identical set of six settlements.
+      only if both delegations agree to the identical set of seven settlements.
 
       '
     roles:
@@ -318,45 +221,182 @@ frames:
         name: People's Republic of China
         short: China
     issues:
-      export_controls:
+      semiconductor_controls:
         name: Semiconductor manufacturing equipment export controls
         options:
-          e1: Full Entity List and FDPR regime retained, no exceptions
-          e2: Regime retained with a narrow legacy-node carve-out
-          e3: Case-by-case licensing under a joint technical review process
-          e4: General license for all but the most advanced lithography tools
-          e5: Export control regime lifted entirely
-      security_commitment:
-        name: Arms sales and security commitments to Taiwan
+          s1: Entity List and foreign direct product rule retained in full
+          s2: Controls retained; performance-threshold exemption for legacy nodes
+          s3: Case-by-case licensing under a joint technical review
+          s4: General licence issued for certified civilian end-uses
+          s5: Licence requirements rescinded
+      critical_minerals:
+        name: Critical minerals and rare-earth magnet export controls
         options:
-          s1: Arms packages expanded, advisory presence increased
-          s2: Current arms sales and posture maintained
-          s3: Sales narrowed to defensive systems, advisers withdrawn
-          s4: All arms sales suspended within 24 months
+          m1: Gallium, germanium and rare-earth magnet exports barred
+          m2: Case-by-case export licensing; military end-users refused
+          m3: General licence against end-use certification
+          m4: Export licence requirements suspended
       tariffs:
         name: Section 301 tariff schedule
         options:
-          t1: Current tariff schedule retained in full
-          t2: Tariffs reduced by 25 percent
-          t3: Tariffs reduced by 50 percent
-          t4: Tariffs reduced by 75 percent
-          t5: Tariffs eliminated entirely
+          t1: Section 301 tariffs retained at current levels
+          t2: Tariffs reduced by one quarter
+          t3: Tariffs reduced by half
+          t4: Tariffs reduced by three quarters
+          t5: Section 301 tariffs suspended
       precursors:
-        name: Fentanyl precursor chemical scheduling and enforcement
+        name: Fentanyl precursor scheduling and enforcement
         options:
-          n1: Binding enforcement regime with independent verification
-          n2: Voluntary information-sharing arrangement, no verification
-          n3: No enforcement mechanism
+          p1: Scheduling and enforcement across all listed precursor chemicals
+          p2: Enforcement on a narrowed list, reviewed annually
+          p3: No scheduling commitment
+      security_commitment:
+        name: The pending Taiwan arms package
+        options:
+          c1: The pending package is released and notified to Congress
+          c2: The pending package is deferred pending interagency review
+          c3: The pending package is held indefinitely
       market_access:
-        name: Market access, data localization, and platform rules
+        name: Inbound investment screening
         options:
-          m1: Current restrictions retained on both sides
-          m2: Reciprocal market access with mutual data-security safeguards
-          m3: Broad market opening with limited conditions
-          m4: Full market access, data localization requirements removed
+          k1: Existing screening regimes retained on both sides
+          k2: Screening retained, with a reciprocal pre-clearance channel
+          k3: Negative list shortened; screening narrowed to critical sectors
+          k4: Screening suspended outside defence-related sectors
       joint_research:
-        name: Joint climate and clean-energy technical cooperation
+        name: Science and Technology Agreement
         options:
-          c1: Fully funded joint program with shared research facilities
-          c2: Limited program, annual technical exchange only
-          c3: No cooperation program
+          j1: Agreement renewed for government-to-government basic research
+          j2: Agreement renewed, narrowed to earthquake and health research
+          j3: Agreement allowed to lapse
+  salient_zh:
+    label: 政治敏感（中文）
+    lang: zh
+    description: The salient frame in Mandarin. Payoffs unchanged. Tests a documented
+      English/Chinese framing divergence.
+    scenario: '美利坚合众国代表团与中华人民共和国代表团正在就一项涵盖七个议题的一揽子协议 进行谈判。每个议题必须且只能确定为所列选项中的一项。只有双方就完全相同的
+      七项条款达成一致，该一揽子协议方可通过。
+
+      '
+    roles:
+      DELTA:
+        name: 美利坚合众国
+        short: 美方
+      OMEGA:
+        name: 中华人民共和国
+        short: 中方
+    issues:
+      semiconductor_controls:
+        name: 半导体制造设备出口管制
+        options:
+          s1: 全面维持实体清单与外国直接产品规则
+          s2: 维持管制，对成熟制程设置性能阈值豁免
+          s3: 通过联合技术审查逐案审批许可
+          s4: 对经核验的民用最终用途签发通用许可
+          s5: 撤销许可要求
+      critical_minerals:
+        name: 关键矿产与稀土磁材出口管制
+        options:
+          m1: 禁止镓、锗及稀土磁材对外出口
+          m2: 逐案审批出口许可，军事最终用户不予许可
+          m3: 凭最终用途证明签发通用许可
+          m4: 暂停出口许可要求
+      tariffs:
+        name: 301条款关税表
+        options:
+          t1: 维持301条款关税现行税率
+          t2: 关税下调四分之一
+          t3: 关税下调二分之一
+          t4: 关税下调四分之三
+          t5: 中止301条款关税
+      precursors:
+        name: 芬太尼前体化学品列管与执法
+        options:
+          p1: 对全部列管前体化学品实施管制与执法
+          p2: 缩减列管清单，每年复审
+          p3: 不作列管承诺
+      security_commitment:
+        name: 尚待批准的对台军售案
+        options:
+          c1: 该军售案予以放行并通报国会
+          c2: 该军售案暂缓，交由跨部门复审
+          c3: 该军售案无限期搁置
+      market_access:
+        name: 外资准入安全审查
+        options:
+          k1: 双方均维持现行审查制度
+          k2: 维持审查制度，另设对等预先核准渠道
+          k3: 缩减负面清单，审查范围限于关键行业
+          k4: 除国防相关行业外，中止安全审查
+      joint_research:
+        name: 中美科技合作协定
+        options:
+          j1: 续签协定，适用于政府间基础研究
+          j2: 续签协定，范围缩减至地震与健康研究
+          j3: 协定到期失效
+  neutral:
+    label: Neutral-real
+    description: Real but low-salience states. Controls for narrative dressing alone.
+    scenario: 'Delegations from the Republic of Cabo Verde and the Republic of Vanuatu
+      are negotiating a comprehensive bilateral maritime and economic agreement covering
+      seven issues. Each issue must be settled at exactly one of its listed options.
+      The agreement enters into force only if both delegations endorse the identical
+      set of seven settlements.
+
+      '
+    roles:
+      DELTA:
+        name: Republic of Cabo Verde
+        short: Cabo Verde
+      OMEGA:
+        name: Republic of Vanuatu
+        short: Vanuatu
+    issues:
+      semiconductor_controls:
+        name: Licensing of advanced marine survey equipment
+        options:
+          s1: Full licensing restrictions retained, no exceptions
+          s2: Restrictions retained with a narrow shallow-water carve-out
+          s3: Case-by-case licensing under a joint technical review
+          s4: General licence issued for certified civilian survey use
+          s5: Licence requirements rescinded
+      critical_minerals:
+        name: Export controls on rare mineral sands
+        options:
+          m1: Mineral sand exports barred entirely
+          m2: Case-by-case export licensing
+          m3: General licence against end-use certification
+          m4: Export licence requirements suspended
+      tariffs:
+        name: Tariff schedule on processed fish products
+        options:
+          t1: Tariff schedule retained at current levels
+          t2: Tariffs reduced by one quarter
+          t3: Tariffs reduced by half
+          t4: Tariffs reduced by three quarters
+          t5: Tariff schedule suspended
+      precursors:
+        name: Enforcement against unlicensed transhipment
+        options:
+          p1: Enforcement across all listed transhipment routes
+          p2: Enforcement on a narrowed list, reviewed annually
+          p3: No enforcement commitment
+      security_commitment:
+        name: The pending patrol vessel transfer
+        options:
+          c1: The pending transfer proceeds as scheduled
+          c2: The pending transfer is deferred pending review
+          c3: The pending transfer is held indefinitely
+      market_access:
+        name: Foreign investment screening in port services
+        options:
+          k1: Existing screening regimes retained on both sides
+          k2: Screening retained, with a reciprocal pre-clearance channel
+          k3: Negative list shortened; screening narrowed to critical sectors
+          k4: Screening suspended outside security-related sectors
+      joint_research:
+        name: Joint oceanographic research programme
+        options:
+          j1: Programme renewed for government-to-government basic research
+          j2: Programme renewed, narrowed to seismic and fisheries research
+          j3: Programme allowed to lapse
