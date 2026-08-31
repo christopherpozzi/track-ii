@@ -1,0 +1,37 @@
+.venv/
+__pycache__/
+*.pyc
+.pytest_cache/
+
+# Corpus policy. Reproducibility comes from the manifest + checksums, not from
+# redistributing other people's text.
+#   rebuild:  ./research/fetch.sh < research/manifest_all.txt
+#   verify:   shasum -c research/CORPUS.sha256
+# Raw downloads are never committed.
+corpus/*.html
+corpus/*.pdf
+corpus/*_flat.txt
+# Third-party copyrighted extractions are not redistributed. Government
+# documents (US public domain, PRC official texts) are committed.
+corpus/brookings_*.txt
+corpus/cfr_*.txt
+corpus/cnas_*.txt
+corpus/csis_*.txt
+corpus/fa_*.txt
+corpus/forum_*.txt
+corpus/fp_*.txt
+corpus/gt_*.txt
+corpus/gta_*.txt
+corpus/house_*.txt
+corpus/piie_*.txt
+corpus/rand_*.txt
+corpus/rff_*.txt
+corpus/sciencedirect_*.txt
+corpus/trivium_*.txt
+corpus/wotr_*.txt
+
+# research/ holds method artifacts only -- notes, manifests, checksums, scripts.
+# Downloads and extractions live in corpus/ under the policy above.
+research/*.pdf
+research/*.html
+research/*_flat.txt

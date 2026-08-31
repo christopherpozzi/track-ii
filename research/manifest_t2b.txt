@@ -1,0 +1,4 @@
+carnegie_chips.html|https://carnegieendowment.org/posts/2025/01/chip-export-controls-biden-trump
+crs_critical_minerals.html|https://www.everycrsreport.com/reports/IF12864.html
+crs_china_rare_earth.html|https://www.everycrsreport.com/reports/R47982.html
+economist_uschina.html|https://www.reuters.com/world/china/china-us-trade-truce-2025-11-10/

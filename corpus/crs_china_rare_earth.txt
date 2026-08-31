@@ -1,0 +1,476 @@
+ 
+ Critical Mineral Resources: National Policy and Critical Minerals List - EveryCRSReport.com 
+ Internet Explorer version 8 or any modern web browser is required to use this website, sorry. 
+ Toggle navigation 
+ EveryCRSReport.com 
+ All Reports 
+ Topic Areas 
+ About 
+ Donate 
+ Critical Mineral Resources: National Policy and Critical Minerals List
+ March 20, 2024 –
+ January 8, 2026
+ R47982 
+ Critical Mineral Resources: National Policy and Critical Minerals List
+ Updated January 8, 2026
+ (R47982)
+ Jump to Main Text of Report 
+ Contents
+ Introduction 
+ Overview 
+ Supply Chain 
+ Mineral Criticality 
+ Policy 
+ National Materials and Minerals Policy 
+ Definition of Critical Mineral 
+ 2022 Critical Minerals List (2022 CML) 
+ USGS Methodology for the 2022 CML 
+ Byproduct List 
+ Minerals Excluded from the 2022 List 
+ 2025 Critical Minerals List (2025 CML) 
+ 2025 CML: Uses and Atlas of Mineral Production Locations 
+ USGS Methodology for the 2025 CML 
+ Comparing the USGS's Critical Minerals Lists to DOE's 2023 Critical Materials List 
+ Critical Minerals Outlook 
+ Congressional Considerations 
+ Figures
+ Figure 1. Supply Chain and Critical Materials Risks, Opportunities, and Policies 
+ Figure 2. Global Production of Rare Earth Elements 
+ Figure 3. Top Producers and Refiners of Critical Minerals for Batteries in 2019 
+ Figure 4. DOE Critical Materials for Energy, as of July 2023 
+ Summary
+ According to a 2008 National Research Council report, a critical mineral is a nonfuel mineral that is essential for use and faces considerable supply chain vulnerabilities. Demand for these components in the agriculture, defense, electronics, energy, manufacturing, refining and transportation sectors is projected to grow in the next decade, likely leading to increased demand for critical mineral resources and supply chain vulnerabilities. Potential issues facing Congress include the effectiveness of current federal activities related to improving the resilience of the critical mineral supplies for the United States and whether to alter legislative direction on critical minerals activities, in the context of Administrations' actions and changing demands and access to supplies. 
+ A supply chain may include extraction, processing, component development, end-use, and recycling technology. The supply chain may be vulnerable if it lacks diversity or capacity. The United States imports large percentages of some extracted and processed critical mineral resources, as well as some critical mineral-based components and products from other countries. Some countries, such as China, dominate parts of some critical mineral supply chains and may restrict exports or use their market power to manipulate commodity prices creating supply chain vulnerabilities for other countries.
+ Congress passed the Consolidated Appropriations Act, 2021 ( P.L. 116-260 ) , which amended the National Materials and Minerals Policy, Research, and Development Act of 1980 (1980 Act; P.L. 96-479 ), making it U.S. policy to facilitate critical mineral research and development and critical mineral extraction, processing, component, and product development in the United States and in cooperation with other open market countries . More specifically, Section 7002 of the Energy Act of 2020 ( Division Z of P.L. 116-260 , as amended by P.L. 118-233 ) amended national materials and minerals policy language from the 1980 Act , to define critical mineral in statute and to specify criteria for developing a critical minerals list (CML). The Energy Act of 2020 directed the Secretary of the Interior, acting through the Director of the U.S. Geological Survey (USGS), to identify critical minerals and develop a CML. 
+ Pursuant to the Energy Act of 2020, a critical mineral is any mineral, element, substance, or material designated as critical by the USGS because it is essential to the economic and national security of the United States, has a vulnerable supply chain, and serves an essential function in manufacturing a product. The definition excludes fuel minerals, water, snow or ice, and common varieties of sand, gravel, stone, pumice, cinders, and clay. In February 2022, the USGS published a list of 50 critical minerals and described a methodology for determining criticality based on the statutory criteria. Under the Energy Act of 2020, the USGS is to update the CML every three years or more often. On November 7, 2025, the USGS published a "Final 2025 List of Critical Minerals" in the Federal Register and used a new methodology compared with the methodology used to develop the 2022 CML for determining mineral criticality.
+ The 2025 CML of 60 critical minerals includes
+ aluminum, antimony, arsenic , barite, beryllium, bismuth, boron , cerium, cesium, chromium, cobalt, copper , dysprosium, erbium, europium, fluorspar, gadolinium, gallium, germanium, graphite, hafnium, holmium, indium, iridium, lanthanum, lead , lithium, lutetium, magnesium, manganese, metallurgical coal , neodymium, nickel, niobium, palladium, phosphate , platinum, potash , praseodymium, rhenium , rhodium, rubidium, ruthenium, samarium, scandium, silicon , silver , tantalum, tellurium , terbium, thulium, tin, titanium, tungsten, uranium , vanadium, ytterbium, yttrium, zinc, and zirconium.
+ Minerals listed in bold are new additions compared with the 2022 CML based on USGS's 2025 methodology. Those in italic are new additions in response to public and interagency input. 
+ The USGS is prioritizing critical minerals in its assessment of potential domestic resources and other research. In June 2021, Congress, via the Infrastructure Investment and Jobs Act (IIJA; P.L. 117-58 ), authorized and appropriated funds for a national mineral research, mapping, and assessment initiative by the USGS called Earth Mapping Resources Initiative. 
+ Congress is considering whether the definition of a critical mineral, the methodology for developing a CML, and the CML itself are sufficient to advance critical mineral resources identification and development per national materials and minerals policy. Congress also is considering how the CML may contribute to identifying supply chain vulnerabilities and how the CML compares with critical mineral priorities developed by other departments, such as the Department of Energy. Some legislation introduced in the 119 th Congress would amend national policy and aspects of the definition of critical mineral and the CML. Other legislation would amend other policies to help to improve resiliency of critical mineral supply chains related to the identification of critical mineral resources and supply chain vulnerabilities.
+ Introduction
+ According to a 2008 National Research Council report, critical minerals are essential in use and subject to supply risks. 1 The report noted that critical minerals are essential for certain products and services. 2 For example, silicon, gallium, and germanium may be essential for manufacturing certain types of semiconductors . 3 Lithium, cobalt, and nickel may be essential for manufacturing certain types of batteries used in electric vehicles and other products. Some rare earth elements (REEs; scandium, yttrium, lanthanum, cerium, praseodymium, neodymium, promethium, europium, gadolinium, dysprosium, holmium, erbium, thulium, ytterbium, and lutetium) may be essential for manufacturing touchscreens in electronic products and magnet-based motors that drive large wind turbines, electric vehicles, and other products. 4 Demand for semiconductors (i.e., computer chips), batteries, touchscreens, magnet-based motors, and other products is projected to grow in the next decade, leading to increased demand for critical minerals. 5 
+ Potential issues facing Congress are the effectiveness of current federal activities related to improving the resilience of critical mineral supplies for the United States and whether to alter legislative direction on critical minerals activities, in the context of recent Administrations' actions and changing demands and access to supplies.
+ This CRS report summarizes changes to national materials and minerals policy, provides an overview of the definition of the term critical mineral and the development of a critical minerals list (CML), and discusses the CML's impact on policy and federal initiatives. Some in Congress have called for changes to the definition of critical mineral and the CML, whereas others in Congress would use the critical mineral designation or the CML to amend minerals policy through legislation introduced in the 119 th Congress. This report raises considerations for Congress about whether the critical mineral designation and the CML may help identify and mitigate supply chain risks. 
+ Overview 
+ Supply Chain
+ According to the U.S. Department of Energy (DOE), a generic supply chain—which includes extraction, processing, components, end-use technology, and recycling and reuse—provides a useful context to consider geologic, technical, environmental, political, and economic factors that impact supply risk ( Figure 1 ). 6 Extraction is the removal of mineral resources from the surface or subsurface via mining (e.g., extracting rare earth element rich minerals, such as monazite and bastnaesite). 7 Processing is the separation and refining of mineral resources to obtain a desired composition or purity (e.g., high-purity neodymium metal for neodymium-iron-boron magnets or high-purity neodymium oxide for glass, optic, and ceramic applications). Components refers to using the processed materials to manufacture component parts for the end-use technology (e.g., magnet components for many applications). The end-use technology may be a product or service (e.g., magnet-based motors that drive large wind turbines, electric vehicles, and other products). Figure 1 shows the stages of a generic supply chain with risks, opportunities, and policies related to one or more stages or to the entire chain. According to DOE, a specific supply chain for a specific mineral may show different details for each stage and may show that materials may be reclaimed (also known as recycled or reused , depending on the material and the process) at different stages of the supply chain and reused either upstream or downstream, depending on the mineral. 8 
+ Mineral resources may be extracted either as major products, where the mineral resource is directly processed to extract the desired materials, or as coproducts or byproducts of other mining operations. 9 The U.S. Geological Survey (USGS) notes that many mineral resources are extracted as byproducts. The USGS tracks domestic and global product and byproduct extraction for minerals listed in the USGS Mineral Commodity Summaries. 10 According to DOE, byproduct extraction may create complex relationships between the availability and extraction costs of different materials, which may cause supply chains and market prices to vary in ways not captured by supply and demand relationships. 11 
+ Figure 1. Supply Chain and Critical Materials Risks, Opportunities, and Policies
+ Source: U.S. Department of Energy (DOE), Critical Materials Strategy , December 2010, Figure 9-1.
+ Notes: DOE's strategy focused on critical materials for energy uses, including critical minerals. The generic supply chain in this figure shows recycling and reuse only at the end of the chain; however, a supply chain for a specific mineral may show materials being reclaimed at one or more other stages and reused either upstream or downstream, depending on the mineral and the available technology. Extraction is the removal of mineral resources from the surface or subsurface via mining. Processing is the separation and refining of mineral resources to obtain a desired composition or purity. Components refers to using the processed materials to manufacture component parts for the end-use technology. The end-use technology may be a product or service. 
+ Mineral Criticality
+ A mineral's criticality may change over time as technology advances and other factors lead to changing supply and demand. Three examples highlight changing mineral criticality related to changing and emerging technologies. 
+ Platinum-group metals (PGMs; palladium, platinum, iridium, osmium, rhodium, and ruthenium) are essential for products (e.g., catalytic converters for internal combustion engine vehicles, electronics, dental and medical devices, and jewelry) and also for services such as catalysts for bulk-chemical production and petroleum refining, and more recently in electrolyzers to produce hydrogen by electrolysis (i.e., separating water into hydrogen and oxygen by using electricity). 12 PGMs' criticality changes as its uses in products and services change and expand. 13 In addition, platinum is recycled for reuse from products, in part because it is technologically feasible and economic to recycle, which factors into PGMs' availability and supply chain vulnerabilities. 
+ Production and demand for REEs was lower in the 1960s-1970s (when the United States was a major producer) than in the 1980s-1990s, when REEs became more essential for evolving technology, such as electronics and magnet-based motors ( Figure 2 ). 14 China increased its REEs production beginning in the mid-1980s, became a major producer of REEs in the mid-1990s, and now dominates production. The recent dominance of China as the top producer of REEs may lead to supply chain risks that may impact the U.S. economy and national security. 15 The increase in production of REEs over time also highlights the growing demand for REEs for different products and services. 
+ A growing number of different critical minerals are essential as components for computer chips (i.e., semiconductors) due to advances in chip technology. 16 In the 1980s, 12 minerals or elemental components, including some critical minerals, were identified as essential for computer chips. In the 2000s to present, more than 60 minerals or elemental components, including more critical minerals, are identified as essential for computer chips. 17 Today, tunable electrical conductivity wafers most commonly are composed of silicon, silicon carbide, germanium, gallium arsenide, or gallium nitride. Change in the criticality of a mineral due to evolving technology highlights a reason to repeatedly analyze supply chain risks over short time periods (such as one year or five years). 18 
+ Figure 2. Global Production of Rare Earth Elements
+ (1955 to 2022)
+ Source: Geology.com, "REE: Rare Earth Elements and their Uses," https://geology.com/ articles/ rare-earth-elements/ . The data for this graph are from the U.S. Geological Survey (USGS). 
+ Notes: P roduction refers to the extraction of a mineral resource and is most often quantified in the weight of material mined in metric tons over a specified time period. A metric ton is a unit of weight equivalent to 1,000 kilograms (about 2,204.6 pounds). Rare earth oxide equivalent is the weight of material in its rare earth oxide, a compound of an element combined with oxygen. See also Gordon B. Haxel, James B. Hedrick, and Greta J. Orris, "Rare Earth Elements—Critical Minerals for High Technology," USGS Factsheet 087-02, 2002, https://pubs.usgs.gov/ fs/ 2002/ fs087-02/ fs087-02.pdf ; and Bradley S. Van Gosen, Philip L. Verplanck, and Poul Emsbo, Rare Earth Element Mineral Deposits in the United States , USGS, Circular 1454, Version 1.1, April 2019, https://doi.org/ 10.3133/ cir1454 . 
+ Besides changes in mineral criticality, supply chains may be vulnerable if they lack diversity and capacity ( Figure 1 ). 19 Extraction or processing of some critical minerals in a few locations, limits diversity. For example, in 2019, 60% or more of lithium, cobalt, and graphite resources were extracted in Australia, Congo, and China, respectively, and 60% or more of lithium and cobalt were processed in China ( Figure 3 ). 20 China has been a top producer of many REEs since the mid-1990s ( Figure 2 ). 21 Factors that may limit extraction capacity include reserve locations limitations, technical challenges to extracting the critical mineral, export quotas, environmental impacts, geopolitical volatility, market volatility, and capital requirements. 22 
+ Figure 3. Top Producers and Refiners of Critical Minerals for Batteries in 2019
+ Source: Modified by CRS. White House, Building Resilient Supply Chains, Revitalizing American Manufacturing, and Fostering Broad-Based Growth: 100-Day Reviews Under Executive Order 14017, June 2021, https://bidenwhitehouse.archives.gov/ wp-content/ uploads/ 2021/ 06/ 100-day-supply-chain-review-report.pdf , Figure 13, p. 121.
+ Notes: Mine production refers to the extraction of a mineral resource and is most often quantified in the weight of material mined in metric tons over a specified time period. A metric ton is a unit of weight equivalent to 1,000 kilograms (about 2,204.6 pounds). Total metric tons refer to the total global amount of production in 2019 and the total global amount of refinement in 2019 in the top and bottom tables, respectively. The percentages given in the tables may not sum to 100% for each mineral because not all producers or refiners are listed. The total metric tons for each mineral for global production may not equal the total metric tons for each mineral for global refinement because production and refinement are different processes involving different materials and these steps potentially may occur in different years. Class 1 Nickel is 99.8% pure nickel. Australia refined about 10% of class 1 nickel, which is shown on the map. As the fifth top refiner, Australia is not listed under the heading Percent of Global Refinement in the figure, which shows the top four refiners for Class I Nickel. 
+ DOE noted opportunities to reduce supply chain risks, such as technological innovations in extraction, processing, substitution, and recycling, as well as more efficient permitting, more stockpiling, and more recycling policies ( Figure 1 ). 23 According to DOE, federal programs and policies could support integrated research and development, education and workforce training, enhanced data and information gathering (i.e., analysis), financial assistance, and diplomacy to reduce risks, advance opportunities, and secure a sustainable critical mineral supply chain. 24 
+ Policy
+ In 2016, the Subcommittee on Critical and Strategic Mineral Supply Chains of the National Science and Technology Council (NSTC) submitted a progress report to Congress on an interagency assessment of critical minerals, including the development of a screening methodology and the initial results of the application of the methodology. 25 The report identified 17 potentially critical minerals and noted the next step was to develop a prioritized list of a subset of the 17 minerals for further investigation. In 2017, the Trump Administration issued an executive order (E.O. 13817) that defined critical minera l and directed the Secretary of the Interior, in coordination with the Secretary of Defense (who is using "Secretary of War" as a "secondary title" under E.O. 14347, dated September 5, 2025), 26 and in consultation with the heads of other relevant executive departments and agencies, to publish a list of critical minerals. 27 In May 2018, the Secretary of the Interior published a list of 35 critical minerals and the methodology for determining them in the Federal Register . 28 In 2020, the Trump Administration issued E.O. 13953 declaring a national emergency to deal with the threat of the nation's undue reliance on critical minerals from foreign adversaries, such as China. 29 E.O. 13953 noted that the United States imported more than half of its annual consumption for 31 of the 35 critical minerals on the 2018 list and had no domestic production for 14 of the 35 listed critical minerals. E.O. 13953 directed the Secretary of the Interior to adjust the listing criteria based on an amended definition of critical mineral and to update the list on a regular basis. 
+ In 2020, Congress changed and added to the national materials and minerals policy through passage of the Consolidated Appropriations Act, 2021 ( P.L. 116-260 ). 30 In addition, the act directed certain executive departments and federal agencies to change or start critical materials and minerals initiatives to advance national policies. Section 7002 of the Energy Act of 2020 ( Division Z of P.L. 116-260 , as amended by P.L. 118-233 ) defined the term critical mineral . Under the authority of the Energy Act of 2020, the USGS aims to identify critical minerals based on supply chain risks and develop and update a CML. 31 In addition, the legislation directs the USGS to conduct research and assessment of critical mineral resources in the United States as well as a supply chain analysis to produce annual reviews and multiyear forecasts of the production, consumption, and recycling patterns of critical minerals. 32 
+ In February 2021, President Biden issued E.O. 14017 directing the federal government to undertake a comprehensive 100-day review of the supply chains of four critical products—semiconductors, large capacity batteries, critical minerals and materials, and pharmaceuticals and active pharmaceutical ingredients—to identify vulnerabilities, assess risks, and develop strategies to promote resilience. 33 In June 2021, the federal government completed a 100-day review and recommended more than 70 actions to promote resilience. 34 
+ In June 2021, Congress, via the Infrastructure Investment and Jobs Act (IIJA; P.L. 117-58 ), authorized and appropriated funds for a national mineral research, mapping, and assessment initiative called Earth Mapping Resources Initiative (Earth MRI), to be coordinated with existing USGS programs. 35 Under the authority of the Energy Act of 2020, the USGS aims to prioritize resource assessments on the most critical of the critical minerals on the CML. 36 In addition, Section 40210 of IIJA codified the NSTC Critical Minerals Subcommittee's efforts to coordinate federal science and technology efforts for supply chain resiliency. 37 
+ In June 2023, the Biden Administration issued a report card, which included descriptions of actions taken on most of the recommendations in the 100-day review and actions taken through enacted legislation, such as the Energy Act of 2020 and the IIJA. 38 On November 27, 2023, the Biden Administration announced new actions to secure supply chains, including critical mineral supply chains. 39 Since then, the Critical Minerals Subcommittee has established a website, CriticalMinerals.gov, that summarizes federal science and technology efforts for critical mineral supply chain resiliency. 40 
+ On January 4, 2025, the Recognizing the Importance of Critical Minerals in Healthcare Act of 2023 ( P.L. 118-233 ) amended Section 7002 of the Energy Act of 2020 to include the Secretary of Health and Human Services among the federal authorities that the Secretary of the Interior shall consult with in designating critical minerals and in reviewing the methodology and the list. 41 
+ In 2025, the second Trump Administration issued several executive orders related to critical minerals and national materials and minerals policy, including the following: 
+ E.O. 14154, "Unleashing American Energy," 42 includes a section on "Restoring America's Mineral Dominance" that directs departments and agencies to help make America's mineral supply chains more resilient and, through the Secretary of the Interior, directs the USGS to consider updating the CML and consider including uranium plus to accelerate geologic mapping with a focus on finding critical mineral resources. 43 
+ E.O. 14156, "Declaring a National Energy Emergency," 44 includes the following direction: "The heads of executive departments and agencies ('agencies') shall identify and exercise any lawful emergency authorities available to them, as well as all other lawful authorities they may possess, to facilitate the identification, leasing, siting, production, transportation, refining, and generation of domestic energy resources" because "The energy and critical minerals ('energy') identification, leasing, development, production, transportation, refining, and generation capacity of the United States are all far too inadequate to meet our Nation's needs." 
+ E.O. 14213, "Establishing the National Energy Dominance Council," 45 established the National Energy Dominance Council (NEDC) to advise the President on "how best to exercise his authority to produce more energy to make America energy dominant" and "improving the processes for permitting, production, generation, distribution, regulation, transportation, and export of all forms of American energy, including critical minerals," among other duties. 
+ E.O. 14241, "Immediate Measures to Increase American Mineral Production," 46 is for the United States to "take immediate action to facilitate domestic mineral production to the maximum possible extent," where "mineral" is a critical mineral, as defined by 30 U.S.C. §1606(a)(3), "as well as uranium, copper, potash, gold, and any other element, compound or material as determined by the Chair of the NEDC." 47 
+ E.O. 14261, "Reinvigorating America's Beautiful Clean Coal Industry and Amending Executive Order 14241 , " 48 is for the United States "to support the domestic coal industry by removing Federal regulatory barriers that undermine coal production, encouraging the utilization of coal to meet growing domestic energy demands, increasing American coal exports, and ensuring that Federal policy does not discriminate against coal production or coal-fired electricity generation." The order directs the Chair of the NEDC to designate coal as a "mineral" as defined in Section 2 of E.O. 14241. The E.O. directs the Secretary of Energy to determine if coal used for steelmaking meets the definition of "critical material" as defined in the Energy Act of 2020 (30 U.S.C. §1606(a)(2)) and, if so, should take steps to place coal for steelmaking on the critical materials list. Similarly, the Secretary of the Interior should determine if coal for steelmaking meets the definition of "critical mineral" as defined in the Energy Act of 2020 (30 U.S.C. §1606(a)(3)) and, if so, should take steps to place coal for steelmaking on the CML. 
+ E.O. 14272, "Ensuring National Security and Economic Resilience Through Section 232 Actions on Processed Critical Minerals and Derivative Products" directs the Secretary of Commerce to initiate investigations to determine the effects on national security of imports of processed critical minerals and their derivative products. 49 
+ E.O. 14285, "Unleashing America's Offshore Critical Minerals and Resources," 50 made it a policy of the United States "to advance United States leadership in seabed mineral development." The Department of the Interior's Secretarial Order (S.O.) 3418, "Unleashing American Energy," following E.O. 14154, directed the Department's Assistant Secretaries to review all agency actions. They are to submit an action plan to Secretary of the Interior. Included in that plan are to be actions to update the USGS's list of critical minerals, including the potential to include uranium, and prioritize efforts for mapping and identifying deposits of critical minerals. 51 
+ National Materials and Minerals Policy
+ Congress reiterated a national policy for materials and minerals in the National Materials and Minerals Policy, Research, and Development Act of 1980 (1980 Act; P.L. 96-479 ): "It is the continuing policy of the United States to promote an adequate and stable supply of materials necessary to maintain national security, economic well-being and industrial production with appropriate attention to a long-term balance between resource production, energy use, a healthy environment, natural resources conservation, and social needs." 52 
+ The 1980 Act defined materials and called for the President, through the Executive Office of the President, to coordinate with responsible agencies and departments to carry out the following measures: 53 
+ (1) identify materials needs and assist in the pursuit of measures that would assure the availability of materials critical to commerce, the economy, and national security; 
+ (2) establish a mechanism for the coordination and evaluation of Federal materials programs, including those involving research and development so as to complement related efforts by the private sector as well as other domestic and international agencies and organizations; 
+ (3) establish a long-range assessment capability concerning materials demands, supply and needs, and provide for the policies and programs necessary to meet those needs; 
+ (4) promote a vigorous, comprehensive, and coordinated program of materials research and development consistent with the policies and priorities set forth in the National Science and Technology Policy, Organization, and Priorities Act of 1976 (42 U.S.C. §§6601 et seq.); 
+ (5) promote cooperative research and development programs with other nations for the equitable and frugal use of materials and energy; 
+ (6) promote and encourage private enterprise in the development of economically sound and stable domestic materials industries; and 
+ (7) encourage Federal agencies to facilitate availability and development of domestic resources to meet critical materials needs.
+ Section 7002 of the Energy Act of 2020 amended the 1980 Act to define critical material , define critical mineral , 54 and amend or add specific critical mineral measures. 55 Measures (3) and (7) were amended to read as follows: 
+ (3) establish an analytical and forecasting capability for identifying critical mineral demand, supply, and other factors to allow informed actions to be taken to avoid supply shortages, mitigate price volatility, and prepare for demand growth and other market shifts; ...
+ (7) facilitate the availability, development, and environmentally responsible production of domestic resources to meet national material or critical mineral needs;
+ New measures (8)-(13) added by the Energy Act of 2020 are the following:
+ (8) avoid duplication of effort, prevent unnecessary paperwork, and minimize delays in the administration of applicable laws (including regulations) and the issuance of permits and authorizations necessary to explore for, develop, and produce critical minerals and to construct critical mineral manufacturing facilities in accordance with applicable environmental and land management laws;
+ (9) strengthen—
+ (A) educational and research capabilities at not lower than the secondary school level; and
+ (B) workforce training for exploration and development of critical minerals and critical mineral manufacturing;
+ (10) bolster international cooperation through technology transfer, information sharing, and other means;
+ (11) promote the efficient production, use, and recycling of critical minerals;
+ (12) develop alternatives to critical minerals; and
+ (13) establish contingencies for the production of, or access to, critical minerals for which viable sources do not exist within the United States.
+ Definition of Critical Mineral
+ Sections 7002(a) and (c) of the Energy Act of 2020 defined critical mineral as any mineral, element, substance, or material designated as critical by the Secretary of the Interior, acting through the Director of the USGS using three criteria. 56 The criteria are as follows: 57 
+ (i) essential to the economic or national security of the United States; 
+ (ii) the supply chain of which is vulnerable to disruptions (including restrictions associated with foreign political risk, abrupt demand growth, military conflict, violent unrest, anti-competitive or protectionist behaviors, and other risks throughout the supply chain); and 
+ (iii) serve an essential function in the manufacturing of a product (including energy technology-, defense-, currency-, agriculture-, consumer electronics-, and health care-related applications), the absence of which would have significant consequences for the economic or national security of the United States.
+ The definition excluded mineral fuels including uranium; 58 water, ice, or snow; and common varieties of sand, gravel, stone, pumice, cinders, and clay. In addition, the Secretary of the Interior acting through the Director of the USGS may designate any mineral, element, substance, or material as a critical mineral that another federal agency determines to be strategic and critical to the defense or national security of the United States. 59 Furthermore, the act directs the Secretary of the Interior, acting through the Director of the USGS, to consult with the Secretaries of Defense, Commerce, Agriculture, Health and Human Services, and Energy and the United States Trade Representative in designating critical minerals. 60 
+ 2022 Critical Minerals List (2022 CML)
+ Section 7002(c) of the Energy Act of 2020 requires the Secretary of the Interior, acting through the Director of the USGS, to develop a CML and to update the list at least every three years, if not more often. 61 The USGS may prioritize in its national resource assessment minerals it places on the CML. 62 The USGS may consider such criticality in planning research and other initiatives.
+ The USGS developed a methodology to determine which minerals should be designated as critical and may update this methodology. 63 The USGS published for public comment a draft list and methodology in a November 9, 2021, Federal Register notice and a final list and methodology in a February 24, 2022, Federal Register notice. 64 
+ The 2022 CML of 50 critical minerals includes
+ aluminum, antimony, arsenic, barite, beryllium, bismuth, cerium, cesium, chromium, cobalt, dysprosium, erbium, europium, fluorspar, gadolinium, gallium, germanium, graphite, hafnium, holmium, indium, iridium, lanthanum, lithium, lutetium, magnesium, manganese, neodymium, nickel, niobium, palladium, platinum, praseodymium, rhodium, rubidium, ruthenium, samarium, scandium, tantalum, tellurium, terbium, thulium, tin, titanium, tungsten, vanadium, ytterbium, yttrium, zinc, and zirconium. 65 
+ The 2022 CML includes nickel and zinc and excludes helium, potash, rhenium, strontium, and uranium compared to the 2018 list. 66 
+ USGS Methodology for the 2022 CML
+ The USGS developed a methodology for designating critical minerals that consists of three possible evaluations based on whether enough data exist for a fully quantitative analysis: 67 
+ 1. A quantitative evaluation of supply risk wherever sufficient data were available using three indicators:
+ (A) a net import reliance indicator of the dependence of the U.S. manufacturing sector on foreign supplies, 
+ (B) an enhanced production concentration indicator which focuses on production concentration outside of the United States, and 
+ (C) weights for each producing country's production contribution by its ability or willingness to continue to supply the United States.
+ 2. a semi-quantitative evaluation of whether the supply chain had a single point of failure, or
+ 3. a qualitative evaluation when other evaluations were not possible.
+ The USGS published a technical report that explains in more detail the methodology for designating the minerals on the 2022 CML. 68 Of note, the quantitative analyses relied on data from 2015 to 2018 and some public comments about the USGS methodology raised concerns about using older data that may not show more recent changes in mineral criticality.
+ Byproduct List
+ Section 7002(c) of the Energy Act of 2020 required the Secretary of the Interior, acting through the Director of the USGS, to publish in the Federal Register two lists—a CML and a list of critical minerals recovered as byproducts ; 69 The Secretary of the Interior published one list combining information about primary and byproduct production. 70 The USGS created a combined list primarily because the production source does not impact the supply risk ranking methodology. 71 Where possible, the USGS identifies byproducts and the host product for a mineral; such information may help with strategies to reduce supply chain vulnerabilities for a particular mineral. 72 
+ Minerals Excluded from the 2022 List
+ Some public comments to the 2021 draft CML and the 2022 CML called for the USGS to include copper, helium, phosphate, potash, lead, silver, or uranium as critical minerals. 73 According to the USGS, it did not include these minerals on the 2022 CML because the minerals did not fit the criteria for criticality based on the USGS methodology or the definition of critical mineral. Uranium, is a fuel mineral and fuel minerals are excluded from consideration by the Energy Act of 2020. 74 Some public comments about the draft methodology called for the USGS to change its quantitative or qualitative methodology, which could have impacted the minerals included on the list. The USGS stated that it did not find any technical flaws in the methodology that would warrant changes. 75 
+ 2025 Critical Minerals List (2025 CML)
+ Pursuant to Section 7002(c) of the Energy Act of 2020, the USGS has updated the 2022 CML in 2025. 76 On August 26, 2025, the USGS published a "2025 Draft List of Critical Minerals" in the Federal Register for public comment. 77 The 2025 draft CML would add copper, lead, potash, rhenium, silicon, and silver and would remove arsenic and tellurium from the 2022 CML based on a new USGS methodology (see " USGS Methodology for the 2025 CML ," below). 78 On November 7, 2025, the USGS published the "Final 2025 List of Critical Minerals" in the Federal Register . 79 
+ The 2025 CML of 60 critical minerals includes
+ aluminum, antimony, arsenic , barite, beryllium, bismuth, boron , cerium, cesium, chromium, cobalt, copper , dysprosium, erbium, europium, fluorspar, gadolinium, gallium, germanium, graphite, hafnium, holmium, indium, iridium, lanthanum, lead , lithium, lutetium, magnesium, manganese, metallurgical coal , neodymium, nickel, niobium, palladium, phosphate , platinum, potash , praseodymium, rhenium , rhodium, rubidium, ruthenium, samarium, scandium, silicon , silver , tantalum, tellurium , terbium, thulium, tin, titanium, tungsten, uranium , vanadium, ytterbium, yttrium, zinc, and zirconium. 80 
+ Minerals listed in bold are new additions to the list compared with the 2022 CML, and these minerals were on the 2025 draft CML. Minerals listed in italic are new additions to the list compared with the 2022 CML and 2025 draft CML and were added in response to public and interagency input. More specifically, the Department of Defense (DOD, now "using a secondary Department of War designation," under E.O. 14347, dated September 5, 2025) recommended adding arsenic and tellurium for national security reasons; 81 DOE recommended adding metallurgical coal and uranium for steel production, energy, and defense reasons; 82 the Department of Agriculture recommended adding phosphate for food security reasons; and some public comments to the 2025 draft CML recommended adding boron for supply chain vulnerability reasons.
+ 2025 CML: Uses and Atlas of Mineral Production Locations
+ The USGS webpage, "About the 2025 List of Critical Minerals" provides more details about the minerals on the 2025 CML, their uses and importance, USGS technical details, and an interactive Critical Minerals Atlas showing where critical minerals are produced. 83 In addition, the annual USGS Mineral Commodity Summaries provide reports on minerals and critical minerals and include a Mineral Commodity Summaries dashboard with maps and tables showing U.S. and global mineral production, U.S. net import reliance, and salient critical minerals statistics. 84 
+ USGS Methodology for the 2025 CML
+ The USGS used a different methodology to determine the 2025 draft CML and the 2025 CML compared with the methodology described above to determine the 2022 CML. 85 The new methodology evaluated mineral commodity supply risk using two criteria:
+ 1. a quantitative assessment of the potential effects of various trade disruption scenarios on the U.S. economy and 
+ 2. for a mineral commodity without enough data for a quantitative assessment, an examination of whether the mineral commodity's U.S. supply chain relied on a sole domestic producer that represented a single point of failure.
+ The quantitative assessment considered 1,200 scenarios for 84 mineral commodities using data from 2023 for most commodities. 86 The USGS examined numerous supply chain disruption scenarios and estimated their potential effect on U.S. gross domestic product (GDP) using a probabilistic economic impacts model for each mineral. Mineral commodities with potential net decreases in U.S. GDP greater than $2 million were included on the 2025 draft CML and the 2025 CML. Zirconium was included on the 2025 CML based on a single point of failure in its supply chain because there was not enough data to conduct an assessment. Cesium, rubidium, and scandium are on the CML based on a qualitative assessment due to insufficient data to apply the USGS methodology. Six other minerals—arsenic, boron, metallurgical coal, phosphate, tellurium, and uranium—were included on the 2025 CML based on public and interagency input, as noted above (" 2025 Critical Minerals ").
+ Comparing the USGS's Critical Minerals Lists to DOE's 2023 Critical Materials List 87 
+ Pursuant to Section 7002(a)(2) of the Energy Act of 2020, DOE prepared and published in the Federal Register a 2023 DOE Critical Materials List. 88 The 2023 DOE Critical Materials List includes critical materials for energy and the critical minerals on the 2022 CML. 89 On May 22, 2025, DOE announced that metallurgical coal used for steelmaking was added to the DOE Critical Materials List pursuant to E.O. 14261. 90 DOE plans to update the 2023 Critical Materials Assessment , which led to the 2023 Critical Materials List, in 2026. On June 30, 2025, in preparation for the updated assessment, DOE published a request for information in the Federal Register , asking for public feedback on "information on data and/or other information that support energy technologies of interest, materials of interest, supply chain information, market dynamics, challenges to domestic industry, methodology, DOE critical materials and DOI critical minerals lists, and other stakeholder issues related to the Energy Critical Materials Assessment." 91 Responses were due by July 25, 2025. 
+ The 2023 DOE Critical Materials List includes 92 
+ Critical materials for energy: aluminum, cobalt, copper , dysprosium, electrical steel (grain-oriented electrical steel, non-grain-oriented electrical steel, and amorphous steel), fluorine, gallium, iridium, lithium, magnesium, natural graphite, neodymium, nickel, platinum, praseodymium, terbium, silicon , and silicon carbide 
+ Critical minerals : The Secretary of the Interior, acting through the Director of the U.S. Geological Survey (USGS), published a 2022 final list of critical minerals that includes the following 50 minerals: "Aluminum, antimony, arsenic, barite, beryllium, bismuth, cerium, cesium, chromium, cobalt, dysprosium, erbium, europium, fluorspar, gadolinium, gallium, germanium, graphite, hafnium, holmium, indium, iridium, lanthanum, lithium, lutetium, magnesium, manganese, neodymium, nickel, niobium, palladium, platinum, praseodymium, rhodium, rubidium, ruthenium, samarium, scandium, tantalum, tellurium, terbium, thulium, tin, titanium, tungsten, vanadium, ytterbium, yttrium, zinc, and zirconium."
+ Four critical materials for energy listed in italics are not on the 2022 CML. Two of the four, electrical steel and silicon carbide, are materials and were not considered by the USGS in any of its assessments. The other two, copper and silicon, were considered by the USGS 2022 methodology and assessed as non-critical using past data from 2015 to 2018. Copper and silicon are on the 2025 CML based the USGS 2025 methodology and more recent data from 2023. The 2025 CML includes additional minerals based on input from the public and other federal agencies—boron, lead, phosphate, rhenium, silver, and uranium—that are not on the 2023 DOE Critical Materials List. 93 Federal statute says that a critical material includes any nonfuel mineral, element, substance, or material determined to be critical by the Secretary of Energy and any mineral, element, substance, or material determined to be a critical mineral by the Secretary of the Interior. 94 According to that statute, DOE should now include the minerals on the 2025 CML on DOE's Critical Materials List.
+ The critical materials for energy on the 2023 DOE Critical Materials List are based on a different criteria and methodology than the USGS's methodologies. 95 For example, DOE evaluated only some materials for some energy technologies, as determined by DOE's evaluation of criticality. 96 DOE's assessment considers the global economy using DOE or International Energy Agency scenarios of future supply and demand of certain energy technologies to achieve certain sustainable development goals for time periods of 5-10 years (i.e., DOE considers global energy and climate models). 97 One reason that DOE included copper and silicon was because DOE's assessment was forward-looking and considered what minerals were anticipated to be critical in 2020-2025 and 2025-2035 for energy technologies ( Figure 4 ). 98 The critical materials for energy have supply chain risks and are essential for energy technologies either for the short term (from 2020 to 2025) or for the medium term (from 2025 to 2035; see Figure 4 ). 99 
+ Figure 4. DOE Critical Materials for Energy, as of July 2023
+ Source: DOE, Critical Materials Assessment , July 2023, https://www.energy.gov/ sites/ default/ files/ 2023-07/ doe-critical-material-assessment_07312023.pdf 
+ Notes: Aluminum, copper, and silicon are not considered critical (red) in the short term (left); however, DOE included these minerals on the 2023 DOE Critical Materials List because they become near critical (yellow) in the medium term (right). Uranium, a fuel mineral, is considered in the Critical Materials Assessment and was plotted in the figure but was not included on the 2023 DOE Critical Materials List. Terbium was included on the list but not shown in this figure, because there was not enough quantitative data to plot its importance and risk, according to DOE.
+ In addition to the different time periods considered by the USGS and DOE, the USGS considers the criticality of minerals that are essential for all technologies, not just energy technologies, and considers current demand based on past production. For the 2022 CML, the USGS calculated supply risk on an annual basis from 2007 to 2018 and calculated a weighted recency supply risk score for 2015-2018. 100 The USGS noted that the years 2015-2018 were used and weighted because they more accurately reflected recent trends in supply and demand at the time. According to the USGS, its analysis did not consider data from 2019 to 2023 because there were not enough data for a quantitative assessment; this lack of more recent data may limit the 2022 CML's ability to capture more recent trends in supply and demand. A 2024 Business Roundtable report recommended that the standards used by the USGS and DOE to determine mineral and material criticality be adjusted to reflect the near-term risk of anticipated supply deficits with opportunity for stakeholder input. 101 The 2025 CML considers critical minerals that are essential for all technologies and considers more recent data (from 2023) for most mineral commodities compared with DOE's focus on energy technologies and future supply and demand.
+ Critical Minerals Outlook
+ The Energy Act of 2020 directed the USGS to prepare an annual comprehensive forecast, entitled Annual Critical Minerals Outlook , of projected critical mineral production, consumption, and recycling patterns for 1-, 5- and 10-year periods. 102 As of November 2025, the USGS had not published an annual critical minerals outlook. The USGS completed a partial critical minerals outlook for some critical minerals on the 2022 CML in March 2025. The outlook provided estimates of the mine production capacities for seven critical minerals: cobalt, gallium, lithium, magnesium, palladium, platinum, and titanium, plus the non-critical mineral helium, for the period from 2025 to 2029. 103 The outlook considered global mine production and potential capacity growth of production. The analysis suggested that cobalt and lithium, which are essential for lithium-ion batteries, may see increases in mine production capacity because of rising demand for these batteries. It also suggested that gallium and platinum may see the same or small increases in mine production capacity that may exceed current production levels. The outlook for magnesium and titanium was less clear, because much mine production of these minerals comes from countries such as China and Russia, which are considered nonmarket economy countries in this analysis, making future mine production capacity difficult to estimate. 104 The outlook cautioned that where free market conditions exist, the potential mine production capacity is likely to depend on supply deficits and prices that are above production costs. The outlook did not attempt to fully analyze the uncertain impact of supply deficits and prices on mine production because these factors have uncertainties driven by opaque mineral commodity markets and other uncertainties, besides mine production, that are difficult to forecast. 105 
+ Congressional Considerations
+ In the 119 th Congress, whether the definition of critical mineral , the methodology for developing a CML, and the CML are sufficient to inform national materials and minerals policy has been raised as issues of policy interest. For example, legislation introduced in the 119 th Congress would amend the definition of critical mineral. The Critical Mineral Consistency Act of 2025 ( S. 714 , ordered to be reported with an amendment and H.R. 755 ) would amend the definition of critical mineral to include a critical material as determined by the Secretary of Energy. 106 
+ The E.O.s issued in 2025 may affect the definition of critical mineral and any lists. For example, E.O. 14261 directs the Secretary of Energy to consider adding metallurgical coal used for steelmaking to the Critical Materials List, and DOE has given notice that metallurgical coal, which is used for steelmaking, has been added to DOE's Critical M aterials List as of May 22, 2025. 107 E.O. 14261 directs the Secretary of the Interior to consider adding coal used for steelmaking to the CML. The 2025 CML includes metallurgical coal based on input from DOE. Although coal is defined as a fuel mineral, E.O. 14261 and DOE considered the nonfuel uses of coal. 108 E.O. 14154, "Unleashing American Energy," directed the Secretary of the Interior to "instruct the Director of the U.S. Geological Survey to consider updating the Survey's List of Critical Minerals, including for the potential of including uranium." The 2025 CML includes uranium based on input from DOE. In another example, E.O. 14241 applies to minerals on the 2022 CML "as well as uranium, copper, potash, gold, and any other element, compound or material as determined by the Chair of the National Energy Dominance Council (NEDC)." 109 The 2025 CML includes copper, potash, and uranium but not gold.
+ Members have introduced legislation aligned in some cases with E.O.s related to critical minerals. H.R. 2926 would establish in statute an NEDC that may decide on what minerals are critical minerals. 110 H.R. 4090 , the Critical Mineral Dominance Act (placed on the House calendar), would codify certain provisions of certain E.O.s related to domestic mining and hardrock minerals . 111 In addition, H.R. 3803 would codify E.O. 14285, "Unleashing America's Offshore Critical Minerals and Resources," with the "force and effect of law," if enacted and H.R. 4370 would codify E.O.s 13817, 13953, 14154, 14241, and 14272.
+ S. 823 and H.R. 3198 Intergovernmental Critical Minerals Task Force Act, would amend the National Materials and Minerals Policy, Research, and Development Act of 1980 (30 U.S.C. §1604) to establish an Intergovernmental Critical Minerals Task Force consisting of federal entities that would consult with state, local, tribal, and territorial entities to combat U.S. reliance on critical minerals and REEs from China and other covered countries. 112 
+ Other legislation introduced in the 119 th Congress would consider securing reliable supplies of critical minerals and REEs from other countries and offshore. S. 429 would consider trade, strategic partnerships, and other means to secure reliable supplies, while S. 789 would direct the Department of the Interior (DOI) to assess global supply and ownership of mining, processing, and recycling operations and to collaborate with U.S. allies and partners to develop mining, processing, and recycling technologies. 113 S. 2839 would establish a Critical Minerals Security Alliance to ensure a reliable critical minerals supply chain for the United States. S. 2860 , Revitalizing America's Offshore Critical Minerals Dominance Act, would consider ways to accelerate and expedite offshore critical mineral resources development.
+ Members may consider whether the various purposes for which different federal departments construct their lists are sufficient to inform national materials and minerals policy and to what extent the departments should coordinate their efforts to identify critical minerals and critical materials. 114 In addition to the DOI and DOE lists, DOD's Defense Logistics Agency assesses the supply chain risks for materials needed on an emergency basis for more than 250 strategic and critical materials. 115 DOD considers critical minerals that come from mining a natural resource to be a subset of strategic and critical materials and defines strategic and critical materials as materials that "(A) would be needed to supply the military, industrial, and essential civilian needs of the United States during a national emergency, and (B) are not found or produced in the United States in sufficient quantities to meet such need." 116 
+ Some in Congress may question whether a critical mineral definition and a CML are necessary. Some legislation introduced in the 119 th Congress uses the term critical mineral without definition or reference to the definition in 30 U.S.C. §1606(a). For example, the Finding Opportunities for Resource Exploration Act, or the Finding ORE Act ( S. 1463 and H.R. 2969 ), would allow the Secretary of the Interior, acting through the Director of the USGS, to enter into scientific and technical cooperative agreements for mapping critical minerals and REEs. 117 The Mining Schools Act of 2025 ( S. 1130 and H.R. 2457 ) would require the Secretary of Energy to provide technology grants to strengthen mining education in minerals, critical minerals, and/or REEs. S. 2550 , H.R. 5299 , H.R. 5248 , H.R. 1215 , and H.R. 1263 would focus on global partnerships for ensuring resilient supply chains for certain critical minerals, and H.R. 2556 would support an assessment of offshore critical minerals. 118 
+ Legislation introduced in the 119 th Congress would amend the 1872 Mining Law (30 U.S.C. §§22 et seq.) for critical minerals-related activities, among other purposes. 119 H.R. 676 would allow issuing, granting, or renewing a permit for critical mineral activities without requiring environmental review under the National Environmental Policy Act of 1969 (42 U.S.C. §4332(2)(C)). H.R. 1865 , the Mining Waste Fraud and Abuse Prevention Act of 2025, would allow for reduced royalty and rental rates for a lease for critical mineral exploration and development, where critical mineral is defined as in 30 U.S.C. §1606(a). 
+ Some in Congress have called for the USGS to complete an annual critical minerals outlook, as directed by the Energy Act of 2020, to identify potential supply chain risks in advance, so critical mineral resource development or other actions may be accelerated. 120 In the 118 th Congress, the Subcommittee on Energy and Mineral Resources of the House Natural Resources Committee held a hearing in September 2023 on Examining the Methodology and Structure of the U.S. Geological Survey's Critical Minerals List . The hearing discussed which minerals to define as critical and the importance of the USGS providing a critical minerals outlook. 121 The 119 th Congress may consider (1) updating the minerals on the 2025 CML or any updates to the CML informed by analyses of recent mineral criticality or (2) updating minerals on the CML to help improve resiliency of supply chains informed by critical mineral outlooks or forecasts of future supply chain vulnerabilities, or for other reasons.
+ Footnotes
+ 1 .
+ Supply risks may be (1) geologic—whether the resource exists in nature, (2) technical—whether the resource can be extracted and processed, (3) environmental and social—whether the resource can be extracted and processed in an environmentally and socially acceptable way, (4) political—whether governments influence resource availability through policies and actions, and (5) economic—whether the resource can be extracted and processed at a cost that users are willing to pay. National Research Council (NRC), Minerals, Critical Minerals, and the U.S. Economy , 2008, (hereinafter, NRC, Critical Minerals , 2008). See p. 8 for a further description of supply risks and p. 238 for a short description of the report's use of the term critical mineral . 
+ 2 .
+ Essential , as discussed in the report, means the chemical and physical properties of a mineral, such as metallurgical, chemical, catalytic, electrical, magnetic, or optical properties, that make it difficult or impossible to find a substitute that can provide a similar function at a comparable cost. NRC, Critical Minerals , 2008, pp. 7, 43-47. 
+ 3 .
+ Semiconductor chips —also known as computer chips , microchips , or integrated circuits —are tunable electrical conductivity wafers fabricated with miniature resistors, transistors, capacitors, or diodes. For more information about semiconductors, see CRS Report R47508, Semiconductors and the Semiconductor Industry , by Alice B. Grossman, Emily G. Blevins, and Karen M. Sutter. 
+ 4 .
+ Rare earth elements (REEs) include scandium, yttrium, and 15 elements that are called the lanthanide series on the periodic table. The lanthanides range from atomic number 57 (lanthanum) to 71 (lutetium). The lanthanide series includes lanthanum, cerium, praseodymium, neodymium, promethium, samarium, europium, gadolinium, terbium, dysprosium, holmium, erbium, thulium, ytterbium, and lutetium. U.S. Geological Survey (USGS), "Rare-Earth Elements," https://www.usgs.gov/publications/rare-earth-elements ; USGS, "Rare Earths Statistics and Information," https://www.usgs.gov/centers/national-minerals-information-center/rare-earths-statistics-and-information ; and Bradley S. Van Gosen et al., Rare Earth Element Mineral Deposits in the United States , USGS, Circular 1454, version 1.1, April 2019, https://doi.org/10.3133/cir1454 (hereinafter Van Gosen, Rare Earth Element Mineral Deposits , 2019). 
+ 5 .
+ White House, Building Resilient Supply Chains, Revitalizing American Manufacturing , and Fostering Broad-Based Growth : 100 - Day Reviews U nder Executive Order 14017 , June 2021, https://www.govinfo.gov/content/pkg/GOVPUB-PR-PURL-gpo156599/pdf/GOVPUB-PR-PURL-gpo156599.pdf , also available at https://bidenwhitehouse.archives.gov/wp-content/uploads/2021/06/100-day-supply-chain-review-report.pdf (hereinafter White House, Building Resilient Supply Chains ); U.S. Department of Energy (DOE), Critical Materials Assessment , July 2023, https://www.energy.gov/sites/default/files/2023-07/doe-critical-material-assessment_07312023.pdf (hereinafter, DOE, Critical Materials Assessment , 2023); and International Energy Agency, "The Role of Critical Minerals in the Clean Energy Transition," https://www.iea.org/reports/the-role-of-critical-minerals-in-clean-energy-transitions . 
+ 6 .
+ DOE, Critical Materials Strategy , December 2010, https://www.energy.gov/sites/prod/files/edg/news/documents/criticalmaterialsstrategy.pdf (hereinafter, DOE, Critical Materials Strategy , 2010), pp. 11-12. 
+ 7 .
+ The USGS geologic description of a mineral is "as a naturally occurring inorganic element or compound having an orderly internal structure and a characteristic chemical composition, crystal form, and physical properties." The USGS defines resource related to minerals, including fuel minerals, as "a concentration of naturally occurring solid, liquid, or gaseous material in or on the Earth's crust in such form and amount that economic extraction of a commodity from the concentration is currently or potentially feasible." The USGS considers extraction to include underground, surface (or open pit), or placer (extraction from sediments, such as river channels or beach sands) mining. USGS, Mineral Commodity Summaries 202 5 , 2025, https://doi.org/10.3133/mcs2025 (hereinafter, USGS, MCS ). USGS, "What Is the Difference Between a Rock and a Mineral?," https://www.usgs.gov/faqs/what-difference-between-rock-and-mineral ; USGS, "How Do We Extract Minerals?," https://www.usgs.gov/faqs/how-do-we-extract-minerals . For more details about certain critical mineral resources and their extraction, processing, and primary uses, see Klaus J. Schulz et al., Critical Mineral Resources of the United States—Economic and Environmental Geology and Prospects for Future Supply , USGS Professional Paper 1802, December 2017, https://doi.org/10.3133/pp1802 (hereinafter, USGS , Critical M ineral R esources, 2017). 
+ 8 .
+ DOE, Critical Materials Strategy , 2010, p. 12.
+ 9 .
+ The USGS defines byproduc t as "those whose production is dependent on that of another commodity." Nedal T. Nassar and Steven M. Fortier, Methodology and Technical Input for the 2021 Review and Revision of the U.S. Critical Minerals List , USGS, USGS Open-File Report 2021-1045, 2021, p. 7, https://doi.org/10.3133/ofr20211045 (hereinafter, USGS, Methodology and Technical Input , 2021).
+ 10 .
+ USGS, "Mineral Commodity Summaries," https://www.usgs.gov/centers/national-minerals-information-center/mineral-commodity-summaries . The USGS publishes summaries every year, and the number of minerals summarized may vary from year to year.
+ 11 .
+ DOE, Critical Materials Assessment , 2023.
+ 12 .
+ DOE, Critical Materials Assessment , 2023 p. 75.
+ 13 .
+ For a list of the most common uses of platinum-group metals in 2025, see USGS, MCS . The USGS also calculates recycling, re-use, and substitution for each mineral commodity to analyze how these other sources of a mineral impact production of critical mineral resources. See also USGS, "Platinum-Group Metals Statistics and Information," https://www.usgs.gov/centers/national-minerals-information-center/platinum-group-metals-statistics-and-information .
+ 14 .
+ Gordon B. Haxel et al., "Rare Earth Elements—Critical Minerals for High Technology," USGS, USGS Factsheet 087-02, 2002, https://pubs.usgs.gov/fs/2002/fs087-02/fs087-02.pdf ; and Van Gosen, Rare Earth Element Mineral Deposits , 2019.
+ 15 .
+ For more information, see CRS In Focus IF11259, Trade Dispute with China and Rare Earth Elements , by Karen M. Sutter; CRS Report R46915, China's Recent Trade Measures and Countermeasures: Issues for Congress , by Karen M. Sutter; and CRS Report R46618, An Overview of Rare Earth Elements and Related Issues for Congress , by Brandon S. Tracy.
+ 16 .
+ USGS, MCS; USGS, Critical Mineral Resources, 2017; and NRC, Critical Minerals, 2008. See also CRS Report R47558, Semiconductors and the CHIPS Act: The Global Context , by Karen M. Sutter, Emily G. Blevins, and Alice B. Grossman.
+ 17 .
+ NRC, Critical Minerals , 2008, Figure 2.2. 
+ 18 .
+ DOE, Critical Materials Strategy , 2010.
+ 19 .
+ NRC, Critical Minerals , 2008. 
+ 20 .
+ White House, Building Resilient Supply Chains , Figure 13. The National Renewable Energy Laboratory analyzed mining data from USGS, Mineral Commodity Summaries 2019 , https://www.usgs.gov/centers/nmic/meneral-commodity-summaries , and refining data from analysis and refining data from BloombergNEF Battery Metals Database, accessed on March 7, 2021. See also CRS In Focus IF11735, China's "One Belt, One Road" Initiative: Economic Issues , by Karen M. Sutter and Michael D. Sutherland.
+ 21 .
+ White House, Building Resilient Supply Chains ; and Van Gosen, Rare Earth Element Mineral Deposits , 2019. For a more recent overview of China's critical mineral supply chain dominance, see Business Roundtable, Resilient, Diverse and Secure: Improving Critical Supply Chains , 2024, https://www.businessroundtable.org/resilient-diverse-and-secure-improving-critical-supply-chains (hereinafter Business Roundtable, Critical Supply Chains ).
+ 22 .
+ The USGS defines reserves as "that part of the reserve base that could be economically extracted or produced at the time of determination" and reserve base as "the in-place demonstrated (measured plus indicated) resource from which reserves are estimated," USGS, MCS. Some reserve locations may have limited extraction capacity because they are remote or located on land where mining is restricted, among other reasons. 
+ 23 .
+ NRC, Critical Minerals , 2008; and DOE, Critical Materials Strategy , 2010.
+ 24 .
+ DOE, Critical Materials Strategy , 2010.
+ 25 .
+ National Science and Technology Council (NSTC), Assessment of Critical Minerals: Screening Methodology and Initial Application , Subcommittee on Critical and Strategic Mineral Supply Chains of the Committee on Environment, Natural Resources, and Sustainability, March 2016, https://obamawhitehouse.archives.gov/sites/default/files/microsites/ostp/NSTC/csmsc_assessment_of_critical_minerals_report_2016-03-16_final.pdf (hereinafter, NSTC, Assessment of Critical Minerals, 2016), among other reports on critical minerals. An "early warning screening" approach for material supply problems was first included as a U.S. policy goal in the National Materials and Minerals Policy, Research, and Development Act of 1980 ( P.L. 96-479 ).
+ 26 .
+ Executive Order 14347 of September 5, 2025, "Restoring the United States Department of War," 90 Federal Register 43893, September 10, 2025, https://www.govinfo.gov/content/pkg/FR-2025-09-10/pdf/2025-17508.pdf (hereinafter, E.O. 14347).
+ 27 .
+ Executive Order 13817 of December 20, 2017, "A Federal Strategy to Ensure Secure and Reliable Supplies of Critical Minerals," 82 Federal Register 60835-60837, December 26, 2017, https://www.govinfo.gov/content/pkg/FR-2017-12-26/pdf/2017-27899.pdf (hereinafter, E.O. 13817).
+ 28 .
+ Department of the Interior (DOI), "Final List of Critical Minerals 2018," 83 Federal Register 23295-23296, May 18, 2018, https://www.govinfo.gov/content/pkg/FR-2018-05-18/pdf/2018-10667.pdf (hereinafter, DOI, "Final List of Critical Minerals 2018").
+ 29 .
+ Executive Order 13953 of September 30, 2020, "Addressing the Threat to the Domestic Supply Chain from Reliance on Critical Minerals from Foreign Adversaries and Supporting the Domestic Mining and Processing Industries," 85 Federal Register 62539-62544, October 5, 2020, https://www.govinfo.gov/content/pkg/FR-2020-10-05/pdf/2020-22064.pdf (hereinafter, E.O. 13953).
+ 30 .
+ More specifically, Section 7002 of the Energy Act of 2020 (Division Z, Title VII, Critical Minerals, of the Consolidated Appropriations Act, 2021, P.L. 116-260 ). 
+ 31 .
+ Some amendments are consistent with some of the recommendations in the NRC, Critical Minerals , 2008; DOE, Critical Materials Strategy , 2010; NSTC, Assessment of Critical Minerals, 2016; E.O. 13871; and E.O. 13953, among other executive branch efforts on critical minerals.
+ 32 .
+ CRS Report R48005, Critical Mineral Resources: The U.S. Geological Survey (USGS) Role in Research and Analysis , by Linda R. Rowan. USGS, "Earth Mapping Resources Initiative," https://www.usgs.gov/earth-mapping-resources-initiative-earth-mri .
+ 33 .
+ Executive Order 14017 of February 24, 2021, "America's Supply Chains," 86 Federal Register 11849, March 1, 2021, https://www.govinfo.gov/content/pkg/FR-2021-03-01/pdf/2021-04280.pdf .
+ 34 .
+ White House, Building Resilient Supply Chains . 
+ 35 .
+ CRS Report R48005, Critical Mineral Resources: The U.S. Geological Survey (USGS) Role in Research and Analysis , by Linda R. Rowan. See also CRS In Focus IF13058, The USGS Earth Mapping Resources Initiative , by Linda R. Rowan.
+ 36 .
+ 30 U.S.C. §1606(d).
+ 37 .
+ CriticalMinerals.gov, "Statutory Authority," https://criticalminerals.gov/statutory-authority/ . The Subcommittee on Critical and Strategic Mineral Supply Chains was renamed the Critical Minerals Subcommittee in 2019. Department of Commerce (DOC), A Federal Strategy to Ensure Secure and Reliable Supplies of Critical Minerals , 2019, https://www.commerce.gov/sites/default/files/2020-01/Critical_Minerals_Strategy_Final.pdf .
+ 38 .
+ White House, "Two Years of Building Stronger Supply Chains and a More Resilient Economy," https://bidenwhitehouse.archives.gov/wp-content/uploads/2023/06/Supply-Chain-Report-Card.pdf (hereinafter, White House, "Two Years of Building Stronger Supply Chains").
+ 39 .
+ White House, "Fact Sheet: President Biden Announces New Actions to Strengthen America's Supply Chains, Lower Costs for Families, and Secure Key Sectors," https://bidenwhitehouse.archives.gov/briefing-room/statements-releases/2024/04/25/fact-sheet-biden-harris-administration-announces-key-actions-to-strengthen-americas-electric-grid-boost-clean-energy-deployment-and-manufacturing-jobs-and-cut-dangerous-pollution-from-the/ (hereinafter White House, "President Biden Announces New Actions to America's Supply Chains").
+ 40 .
+ CriticalMinerals.gov, "CriticalMinerals.gov," https://criticalminerals.gov/ . The website was called for in White House, "President Biden Announces New Actions to America's Supply Chains."
+ 41 .
+ 30 U.S.C. 1606(c)(4)(C) and (5)(A).
+ 42 .
+ Executive Order 14154 of January 20, 2025, "Unleashing American Energy," 90 Federal Register 8353, January 29, 2025, https://www.govinfo.gov/content/pkg/FR-2025-01-29/pdf/2025-01956.pdf (hereinafter, E.O. 14154, "Unleashing American Energy").
+ 43 .
+ The E.O. does not specify how the USGS should accelerate geologic mapping, but using the Earth Mapping Resources Initiative (Earth MRI) would be one way to do so. USGS, "Earth Mapping Resources Initiative," https://www.usgs.gov/earth-mapping-resources-initiative-earth-mri . CRS Report R48005, Critical Mineral Resources: The U.S. Geological Survey (USGS) Role in Research and Analysis , by Linda R. Rowan. See also CRS In Focus IF13058, The USGS Earth Mapping Resources Initiative , by Linda R. Rowan.
+ 44 .
+ Executive Order 14156 of January 20, 2025, "Declaring a National Energy Emergency," 90 Federal Register 8433, January 29, 2025, https://www.govinfo.gov/content/pkg/FR-2025-01-29/pdf/2025-02003.pdf . Where "energy" includes critical minerals as defined in the Energy Policy Act of 2020 (30 U.S.C. §1606 (a)(3)).
+ 45 .
+ Executive Order 14213 of February 14, 2025, "Establishing the National Energy Dominance Council," 90 Federal Register 9945, February 20, 2025, https://www.govinfo.gov/content/pkg/FR-2025-02-20/pdf/2025-02928.pdf .
+ 46 .
+ Executive Order 14241 of March 20, 2025, "Immediate Measures to Increase American Mineral Production" 90 Federal Register 13673, March 25, 2025, https://www.govinfo.gov/content/pkg/FR-2025-03-25/pdf/2025-05212.pdf .
+ 47 .
+ CRS Insight IN12540, Trump Administration's Invocation of the Defense Production Act for Mineral Production , by Adam G. Levin. 
+ 48 .
+ Executive Order 14261 of April 8, 2025, " Reinvigorating America ' s Beautiful Clean Coal Industry and Amending Executive Order 14241 " 90 Federal Register 15517, April 14, 2025, https://www.govinfo.gov/content/pkg/FR-2025-04-14/pdf/2025-06380.pdf .
+ 49 .
+ Executive Order 14272 of April 15, 2025, "Ensuring National Security and Economic Resilience Through Section 232 Actions on Processed Critical Minerals and Derivative Products" 90 Federal Register 16437, April 18, 2025, https://www.govinfo.gov/content/pkg/FR-2025-04-18/pdf/2025-06836.pdf .
+ 50 .
+ Executive Order 14285 of April 24, 2025, "Unleashing America's Offshore Critical Minerals and Resources," 90 Federal Register 17735, April 29, 2025, https://www.govinfo.gov/content/pkg/FR-2025-04-29/pdf/2025-07470.pdf (hereinafter E.O. 14285). See also CRS Report R47324, Seabed Mining in Areas Beyond National Jurisdiction: Issues for Congress , by Caitlin Keating-Bitonti and CRS Report R48302, Critical Minerals on the U.S. Outer Continental Shelf: The Bureau of Ocean Energy Management's Role and Issues for Congress , by Caitlin Keating-Bitonti and Laura B. Comay.
+ 51 .
+ U.S. Department of the Interior, Secretarial Order (S.O.) 3418, "Unleashing American Energy," February 3, 2025, https://www.doi.gov/document-library/secretary-order/so-3418-unleashing-american-energy . The S.O. does not specify how the USGS should accelerate geologic mapping, but using the Earth Mapping Resources Initiative (Earth MRI) would be one way to do so. USGS, "Earth Mapping Resources Initiative," https://www.usgs.gov/earth-mapping-resources-initiative-earth-mri . See also CRS Report R48005, Critical Mineral Resources: The U.S. Geological Survey (USGS) Role in Research and Analysis , by Linda R. Rowan for more on geologic mapping and CRS In Focus IF13058, The USGS Earth Mapping Resources Initiative , by Linda R. Rowan.
+ 52 .
+ 30 U.S.C. §§1601 et seq. The National Materials and Minerals Policy, Research, and Development Act of 1980 (1980 Act; P.L. 96-479 ) states: "Nothing in this Act shall be interpreted as changing in any manner or degree the provisions of and requirements of the Mining and Minerals Policy Act of 1970, as amended (30 U.S.C. §21a)." The 1970 act established in law a national mining and minerals policy:
+ The Congress declares that it is the continuing policy of the Federal Government in the national interest to foster and encourage private enterprise in (1) the development of economically sound and stable domestic mining, minerals, metal and mineral reclamation industries, (2) the orderly and economic development of domestic mineral resources, reserves, and reclamation of metals and minerals to help assure satisfaction of industrial, security and environmental needs, (3) mining, mineral, and metallurgical research, including the use and recycling of scrap to promote the wise and efficient use of our natural and reclaimable mineral resources, and (4) the study and development of methods for the disposal, control, and reclamation of mineral waste products, and the reclamation of mined land, so as to lessen any adverse impact of mineral extraction and processing upon the physical environment that may result from mining or mineral activities.
+ 53 .
+ These measures apply to materials as defined in the 1980 Act (30 U.S.C. §1601(b)(2)):
+ substances, including minerals, of current or potential use that will be needed to supply the industrial, military, and essential civilian needs of the United States in the production of goods or services, including those which are primarily imported or for which there is a prospect of shortages or uncertain supply, or which present opportunities in terms of new physical properties, use, recycling, disposal or substitution, with the exclusion of food and of energy fuels used as such.
+ 54 .
+ 30 U.S.C. §1606(a). The Energy Act of 2020 ( P.L. 116-260 ) retains the definition of materials from the 1980 Act. 30 U.S.C. §1606(a)(2). Section 7002(a)(2) of the Energy Act of 2020 defines critical materials as 
+ (A) Any non-fuel mineral, element, substance, or material that the Secretary of Energy determines (i) has high risk for supply chain disruption; and (ii) serves an essential function in one or more energy technologies, including technologies that produce, transmit, store, and conserve energy [referred to here as a critical material for energy]; or (B) a critical mineral [as designated by the Secretary of the Interior].
+ 55 .
+ 30 U.S.C. §1603.
+ 56 .
+ 30 U.S.C. §1606(a)(3).
+ 57 .
+ 30 U.S.C. §1606(c)(4)(A).
+ 58 .
+ Mineral fuels include oil, gas, coal, oil shale, and uranium under the Mining and Minerals Policy Act of 1970 (30 U.S.C. 21(a)). The uranium mining and processing supply chain has been evaluated elsewhere (DOE, Nuclear Energy , U.S. Department of Energy Response to Executive, February 2022, https://www.energy.gov/sites/default/files/2022-02/Nuclear%20Energy%20Supply%20Chain%20Report%20-%20Final.pdf ) and issues regarding the availability and reliability of nuclear fuel are addressed in a separate section of the Energy Act of 2020 ( P.L. 116-260 , Title II, "Nuclear"). See also CRS Report R42853, Nuclear Energy: Overview of Congressional Issues , by Mark Holt.
+ 59 .
+ 30 U.S.C. §1606(c)(4)(B). See NRC, Critical Minerals , 2008, for a discussion of critical mineral versus strategic minerals and for a history of U.S. policy regarding strategic versus critical minerals. See also USGS , Critical M ineral R esources, 2017, Appendix A1, for a history of strategic versus critical minerals beginning with World War I.
+ 60 .
+ 30 U.S.C. §1606(c)(4)(C).
+ 61 .
+ 30 U.S.C. §1606(c)(4)(A).
+ 62 .
+ 30 U.S.C. §1606 (d)(5) allows the Secretary of the Interior to complete resource assessments for the most critical minerals on the CML first. CRS Report R48005, Critical Mineral Resources: The U.S. Geological Survey (USGS) Role in Research and Analysis , by Linda R. Rowan.
+ 63 .
+ 30 U.S.C. §1606 (c). The USGS with other agencies began working on a methodology as a member of the Subcommittee on Critical and Strategic Mineral Supply Chains of the NSTC. NSTC, Assessment of Critical Minerals, 2016.
+ 64 .
+ USGS, "2021 Draft List of Critical Minerals," 86 Federal Register 214, November 9, 2021, https://www.govinfo.gov/content/pkg/FR-2021-11-09/pdf/2021-24488.pdf (hereinafter , USGS, " 2021 Draft List " ) ; and USGS, "2022 Final List of Critical Minerals," 87 Federal Register 10381-10382, February 24, 2022, https://www.govinfo.gov/content/pkg/FR-2022-02-24/pdf/2022-04027.pdf (hereinafter, USGS, "2022 Final List").
+ 65 .
+ USGS, "U.S. Geological Survey Releases 2022 List of Critical Minerals," https://www.usgs.gov/news/national-news-release/us-geological-survey-releases-2022-list-critical-minerals . The USGS considers all uses of critical minerals in its assessments. Others, such as DOE, may consider only energy uses in their assessments.
+ 66 .
+ The USGS included uranium on the 2018 list and considered uranium's fuel and nonfuel uses. The 2018 list grouped more than a dozen minerals into two mineral groups, rare earth elements (REEs) and platinum group elements (PGEs), whereas the 2022 CML ungrouped these minerals and listed them individually. This accounts in part for the shorter list of minerals in 2018 compared with the 2022 CML. The REE and PGE groups each have similar physical and chemical properties and tend to occur together in nature. See footnote 4 for more about REEs. PGEs include a cluster of minerals with similar atomic numbers across two rows of the periodic table, ruthenium (atomic number = 44), rhodium (45), and palladium (46) and osmium (76), iridium (77), and platinum (78). USGS, "Platinum-Group Elements," https://www.usgs.gov/publications/platinum-group-elements . In some descriptions, PGE s are referred to as platinum group metals (PGM s ) . USGS, "Platinum-Group Metals," https://www.usgs.gov/centers/national-minerals-information-center/platinum-group-metals-statistics-and-information . DOI, "Final List of Critical Minerals 2018"; and USGS, "2022 Final List."
+ 67 .
+ USGS, "2022 Final List."
+ 68 .
+ USGS, Methodology and Technical Input , 2021.
+ 69 .
+ A byproduct refers to a commodity recovered from the extraction and/or processing of a primary commodity. See 30 U.S.C. §1606 (a)(1): "The term ''byproduct' means a critical mineral—(A) the recovery of which depends on the production of a host mineral that is not designated as a critical mineral; and (B) that exists in sufficient quantities to be recovered during processing or refining."
+ 70 .
+ USGS, "2022 Final List"; USGS, Methodology and Technical Input, 2021, Figure 3 and pp. 7-8; and CRS Report R48005, Critical Mineral Resources: The U.S. Geological Survey (USGS) Role in Research and Analysis , by Linda R. Rowan.
+ 71 .
+ USGS, Methodology and Technical Input , 2021.
+ 72 .
+ USGS, Methodology and Technical Input , 2021. In addition, the USGS identifies products and byproducts for mineral commodities where the data are available, including for some critical minerals, in the annual USGS Mineral Commodity Summaries. USGS, "Mineral Commodity Summaries," https://www.usgs.gov/centers/national-minerals-information-center/mineral-commodity-summaries .
+ 73 .
+ USGS , " 2021 Draft List "; and USGS, "2022 Final List." 30 U.S.C. §1606(a)(3)(B).
+ 74 .
+ USGS, "2022 Final List."
+ 75 .
+ USGS, "2022 Final List."
+ 76 .
+ 30 U.S.C. §1606(c)(4)(A); requires the Secretary of the Interior, acting through the Director of the USGS, to update the list at least every three years, if not more often.
+ 77 .
+ Geological Survey (USGS), "2025 Draft List of Critical Minerals," 90 Federal Register 41591, August 26, 2025, https://www.govinfo.gov/content/pkg/FR-2025-08-26/pdf/2025-16311.pdf (hereinafter, USGS, "2025 Draft List"). 
+ 78 .
+ Nedal T. Nassar et al., Methodology and Technical Input for the 2025 U.S. List of Critical Minerals—Assessing the Potential Effects of Mineral Commodity Supply Chain Disruptions on the U.S. Economy , USGS Open-File Report 2025–1047, p. 32, 2025, https://doi.org/10.3133/ofr20251047 (hereinafter USGS, Methodology and Technical Input , 2025).
+ 79 .
+ USGS, "Final 2025 List of Critical Minerals," 90 Federal Register 50494, November 7, 2025, https://www.govinfo.gov/content/pkg/FR-2025-11-07/pdf/2025-19813.pdf (hereinafter, USGS, "2025 Final List").
+ 80 .
+ Zirconium is on the CML based on a single point of failure rather than a USGS methodology. Cesium, rubidium, and scandium are on the CML based on a qualitative assessment due to insufficient data to apply the USGS methodology.
+ 81 .
+ E.O. 14347. Arsenic and tellurium were on the 2022 CML and were removed in the 2025 draft CML. 
+ 82 .
+ In addition, the USGS intended to analyze and provide information to the Secretary of the Interior on the potential for including metallurgical coal and uranium on the 2025 CML. The USGS stated that the agency "will assess the production, processing, trade, and end-use characteristics of these materials," consistent with E.O. 14154 and E.O. 14261 and in support of national energy and industrial policy objectives. USGS, "2025 Draft List." For more information about metallurgical coal, see CRS Report R48635, Metallurgical Coal: Frequently Asked Questions , coordinated by Lexie Ryan.
+ 83 .
+ USGS, "About the 2025 List of Critical Minerals," https://www.usgs.gov/programs/mineral-resources-program/science/about-2025-list-critical-minerals . USGS, "Critical Minerals Atlas," https://apps.usgs.gov/critical-minerals/critical-minerals-atlas.html .
+ 84 .
+ USGS, MCS and USGS, "Mineral Commodity Summaries, 2025," https://tableau.usgs.gov/views/MCS2025_Workbook_01-28-2025_Public/MCSDashboard .
+ 85 .
+ USGS, Methodology and Technical Input , 2025.
+ 86 .
+ See USGS, Methodology and Technical Input , 2025 for details about other data from other years that the USGS considered for some mineral commodities.
+ 87 .
+ Emphasis is placed on Materials to avoid confusion with the USGS Critical Minerals List (CML).
+ 88 .
+ Department of Energy, "Notice of Final Determination on 2023 DOE Critical Materials List," 88 Federal Register 51792, August 4, 2023, https://www.govinfo.gov/content/pkg/FR-2023-08-04/pdf/2023-16611.pdf (hereinafter, DOE, "Determination on 2023 DOE Critical Materials List").
+ 89 .
+ DOE, "Determination on 2023 DOE Critical Materials List." DOE notes that the 2023 list is based on an updated analysis and methodology of previous critical materials strategy reports published in 2010, 2011, and 2019. DOE, Critical Materials Assessment , 2023. For more on critical minerals and materials for energy technologies, see CRS Report R48149, Critical Minerals and Materials for Selected Energy Technologies , by Emma Kaboli.
+ 90 .
+ Tala Goudarzi, Federal Notice , Office of Fossil Energy and Carbon Management, Department of Energy, 6450-01-P, May 22, 2025, https://www.energy.gov/sites/default/files/2025-05/notice-metallurgical-coal-steelmaking-critical-materials-list.pdf .
+ 91 .
+ Department of Energy, "Notice of Request for Information (RFI) on 2026 Energy Critical Materials Assessment," 90 Federal Register 27859, June 30, 2025, https://www.govinfo.gov/content/pkg/FR-2025-06-30/pdf/2025-12054.pdf .
+ 92 .
+ DOE, "Determination on 2023 DOE Critical Materials List."
+ 93 .
+ Arsenic and tellurium were on the 2022 CML and therefore were included on the 2023 DOE Critical Materials List.
+ 94 .
+ 30 U.S.C. §1606(a)(2).
+ 95 .
+ DOE notes its list was developed independently of the 2022 CML but complements the 2022 CML by providing a global perspective of demand for critical materials for clean energy technologies from now to 2035. DOE, Critical Materials Assessment , 2023, pp. x and xiii. 
+ 96 .
+ According to DOE, it established criteria and a methodology to assess critical materials for energy technologies because it would not be possible to evaluate the 118 elements on the periodic table. The updated assessment considered 38 materials used by nine technologies and ranked 23 of these materials to be critical enough for a more detailed evaluation. The nine technologies are broadly described by DOE as vehicles, stationary storage, hydrogen electrolyzers, solar energy, wind energy, nuclear energy, electric grid, solid state lighting, and microchips. DOE, Critical Materials Assessment , 2023.
+ 97 .
+ For example, DOE considers the International Energy Agency's Net-Zero Emissions Scenario, Sustainable Development Scenario, and Announced Pledge Scenarios. DOE, Critical Materials Assessment , 2023; and International Energy Agency, "Global Energy and Climate Model," https://www.iea.org/reports/global-energy-and-climate-model .
+ 98 .
+ USGS, "2022 Final List"; USGS, Methodology and Technical Input , 2021; and DOE, Critical Materials Assessment , 2023.
+ 99 .
+ DOE interprets energy technologies to be clean energy technologies as described in the DOE Critical Minerals and Materials Vision and Strategy. DOE, Critical Minerals and Materials: U.S. Department of Energy's Strategy to Support Domestic Critical Mineral and Material Supply Chains ( FY2021 -F Y2031) , https://www.energy.gov/sites/prod/files/2021/01/f82/DOE%20Critical%20Minerals%20and%20Materials%20Strategy_0.pdf . DOE, "Determination on 2023 DOE Critical Materials List."
+ 100 .
+ The USGS relied on annual evaluations for each mineral for 2007-2018, except for minerals where annual data were not available. The analysis stopped at 2018 because that was the most recent year for which the USGS had complete annual data for quantitative assessments. USGS, Methodology and Technical Input , 2021.
+ 101 .
+ Business Roundtable, Critical Supply Chains . 
+ 102 .
+ 30 U.S.C. §1606 (j)(1)(B).
+ 103 .
+ Elisa Alonso et al., World Minerals Outlook - Cobalt, Gallium, Helium, Lithium, Magnesium, Palladium, Platinum, and Titanium Through 2029 , USGS, Scientific Investigations Report 2025-5021, March 11, 2025, https://doi.org/10.3133/sir20255021 (hereinafter Alonso, World Minerals Outlook). 
+ 104 .
+ From 19 U.S.C. §1677(18)(A) – "The term 'nonmarket economy country' means any foreign country that the administering authority determines does not operate on market principles of cost or pricing structures, so that sales of merchandise in such country do not reflect the fair value of the merchandise." See also CRS In Focus IF10385, China's Status as a Nonmarket Economy (NME) , by Karen M. Sutter.
+ 105 .
+ Alonso, World Minerals Outlook. 
+ 106 .
+ An amendment to S. 714 , would require the USGS and the Energy Secretary to update their respective lists within 45 days of any changes and would require federal entities to use the latest editions of the lists . CQ, "Senate Energy and Natural Resources Committee Markup: Senate pane l backs bill to harmonize critical materials list ," https://plus.cq.com/doc/committees-20250430547368?2&searchId=pwNbFvCD . S. 714 was ordered to be reported with an amendment. 
+ 107 .
+ Executive Order 14261 of April 8, 2025, " Reinvigorating America ' s Beautiful Clean Coal Industry and Amending Executive Order 14241 " 90 Federal Register 15517, April 14, 2025, https://www.govinfo.gov/content/pkg/FR-2025-04-14/pdf/2025-06380.pdf and Tala Goudarzi, Federal Notice , Office of Fossil Energy and Carbon Management, Department of Energy, 6450-01-P, May 22, 2025, https://www.energy.gov/sites/default/files/2025-05/notice-metallurgical-coal-steelmaking-critical-materials-list.pdf .
+ 108 .
+ 30 U.S.C. §21(a). See footnote 58 .
+ 109 .
+ Executive Order 14241 of March 20, 2025, "Immediate Measures to Increase American Mineral Production" 90 Federal Register 13673, March 25, 2025, https://www.govinfo.gov/content/pkg/FR-2025-03-25/pdf/2025-05212.pdf . See also CRS Insight IN12540, Trump Administration's Invocation of the Defense Production Act for Mineral Production , by Adam G. Levin. 
+ 110 .
+ H.R. 2926 uses similar or the same wording in some text as E.O. 14241 to establish an NEDC.
+ 111 .
+ H.R. 4090 defines hardrock mineral in the legislation and does not use the term critical mineral or the statutory definition of critical mineral in the text of the bill.
+ 112 .
+ Not all of the REEs are included on the 2025 CML (i.e., promethium is not on the 2025 CML). Some measures define REEs by listing the 17 elements and direct policies and activities to apply to all REEs in addition to critical minerals. See footnote 4 for more on REEs and a full list.
+ 113 .
+ It is not possible to secure all of the critical minerals on the 2025 CML from domestic mine production. The United States may face consideration of whether to source some critical minerals from deposits in other countries through trades, partnerships, or other avenues. A Business Roundtable report recommended leveraging ongoing work in international, bilateral, and regional discussions to build and expand trader programs for resource recovery trade. Business Roundtable, Critical Supply Chains . The committee held a hearing on S. 789 on March 12, 2025.
+ 114 .
+ For a table listing the status of federal government actions to promote stronger supply chains as of 2023, see White House, "Two Years of Building Stronger Supply Chains." For some information about different federal efforts related to critical mineral lists, see Critical Mineral Subcommittee (CriticalMinerals.gov), "Critical Mineral Lists," https://www.criticalminerals.gov/pages/critical-minerals-lists .
+ 115 .
+ See White House, Building Resilient Supply Chains , pp. 151-204, for an overview of Department of Defense assessments of critical and strategic materials, how critical minerals are part of these assessments, and some selected short lists of fewer than 60 critical materials. For a history of strategic versus critical minerals policy, see USGS , Critical M ineral R esources, 2017, Appendix A1. For descriptions of different federal efforts related to critical mineral lists from DOI, DOE, and DOD, see Critical Mineral Subcommittee (CriticalMinerals.gov), "Critical Mineral Lists," https://www.criticalminerals.gov/pages/critical-minerals-lists .
+ 116 .
+ 50 U.S.C. §98h-3 and CRS Report R47833, Emergency Access to Strategic and Critical Materials: The National Defense Stockpile , by Cameron M. Keys.
+ 117 .
+ S. 1463 was ordered to be reported with an amendment in the nature of a substitute and placed on the Senate Legislative Calendar . Aspects of any cooperative agreements between the USGS and others for mapping critical minerals in other countries in S. 1463 was amended on June 5, 2025. CQ, "Senate Foreign Relations Committee Markup: Senate panel backs atom . " https://plus.cq.com/doc/committees-20250605548893?2&searchId=WkfHkTjz . 
+ 118 .
+ H.R. 1263 was passed in the House, received in the Senate and referred to the Committee on Foreign Relations. H.R. 2556 was ordered to be reported in the nature of a substitute.
+ 119 .
+ For some more background on the 1872 Mining Law see CRS Report R48166, The U.S. Mining Industry and the Rosemont Decision , by Emma Kaboli and Adam Vann.
+ 120 .
+ 30 U.S.C. §1606 (j). See " Comparing the USGS's Critical Minerals Lists to DOE's 2023 Critical Materials List " and CRS Report R48005, Critical Mineral Resources: The U.S. Geological Survey (USGS) Role in Research and Analysis , by Linda R. Rowan.
+ 121 .
+ U.S. Congress, House Committee on Natural Resources, Subcommittee on Energy and Mineral Resources, Examining the Methodology and Structure of the USGS 's Critical Minerals List , 118 th Cong., 1 st sess., September 13, 2023, https://naturalresources.house.gov/calendar/eventsingle.aspx?EventID=414780 . 
+ Download PDF 
+ Download EPUB 
+ Revision History
+ Jan. 8, 2026
+ HTML 
+ · 
+ PDF 
+ 3% changed
+ Nov. 26, 2025
+ HTML 
+ · 
+ PDF 
+ 4% changed
+ Sep. 18, 2025
+ HTML 
+ · 
+ PDF 
+ 2% changed
+ Jul. 17, 2025
+ HTML 
+ · 
+ PDF 
+ 1% changed
+ Jun. 17, 2025
+ HTML 
+ · 
+ PDF 
+ 79% changed
+ Feb. 21, 2025
+ HTML 
+ · 
+ PDF 
+ 3% changed
+ Apr. 8, 2024
+ HTML 
+ · 
+ PDF 
+ <1% changed
+ Mar. 20, 2024
+ HTML 
+ · 
+ PDF 
+ Metadata
+ Topic areas
+ Energy Policy 
+ Environmental Policy 
+ National Defense 
+ Science and Technology Policy 
+ Report Type: Reports
+ Source: Congress.gov , CRSReports.Congress.gov 
+ Raw Metadata: JSON 
+ About 
+ Bulk Download 
+ GitHub 
+ Privacy 
+ Donate 
+ Search powered by 
+ 

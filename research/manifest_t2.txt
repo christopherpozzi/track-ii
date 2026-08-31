@@ -1,0 +1,16 @@
+nss_2025.pdf|https://www.whitehouse.gov/wp-content/uploads/2025/12/2025-National-Security-Strategy.pdf
+rand_quarantine.pdf|https://www.rand.org/content/dam/rand/pubs/research_reports/RRA1200/RRA1279-1/RAND_RRA1279-1.pdf
+rand_grayzone.pdf|https://www.rand.org/content/dam/rand/pubs/conf_proceedings/CFA2000/CFA2065-1/RAND_CFA2065-1.pdf
+piie_tariff_chart.pdf|https://www.piie.com/sites/default/files/documents/piie-chart-us-china-war-up-to-date.pdf
+piie_uschina_war.html|https://www.piie.com/research/trade-investment/us-china-trade-war
+piie_2025_imports.html|https://www.piie.com/blogs/realtime-economics/2026/trump-china-trade-wars-five-takeaways-us-imports-2025
+fa_taiwan_not_for_sale.html|https://www.foreignaffairs.com/taiwan/taiwan-not-sale
+csis_critical_minerals.html|https://www.csis.org/analysis/china-imposes-its-most-stringent-critical-minerals-export-restrictions-yet-amidst
+carnegie_tech.html|https://carnegieendowment.org/research/2025/01/us-china-technology-competition
+cnas_export_controls.html|https://www.cnas.org/publications/reports/the-future-of-us-export-controls
+merics_economic.html|https://merics.org/en/report/chinas-economic-statecraft
+house_ccp_committee.html|https://selectcommitteeontheccp.house.gov/media/press-releases
+asiasociety_trade.html|https://asiasociety.org/policy-institute/us-china-trade
+crs_us_export_controls_china.html|https://www.everycrsreport.com/reports/IF11627.html
+crs_taiwan_defense.html|https://www.everycrsreport.com/reports/IF10275.html
+crs_rare_earths.html|https://www.everycrsreport.com/reports/IF12864.html

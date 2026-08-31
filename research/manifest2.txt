@@ -1,0 +1,6 @@
+prc_export_control_law.html|http://www.npc.gov.cn/npc/c2/c30834/202010/t20201018_307461.html
+prc_anti_secession_law.html|http://www.npc.gov.cn/zgrdw/npc/xinwen/2005-03/14/content_1699517.htm
+prc_anti_foreign_sanctions.html|http://www.npc.gov.cn/npc/c2/c30834/202106/t20210610_311907.html
+crs_phase_one.html|https://www.everycrsreport.com/reports/IF12125.html
+crs_export_controls_semi.html|https://www.everycrsreport.com/reports/R48642.html
+crs_taiwan_arms.html|https://www.everycrsreport.com/reports/IF11665.html

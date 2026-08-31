@@ -1,0 +1,82 @@
+ 
+ Section 301 and China: The U.S.-China Phase One Trade Deal - EveryCRSReport.com 
+ Internet Explorer version 8 or any modern web browser is required to use this website, sorry. 
+ Toggle navigation 
+ EveryCRSReport.com 
+ All Reports 
+ Topic Areas 
+ About 
+ Donate 
+ Section 301 and China: The U.S.-China Phase One Trade Deal
+ May 27, 2022 –
+ May 21, 2026
+ IF12125 
+ Section 301 and China: The U.S.-China Phase One Trade Deal
+ Updated May 21, 2026
+ (IF12125)
+ On January 15, 2020, then-President Donald J. Trump signed a trade agreement with then-Vice Premier Liu He of the People's Republic of China (PRC, or China). The agreement sought to resolve some long-standing complaints by U.S. government and businesses asserting that China was engaging in unfair trade, investment, and technology practices, which the U.S. Trade Representative (USTR) had investigated and identified under Section 301 of the Trade Act of 1974 (19 U.S.C. §2411). The deal is called the Phase O ne agreement because it was to be the first of subsequent agreements to address U.S. concerns. It appeared to have been difficult for USTR to secure commitments from the PRC in some areas, and some experts assessed that PRC negotiators pushed most issues identified by the USTR related to PRC industrial policies (e.g., state subsidies, technology transfer requirements, and IP theft) for future talks. In October 2025, USTR initiated an investigation of China's implementation of the Phase One deal.
+ China and Section 301 Context
+ In August 2017, the USTR invoked Section 301 in an effort to address PRC industrial policies. These PRC policies' stated objective is to seek PRC global commercial and technology leadership through trade, investment, and technology practices, which the USTR assessed to be discriminatory. The decision to invoke Section 301 followed 15 years of efforts by the U.S. government and U.S. industry to resolve concerns about PRC industrial practices, which PRC officials were mostly unwilling to acknowledge and address. These views were also informed by PRC intensification of such practices. Particular areas of concern included new Made in China 202 5 industrial policies, increased reports of PRC corporate espionage, tightened control by the PRC government of information and data controls, and increased economic coercion and forced technology transfer requirements by PRC authorities. U.S. stakeholders assessed that China was deploying a web of mutually reinforcing government policies that favored PRC firms and pressured or incentivized some foreign firms to transfer trade secrets, intellectual property (IP), and technology to PRC entities in order to operate and expand in China. Also of concern to U.S. stakeholders was a sharp increase in PRC firms' acquisition of foreign firms in strategic sectors (e.g., aerospace and semiconductors), often using state funds.
+ While the USTR had prevailed at the World Trade Organization (WTO) in several dispute cases or elements of cases against China, some experts assessed that most PRC practices at issue were systemic and pervasive such that they could not be resolved through the WTO's case-by-case dispute settlement approach. Some U.S. concerns (particularly regarding PRC investment restrictions and subsidies) fell in gray areas of WTO rules or outside the WTO's purview. Prior experience in seeking to address PRC industrial policies in key sectors (e.g., steel, solar panels, and telecom equipment) led U.S. officials to seek trade countermeasures to address PRC industrial policies in their early stages. They sought to target sectors supported by Made in China 2025 , such as electric vehicles (EVs), before PRC firms entered a significant production or export phase. USTR reasoned that trade remedies, such as antidumping measures, were reactive and applied so late in a product cycle that they would do little to prevent China from securing a dominant global market position, particularly given the broad scope and potential global effects of China's policies.
+ Section 301 Findings and Actions
+ In 2018, as part of its investigation under Section 301 of the Trade Act of 1974 (19 U.S.C. §2411), the USTR concluded that China engaged in forced technology transfer, cyber-enabled theft of U.S. IP and trade secrets, discriminatory and nonmarket licensing practices, and state-funded strategic acquisitions of U.S. assets. Section 301 allows for a range of countermeasures and requires the USTR to negotiate with a country of concern in an effort to resolve issues. For countermeasures, the USTR imposed four rounds of tariffs at a rate that ranged from 7.5% to 25% on about $370 billion worth of U.S. imports from China. The PRC countered with tariffs on $110 billion worth of U.S. trade. Both sides have granted some exceptions, but most tariffs remain in effect. The Departments of Commerce and the Treasury did not use other authorities under their purview, such as restricting services trade and investment. The USTR also reached agreement with the PRC on some issues under Phase One ( text box). 
+ Phase One Agreement: Select Provisions
+ The Agreement includes PRC commitments in these areas: 
+ IP. Defines "confidential business information" as trade secrets subject to protection, and defines "misappropriation" to include electronic intrusions and unauthorized disclosure, including by government officials and third-parties. The burden of proof shifts to the accused party if a rights holder shows that the accused party had access or an opportunity to obtain a trade secret; the information used by the accused party is materially the same as that of the rights holder; evidence that a trade secret has been or risks being disclosed; or other evidence of misappropriation. Requires pharmaceutical patent extensions in the event of unreasonable delays in PRC grants of patents.
+ Technology Transfer. Prohibits forced technology transfer, an activity the PRC government had denied undertaking. Requires that firms operate freely without pressure to transfer technology. Transfer or licensing of technology should be on market terms that are voluntary and reflect mutual agreement. Prohibits the PRC government from requiring technology transfer in relation to acquisitions, joint ventures, or other transactions. Prohibits the PRC from requiring or pressuring (formally or informally) technology transfer, or the use or favoring of a particular technology. This prohibition includes conditions the PRC might impose through regulatory requirements and administrative approvals or licenses to operate in China or receive any advantages. 
+ Foreign investment and acquisitions . Prohibits PRC government support of outbound investment targeting foreign technology/capabilities prioritized in PRC industrial plans. 
+ Currency . Requires market-determined exchange rates, and transparency and reporting on currency practices.
+ Negotiations . Creates a Trade Framework Group, led by the USTR and a PRC Vice Premier, to meet every six months on unresolved IP and agricultural issues.
+ Dispute Resolution. Allows 90 days to resolve issues, after which if a resolution is not reached either side may take proportionate unspecified action.
+ See CRS In Focus IF11346, Section 301 of the Trade Act of 1974 . 
+ Other Phase One Commitments
+ Phase One also sought to address the U.S. trade deficit with China with a two-year purchasing deal. China agreed to purchase during 2020 and 2021 at least $200 billion of goods above a 2017 baseline amount of U.S. agriculture (+$32 billion), energy (+$52.4 billion), manufactured goods (+$77.7 billion), and services (+$37.9 billion). China fulfilled 60% of its goods commitments (and about 57% for goods and services), due in part to PRC efforts to diversify agriculture and energy suppliers and the COVID-19 pandemic. PRC efforts to hasten its exports by reclaiming shipping containers in U.S. ports before they could be reloaded by U.S. exporters may have impeded some U.S. exports to China during this period. ( Figure 1 ).
+ Figure 1. PRC Phase One Purchases (2020 to 2021)
+ Source: CRS with data from the U.S. Census Bureau.
+ Notes: Excludes services commitments. Goods includes aircraft.
+ China also made some market access commitments in agriculture and financial services that were unrelated to USTR's Section 301 concerns. Some saw that this focus, together with the purchasing deal, allowed the PRC to avoid addressing core U.S. Section 301 concerns about PRC industrial and technology practices. In agriculture, the PRC committed to expand U.S. access to China's market in rice, beef, pork, and poultry, while leaving some technical issues to future talks. In financial services, China agreed to reduce some foreign equity limits, and licensed a few U.S. firms to operate in China. The PRC committed to review applications to operate in China from Mastercard, Visa, and American Express, but did not commit to licensing them to operate. China also still required foreign firms to joint venture with PRC firms in China's credit card market, which is controlled by a state monopoly, China UnionPay.
+ Subsequent Section 301 Actions
+ In May 2024, USTR extended most 2018 tariffs and raised tariffs by an additional 25% to 100% on some goods (e.g., EVs/batteries, medical products, ship-to-shore cranes, semiconductors, solar cells, steel, and aluminum). In November 2025, USTR extended certain tariff exclusions for one year. In December 2025, USTR determined PRC policies and practices on mature-node chips and silicon carbide substrates/wafers to be "actionable" and deferred action by proposing an initial 0% tariff rate until June 2027. In January 2025, USTR also determined PRC practices to be "actionable" and proposed port equipment tariffs and fees for using PRC-built ships. China retaliated with similar measures. In November 2025, both sides halted such actions for one year. The U.S. government has also imposed tariffs on China under other authorities. See CRS In Focus IF12990, U.S.-China Tariff Actions Since 2018: An Overview ; CRS In Focus IF12958, Section 301 and China: Mature-Node Semiconductors ; CRS In Focus IF12666, Section 301 and China: Shipping and Shipbuilding Issues ; and CRS In Focus IF11284, U.S.-China Trade Relations . 
+ Issues for Congress
+ As it debates options to counter persistent PRC statist economic practices that the USTR raised in 2018, Congress might assess the effectiveness of Section 301 to date as well as the terms of the Phase One deal and China's implementation of such terms. Some Members have pressed for eliminating or reducing U.S. tariffs to provide relief for U.S. consumers and businesses. Other Members say tariffs should be sustained or raised to pressure China to modify practices of concern and to protect the U.S. market from subsidized PRC exports. Congress might consider the following.
+ Given the limited commitments U.S. officials secured through Phase One , what might Congress expect or require in any subsequent talks with China? Does a focus on PRC talks take U.S. attention and resources away from efforts to use U.S. trade tools and take joint actions with other countries to counter PRC practices? 
+ What actions might USTR take if it determines that China failed to implement provisions of the deal, such as those related to IP and technology transfer? 
+ USTR has determined that PRC practices in maritime and shipbuilding and in semiconductors are actionable under Section 301 but has delayed implementation of remedies. USTR also proposed but never enacted tariffs on consumer electronics from China under Section 301. President Trump also exempted many of these products in his 2025 reciprocal tariff actions. What are the ramifications of these delayed actions and exemptions? 
+ Is Section 301 the appropriate tool to address problematic PRC practices in other sectors? If so, what areas should be a priority? What other tools might be created or deployed to counter PRC practices? 
+ What role have tariffs played in U.S. efforts to diversify trade away from China and counter PRC industrial policies? How might the Trump Administration's tariffs on other trading partners affect such efforts? 
+ Download PDF 
+ Download EPUB 
+ Revision History
+ May. 21, 2026
+ HTML 
+ · 
+ PDF 
+ <1% changed
+ Mar. 5, 2026
+ HTML 
+ · 
+ PDF 
+ 59% changed
+ Feb. 12, 2025
+ HTML 
+ · 
+ PDF 
+ Dec. 16, 2022
+ HTML 
+ · 
+ PDF 
+ May. 27, 2022
+ HTML 
+ · 
+ PDF 
+ Metadata
+ Report Type: In Focus
+ Source: Congress.gov , CRSReports.Congress.gov 
+ Raw Metadata: JSON 
+ About 
+ Bulk Download 
+ GitHub 
+ Privacy 
+ Donate 
+ Search powered by 
+ 

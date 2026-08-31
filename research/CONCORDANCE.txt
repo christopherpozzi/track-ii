@@ -1,0 +1,23 @@
+cell                        n  sup  qual  con   conc   status
+---------------------------------------------------------------
+export_controls.DELTA       5    3     1    1    60%   contested
+export_controls.OMEGA       5    5     0    0   100%   uncontested
+security_commitment.DELTA   4    1     3    0    25%   qualified
+security_commitment.OMEGA   5    3     1    1    60%   contested
+tariffs.DELTA               3    2     1    0    67%   qualified
+tariffs.OMEGA               4    3     1    0    75%   qualified
+precursors.DELTA            2    2     0    0   100%   uncontested
+precursors.OMEGA            3    0     0    3     0%   contested
+market_access.DELTA         2    2     0    0   100%   uncontested
+market_access.OMEGA         2    2     0    0   100%   uncontested
+joint_research.DELTA        1    1     0    0   100%   uncontested
+joint_research.OMEGA        1    1     0    0   100%   uncontested
+---------------------------------------------------------------
+ALL                        37   25     7    5    68%
+
+  uncontested   6 of 12 cells
+  qualified     3 of 12 cells
+  contested     3 of 12 cells
+
+  median sources per cell: 3
+  cells resting on ONE source: ['joint_research.DELTA', 'joint_research.OMEGA']

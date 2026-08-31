@@ -1,0 +1,291 @@
+ 
+ U.S. Export Controls and China: Advanced Semiconductors - EveryCRSReport.com 
+ Internet Explorer version 8 or any modern web browser is required to use this website, sorry. 
+ Toggle navigation 
+ EveryCRSReport.com 
+ All Reports 
+ Topic Areas 
+ About 
+ Donate 
+ U.S. Export Controls and China: Advanced Semiconductors
+ August 22, 2025 –
+ September 19, 2025
+ R48642 
+ U.S. Export Controls and China: Advanced Semiconductors
+ Updated September 19, 2025
+ (R48642)
+ Jump to Main Text of Report 
+ Contents
+ Introduction 
+ Overview of U.S. Government Actions 
+ Gaps, Workarounds, and Countermeasures 
+ Issues for Congress 
+ Tables
+ Table A-1. Select Details of U.S. Advanced Chip Controls on China (2022-2025) 
+ Table A-2. Nvidia's Modified Chips for China 
+ Appendixes
+ Appendix. 
+ Summary
+ Semiconductors are strategic and uniquely important electronic devices. They are fundamental to most industrial and national security activities and serve as essential building blocks of other technologies, such as artificial intelligence (AI). Policymakers, including top leaders in the United States, the People's Republic of China (PRC, or China), and elsewhere, see semiconductors and AI technologies as critical to future economic competitiveness, national security, and global leadership. In 2014, the PRC government issued a national semiconductor industrial policy with the stated goal of establishing a world-leading semiconductor industry in all areas of the integrated circuit supply chain by 2030. To achieve its goals of technology leadership and independence, China has used government financing and certain policies to foster targeted foreign commercial ties across the semiconductor supply chain. 
+ Since 2018, the U.S. government has sought to strengthen U.S. export controls of advanced semiconductors with the stated intent of both restricting PRC access to the technologies and ability to produce advanced chips, and curtailing PRC access to related computing and AI applications. U.S. actions have also sought to sustain U.S. leadership in advanced chips, related parts of the semiconductor supply chain, and computing and AI applications, while slowing China's development of competitive capabilities. U.S. actions have been grounded in concerns about PRC efforts to build an indigenous, self-sufficient, and secure and controllable semiconductor ecosystem; and PRC military-civil fusion policies that seek to use commercial advancements in semiconductors, AI, and other technologies for military uses. Some analysts have noted that before 2018, some U.S. controls and licensing policies vis-a-vis China allowed some U.S. firms across the supply chain to contribute to the development of China's semiconductor industry. U.S. efforts to enhance controls have restricted some advanced technologies and activities from China. Other parts of the semiconductor supply chain remain open to China. 
+ Congress and the Trump Administration are assessing how to advance U.S. competitiveness in semiconductors and AI. In this context, some stakeholders have called for removing controls on advanced chips to promote U.S. competitiveness and possibly increase PRC entities' reliance on U.S. firms; others have said liberalizing controls could cede some U.S. competitive advantages to China in part by filling PRC gaps in advanced chips. Some stakeholders have argued U.S. controls could encourage PRC efforts to indigenize technology. PRC policies already seek technology "self-reliance" and restrict foreign firms' market access as PRC firms gain technological capabilities. Some Members of Congress have raised concerns about President Trump's negotiation of U.S. export control terms with China and approval of Nvidia's H20 and AMD's MI308 for sale in China. Some former U.S. officials have expressed concerns about what they have described as negotiating national security decisions in exchange for trade concessions or government revenue, and have pointed out that such actions could be seen as contradicting past U.S. practice to reject PRC efforts to negotiate on such terms. Congress may assess the authority for the U.S. government to receive proceeds from licensed chip sales. Of potential relevance, depending on the facts as they continue to emerge, may be Article I, Section 9, Clause 5 of the U.S. Constitution, which prohibits the federal imposition of export taxes and duties (not user fees), and 50 U.S.C. §4815(c), which prohibits BIS from collecting fees for considering or issuing export licenses.
+ Related CRS reports include CRS Report R46767, China's New Semiconductor Policies: Issues for Congress ; CRS Report R47558, Semiconductors and the CHIPS Act: The Global Context ; CRS In Focus IF10964, Made in China 2025 and Industrial Policies: Issues for Congress ; CRS Report R47523, Frequently Asked Questions: CHIPS Act of 2022 Provisions and Implementation ; CRS Report R47508, Semiconductors and the Semiconductor Industry CRS In Focus IF12899, Data Centers and Cloud Computing: Information Technology Infrastructure for Artificial Intelligence ; CRS Report R46795, Artificial Intelligence: Background, Selected Issues, and Policy Considerations ; CRS In Focus IF12629, Regulation of U.S. Outbound Investment to China ; CRS In Focus IF12958, Section 301 and China: Mature-Node Semiconductors ; CRS In Focus IF11627, U.S. Export Controls and China ; and CRS Report R46814, The U.S. Export Control System and the Export Control Reform Act of 2018 . 
+ Introduction
+ Since 2018, the U.S. government has sought to strengthen U.S. export controls to restrict the PRC's access to advanced semiconductor ("chip") technologies and ability to produce advanced chips. U.S. actions have focused on sustaining the lead in advanced chips, and related computing and AI applications, and slowing China's development of competitive capabilities, including in defense and intelligence. 1 The controls also have sought to counter and slow PRC efforts to build an indigenous, self-sufficient, and secure and controllable semiconductor ecosystem and to thwart PRC military-civil fusion policies that have sought to apply commercial advancements in semiconductors, AI, and other technologies for military purposes. 2 Prior to 2018, U.S. controls and export licensing policies vis-a-vis China allowed firms across the semiconductor supply chain to sell a range of products and services in China. 3 This activity provided revenue for U.S. firms. It also allowed China to develop some competitive capabilities. 4 Parts of the supply chain that remain open to China include some advanced chips (through licensing) equipment and tools; third-party computing; mature-node technology; research and development (R&D) and open-source technology; materials and intermediates; and training for PRC staff. This report discusses U.S. export control actions related to advanced semiconductors, potential gaps, and issues before Congress. Text Box I describes the technologies discussed in the report; Table A-1 provides a timeline of U.S. export control actions . 5 
+ I: Advanced Semiconductor Chips and Supply Chains
+ Discussions of advanced semiconductors focus on a particular set of chips, specifically, a dvanced logic chips —including Field-Programmable Gate Arrays (FPGAs) and Application-Specific Integrated Circuits (ASICs)— advanced memory chips —including High-Band Memory (HBM) and Dynamic Random Access Memory (DRAM) chips, and graphic processing units (GPUs), which provide the speed and levels of computing power required to process vast amounts of data and perform complex calculations used in supercomputing and AI applications. 6 Other parts of the advanced semiconductor supply chain include (a) design and intellectual property (IP); (b) certain materials (e.g., metals, minerals, elements, chemicals, and gases); (c) specialized processed inputs (e.g., photoresists and photomasks); d) specialized manufacturing processes (e.g., deposition, etching, and photolithography); (e) semiconductor manufacturing equipment (SME); (f) electronic design automation (EDA) hardware and software tools; and (g) advanced packaging and testing techniques and tools that can enhance a chip's performance. 7 
+ Overview of U.S. Government Actions
+ The first Trump Administration expanded export controls on semiconductor technologies to China, mostly through an actor-based approach that added some PRC firms (e.g., Huawei) to the Commerce Department's Bureau of Industry and Security (BIS)' Entity List (EL). The EL lists foreign persons and entities who are involved, or have the potential to be involved, in activities contrary to U.S. national security or foreign policy interests. It requires licenses for exports of dual-use items (items with both commercial and military uses) listed on the Commerce Control List (CCL) and other items. 8 In 2020, BIS expanded the foreign-produced direct product rule (FDPR) to subject any firm to U.S. export controls when using U.S. technology, software, or equipment to produce chips for Huawei. 9 BIS also reconstituted its Military End User (MEU) list—a list of entities requiring licensing for exports, reexports, or transfers of specific dual-use items to the PRC, Russia and China because of risks of technology transfer for military use and retightened license requirements for PRC firms on the MEU. 10 BIS had previously waived license requirements for dual-use exports to PRC military firms if the items were for non-military uses.
+ During the Biden Administration, BIS added more PRC entities to the EL and strengthened technology-based and country-based controls for advanced chips and related semiconductor manufacturing equipment (SME), such as SME using extreme ultraviolet lithography (EUV) and deep ultraviolet lithography (DUV). The U.S. government also negotiated terms with Japan and the Netherlands to align SME export controls vis-a-vis China. 11 In 2022, BIS added controls on certain advanced logic chips, integrated circuits, and SME related to advanced computing. 12 In 2023, BIS added PRC entities involved in advanced computing and AI to the EL. 13 BIS closed gaps in controls for certain Nvidia chips designed for China that fell below earlier computing control thresholds in part by expanding controls to consider a chip's total processing performance and performance density. 14 BIS also added details to its SME controls and extended controls to include PRC design firms that use U.S. electronic design automation (EDA) hardware and software tools. Observers characterized this as an effort to curtail PRC design firms' ability to send advanced chip design files to foundries outside the PRC (e.g., Taiwan) to produce advanced chips. 15 BIS exempted some foreign-owned facilities in China that are not PRC-majority owned from certain controls. Also, in 2023, former President Biden issued Executive Order 14105, followed by an implementing rule in 2024, to restrict U.S. investment in advanced chips and certain types of AI in China. 16 In 2024, BIS expanded the FDPR to apply to SME and chips and further restricted exports to 16 PRC entities. 17 BIS added China wide-controls for advanced packaging SME, high-bandwidth memory (HBM), and dynamic random-access memory (DRAM), which, with the expansion of the FDPR, extended controls to South Korean firms operating in China. 18 BIS added controls for "node-agnostic" tools (used for legacy and advanced chip production) and DUV and multi-patterning techniques. Other SME is subject to end-use/end-user controls and has a new license exception. BIS added 140 PRC entities to the EL and removed three PRC firms from the validated end-user program (VEU). The VEU program allows designated entities to export certain dual-use items without a BIS license. 19 
+ On January 15, 2025, BIS issued a global AI Diffusion Rule to curtail PRC access to advanced chips and AI computing power through third countries and in an effort to create a secure global ecosystem for AI data centers. 20 The rule proposed a global licensing framework that grouped countries into three categories for export controls on advanced chips, computers, and AI model weights. Tier I included the United States and 18 countries with whom the United States partners on intelligence, security, and semiconductors, and exempted them from licensing. Tier II included most other parts of the world; these countries would be licensed through a data center VEU program, which would operate under a presumption of license approval. The VEU program provided a general authorization for U.S. exports of advanced chips to pre-approved data centers. These countries also were subject to a per-company per-country cumulative total computing power allocation. Tier III included China, Russia and North Korea, which were subject to a presumption of denial. 21 The rule also aimed to close gaps in controls by considering multichip modes and total computing power, and by restricting PRC access to third parties, including via cloud computing services. BIS also ended license exceptions for front-end chip fabricators and outsourced assembly and testing; it also restricted PRC access to model weights of the most advanced U.S. closed-weight dual-use AI models. 22 
+ The second Trump Administration to date has both tightened and loosened export controls on chips. Initial actions tightening controls have included adding 42 PRC entities to the EL in March 2025 and another 23 PRC entities in September 2025; and requiring Nvidia to apply for a license to sell its H20 GPU in China. 23 The H20 is the latest in a series of chips Nvidia modified in response to U.S. export controls (see Text Box II and Table A-2 ). Also, BIS assessed in May 2025 that Huawei had developed its Ascend chips in violation of U.S. controls and warned that using such chips would violate U.S. export controls. 24 BIS also informed firms that produce EDA hardware and software tools that they would need a license for PRC sales. 25 In September 2025, BIS removed the named PRC facilities of Samsung and SK Hynix from the VEU program, effective December 31, 2025. 26 Actions loosening controls have included rescinding the Biden Administration's AI Diffusion Rule, which ended proposed controls on PRC access to third-party computing centers, and issuing the AI Action Plan in July 2025, which promoted the U.S. export of "its full AI technology stack—hardware, models, software, applications, and standards—to countries that join America's AI alliance." 27 Also, BIS reportedly withheld export control actions against China during U.S.-China tariff talks. 28 In July 2025, BIS rescinded license requirements for EDA firms after the PRC agreed to resume licensing rare earth magnets for U.S. firms. 29 In August 2025, BIS approved Nvidia's H20 and Advanced Micro Devices, Inc. (AMD)'s MI308 GPUs for sale in China under terms that the U.S. government would receive 15% of proceeds. 30 
+ Gaps, Workarounds, and Countermeasures
+ BIS's targeting controls on certain PRC entities, technology levels, and industry segments has left gaps in controls and enabled corporate workarounds. The EL's actor-based approach is limited to specific entities, of which only parts of the firm and named subsidiaries are listed. 31 Some key PRC national champion firms, such as Changxin Memory Technologies (CXMC)—a firm leading PRC efforts to develop HBM capabilities—remain unlisted and are able to purchase U.S. SME and other semiconductor technologies. 32 Unlisted PRC firms may support PRC efforts to work around controls. For example, some of the PRC firms listed on the EL in September 2025 were charged with providing controlled SME to a listed PRC entity, SMIC. 33 Some PRC firms have restructured around these EL-based controls. For example, in November 2020, Huawei sold its 5G business, Honor, to a PRC government consortium. 34 Huawei reportedly transferred some of its R&D teams and advanced technology and design capabilities to the new entity. 35 BIS did not list Honor on the EL—either as a Huawei subsidiary or affiliate, or under a new listing—allowing Honor to come out from under U.S. export controls and resume technology licensing and partnerships with U.S. and foreign firms. 36 U.S. firms AMD and Nvidia have responded to controls by calibrating GPUs for China that fall just below control thresholds but still support AI development and advanced computing functions. 37 PRC firms have used similar approaches. For example, CXMC reportedly recalculated its chip features to fall below BIS's October 2022 controls. 38 Additionally, there have been reports of U.S. firms violating controls. For example, since 2022, the Department of Justice has been investigating Applied Materials' potential sales of SME to SMIC via a subsidiary in South Korea. 39 In July 2025, U.S-based Cadence Designs System, Inc. pleaded guilty and paid about $213 million in penalties to resolve U.S. government criminal and civil charges that between 2015 and 2021, the firm sold EDA tools to China's National University of Defense Technology (NUDT), a military firm that BIS listed on the EL in 2015 for its support of China's supercomputing programs and related nuclear activities. 40 
+ Licensing guidance in some cases only restricts certain technologies and allows BIS discretion to approve dual-use exports on a case-by-case basis, such as BIS's approval of Nvidia's H20 and AMD's MI308 for export to China. 41 Some critics have contended that BIS has been slow to list PRC firms, strengthen controls, and respond to workarounds to address White House concerns about PRC semiconductor policies since at least 2016. 42 For example, some experts say that Huawei built its Ascend AI chips at PRC fabs that were notified to BIS but that were not added to the EL. 43 These fabs and other Huawei-tied firms that are part of Huawei's vertically integrated ecosystem are not listed on the EL and do not face the same level of controls as Huawei. 44 Additionally, BIS kept AMEC, a top PRC SME producer, on its VEU list until December 2024, which facilitated multiple dual-use sales to China. 45 BIS's process of developing controls takes time and may signal to firms that controls may be coming. BIS's issuance of general licenses after controls are in effect would allow some sales of the controlled technology to China to continue for certain periods of time. With such possible signaling of impending BIS actions, together with BIS's use of general licenses, PRC firms may then be able to stockpile SME and chips. 46 The PRC's 2020 antitrust terms for Nvidia that legally require Nvidia to allow PRC entities to buy a year's worth of GPUs (see Text Box II , below) may support such PRC stockpiling. Advanced packaging techniques, aimed at enhancing performance and competitiveness with leading-edge nodes, also may allow firms to circumvent controls by grouping multiple mature-node chips. 47 U.S. joint ventures (JVs) and R&D in China have supported some PRC chip advancements. 48 BIS "red flag" guidance obligates certain corporate due diligence but a "knowledge" standard limits the extent to which firms are liable for knowing the end use of their exports. Some Members of Congress criticized Nvidia for not stemming PRC circumvention via third markets. 49 
+ II: Nvidia's Modified Chips for China
+ In October 2022, after BIS controlled its A100 and H100 GPUs, Nvidia customized its A800 and H800 chips for China by reducing the NVLink interface (high-speed, low-latency GPU-to-GPU communication) from 600GB/s to 400GB/s. (PRC firm DeepSeek used the H800 in its AI language model). In November 2023, after BIS controlled the A800 and H800 chips, Nvidia announced H20, L20, and L2 chips for China. The H20 is a modified H100 chip that is optimized for AI inference and memory bandwidth. It has a reduced core count but uses HBM3 technology, which BIS restricted in 2024, that supports AI applications. The L20 is a modified AD102. The L2 is a modified AD104. In May 2025, after BIS controlled the H20, Nvidia announced a new R&D center in Shanghai and said it would further optimize the H20 and develop the B30 based on its Blackwell RTX Pro with multi-GPU scaling and GDDR7 memory instead of HBM3 (which is subject to BIS controls).
+ Source: Britney Nguyen, "Here Are the Chips that Nvidia Can Sell to China," Quartz, March 27, 2025. 
+ BIS has coordinated export controls with certain governments; differences in controls and licensing nevertheless exist. China has access to foreign-owned foundries in the PRC and Taiwan. 50 PRC dual-use industrial policies complicate BIS's ability to implement controls by obfuscating military and civilian entities and functions, and by requiring firms in strategic sectors, including semiconductors, to use a PRC government-tied partner, raising risks of technology spillage. 51 BIS has also faced challenges in inspecting licensed end users in China. 52 
+ The PRC government has used export controls on advanced manufacturing inputs (e.g., germanium, gallium, and rare earth magnets) and antidumping, antitrust and other regulatory actions to pressure and retaliate against U.S. export controls. 53 The PRC government has used antitrust reviews to scuttle strategic U.S. semiconductor deals and set both confidential and public conditions on U.S. and foreign semiconductor firms' operations in China. 54 Such terms may challenge U.S. export controls with requirements to treat PRC customers the same as non-PRC firms; sustain levels of chip supplies for China; ensure interoperability with PRC products; use open source software; and report to China's State Administration for Market Regulation (SAMR) every six months. Specific terms set in 2020 require Nvidia to allow PRC customers, distributors and original equipment manufacturers (OEMs) to purchase one year's supply of its GPUs. 55 As U.S. and foreign firms have complied with PRC technology transfer requirements, the PRC has pressed to secure even more advanced technology. For example, after the H20 was approved, the PRC raised security concerns about the chip and effectively blacklisted another chip Nvidia had designed for China, the RTX Prop 6000D, or B40; the PRC also reportedly is pressing to relax controls on HBM, a technology that some experts see as a key chokepoint for China's ability to produce advanced chips, including Huawei's Ascend series chips. 56 China may use its purported security concerns about the H20 to press for technology disclosures and access to more advanced chips, such as Nvidia's B30 chip. 57 It also may press for technology transfer through Nvidia's new R&D center in Shanghai. 58 In another effort to pressure Nvidia to provide its advanced chips to China, in September 2025, SAMR announced that Nvidia had violated the terms of its 2020 antitrust review and by extension the Antimonopoly Law of China. 59 Nvidia's CEO has said he plans to sell chips more advanced than the H20 to compete in China. 60 
+ Issues for Congress
+ Congress and the Trump Administration are assessing how to advance U.S. competitiveness in semiconductors and AI. In this context, some stakeholders have called for removing controls on advanced chips to promote U.S. competitiveness and possibly increase PRC entities' reliance on U.S. firms; others have said liberalizing controls could cede some U.S. competitive advantages to China in part by filling PRC gaps in the ability to produce advanced chips. 61 Some stakeholders have argued U.S. controls could encourage PRC efforts to indigenize technology. PRC policies already seek technology "self-reliance" and restrict foreign firms' market access as PRC firms gain technological capabilities. 62 Some Members of Congress have raised concerns about President Trump's negotiation of U.S. export control terms with China and approval of Nvidia's H20 and AMD's MI308 for sale in China. 63 Some former U.S. officials have expressed concerns about what they have described as negotiating national security decisions in exchange for trade concessions or government revenue, and have pointed out that such actions could be seen as contradicting past U.S. practice to reject PRC efforts to negotiate on such terms. 64 Congress may assess the authority for the U.S. government to receive proceeds from licensed chip sales. Of potential relevance, depending on the facts as they continue to emerge, may be Article I, Section 9, Clause 5 of the U.S. Constitution, which prohibits the federal imposition of export taxes and duties (not user fees), and 50 U.S.C. §4815(c), which prohibits BIS from collecting fees for considering or issuing export licenses.
+ Congress could consider legislation barring profit sharing in exchange for licensing approval or permitting BIS to charge fees for such approvals. Congress also could codify BIS rules issued since 2022 to counter PRC and industry pressure to dilute or reverse such rules. P.L. 119-34 requires BIS to report annually to Congress with specific licensing and end-use check details. Congress could strengthen oversight by regularly assessing this new report and ensuring that BIS provides classification determinations, licensing decisions, and export data. Congress also could instruct BIS to issue the annual public reports it has published in the past on China trade, which it has not issued since 2022. 65 Congress might also direct BIS to report on PRC semiconductor advances, possibly including, for example, on how such progress may have been made with U.S. support to identify any gaps in controls and on the quality of such advances (e.g., the ability of PRC firms to produce chips at consistent quality and scale to meet PRC demand). Congress might also consider the strategic importance of the other parts of the semiconductor supply chain that remain open to China and whether any additional controls are needed to address other parts of the supply chain or to close gaps and curtail workarounds.
+ Other legislation related to semiconductor export controls introduced in the 119 th Congress include H.R. 3447 / S. 1705 to require the Secretary of Commerce to issue standards for chip security mechanisms; H.R. 2683 to require remote access for export licensed trade; H.R. 1122 to control the export to China of some chip technology; S. 1053 and H.R. 2246 to restrict some semiconductor investments in China and PRC firms; and S. 1473 to create an export control whistleblower program. S.Amdt. 3505 to S. 2296 would require a U.S. exporter of advanced chips to certify that a) a U.S. person had a right-of-first-refusal; b) there is no U.S. backlog of requests as a result of the sale; c) the exporter is not offering advantages, pricing or terms to a foreign person that it is not providing U.S. persons; and d) the chip will not be used to compete with U.S. persons outside the domestic market of the buyer.
+ Appendix. 
+ Table A-1. Select Details of U.S. Advanced Chip Controls on China (2022-2025)
+ Date and Notice a 
+ Details
+ Oct . 2022 
+ (87 FR 62186)
+ Added to the Commerce Control List (CCL) new Export Control Classification Numbers (ECCNs) for certain advanced logic chips, integrated circuits, and semiconductor manufacturing equipment (SME) for certain end uses related to advanced computing and supercomputing. 
+ Revised Entity List (EL) guidance for 28 PRC entities. 
+ Expanded the foreign direct product rule (FDPR) to anyone "knowingly" involved in a transaction subject to the EL and the new advanced computing and supercomputing controls. 
+ Added a Temporary General License for production of items destined for use outside China. 
+ Jan . 2023 
+ (88 FR 2821)
+ Added Macau to the October 2022 controls. 
+ Oct . 2023 
+ (88 FR 71991)
+ (88 FR 73424)
+ (88 FR 73458)
+ Added PRC entities involved in advanced computing and AI to the EL. 
+ Imposed worldwide license requirements for certain end-uses conducted on behalf of entities headquartered in, or with an ultimate parent company headquartered in the PRC. 
+ Refined October 2022 controls and required licenses for chips designed for China that fell just below October 2022 thresholds. 
+ Confirmed certain items (e.g., photomasks and testing equipment that does not change a chip's capability to a node of concern) not subject to controls. 
+ Clarified that "presumption of denial" allows for case-by-case consideration/approval. 
+ Created some exceptions for facilities in China that are non-PRC majority owned. 
+ Added specifications for SME controls which may narrow or broaden certain controls. 
+ Narrowed list of products subject to a license exception. 
+ Oct . 2024 
+ (89 FR 80080)
+ Expanded the validated end user (VEU) program to include global data centers. 
+ Dec . 2024 
+ (89 FR 96790)
+ (89 FR 96830)
+ Expanded the FDPR to apply to SME and chips. 
+ Further restricted SME for16 PRC entities. 
+ Added China wide-controls for high-bandwidth memory (HBM), dynamic random-access memory (DRAM), and advanced packaging SME; end use/user controls for other SME. 
+ Exempted countries that align with U.S. policies. 
+ Added "Red-Flag" guidance that requires certain corporate due diligence. 
+ Added 140 PRC and PRC-tied entities to the EL and removed three firms from the VEU. 
+ Added controls for "node-agnostic" tools (used for legacy and advanced chip production) and deep ultraviolet lithography and multi-patterning techniques. 
+ Added license exception category (Restricted Fabrication Facility) for less advanced SME 
+ Ja n . 2025 
+ (90 FR 4544)
+ (90 FR 5298)
+ Added due diligence rules for exporters. 
+ Proposed the AI Diffusion Rule which would create a global licensing system for advanced chips, computers, and advanced closed-weight dual-use AI model weights: 
+ Tier I : not subject to licensing; includes the United States and 18 countries with whom the United States partners on intelligence, security, and semiconductor policies. 
+ Tier II : subject to licensing through the data center VEU program; includes most countries. 
+ Tier III : subject to a presumption of denial; includes China, Russia, and North Korea. 
+ D ata center VEUs : subject to a presumption of approval. 
+ Ended exceptions for front-end fabricators and outsourced assembly and test. 
+ Ma r . - July 2025 
+ (90 FR 14032)
+ Added 42 PRC entities to the EL. 
+ Rescinded the January 2025 AI Diffusion Rule. 
+ Issued guidance that any use of Huawei's Ascend AI chips violates U.S. export controls. 
+ Sept. 2025 
+ (90 FR 42321)
+ (90 FR 44496)
+ Removed named PRC facilities of Samsung and SK Hynix from the VEU program. 
+ Added 23 PRC entities to the EL. 
+ Source: CRS based on U.S. government announcements. 
+ Note: 
+ a. Federal Register (FR) notice citation.
+ Table A-2. Nvidia's Modified Chips for China
+ Date
+ U.S. Bureau of Industry and Security (BIS) Export Control Actions
+ Nvidia's Modified Chips and Related Issues
+ Oct. 2022
+ BIS controlled the A100 and H100 chips
+ Nvidia announced modified chips for China, the A800 and the H800
+ Nov. 2023
+ BIS controlled the A800 and H800 chips
+ Nvidia announced modified chips for China, the H20, the L20, and the L2
+ May 2025
+ BIS initially controlled the H20
+ Nvidia announced efforts to develop the B30 and the B40 (or RTX Pro 6000D) for China
+ July 2025
+ BIS granted an export license for H20 sales in China
+ The Cybersecurity Administrator of China (CAC) expressed security concerns about the H20
+ Sept. 2025
+ Reports of BIS consultations with Nvidia regarding the B30 and possibly the B40 (or RTX Pro 6000D). Potential BIS anticipated actions.
+ The CAC effectively "blacklisted" the B40 (or RTX Pro 6000D)
+ Source: CRS with information from BIS announcements and media reports.
+ Footnotes
+ 1 .
+ See, for example, Office of the White House, "Remarks by National Security Advisor Jake Sullivan at the Special Competitive Studies Project, Global Emerging Technologies Summit," September 16, 2022. 
+ 2 .
+ See, for example, U.S. Department of Commerce, Bureau of Industry and Security (BIS), "Export Controls on Semiconductor Manufacturing Items," 88 Federal Register 73424, October 25, 2023.
+ 3 .
+ See CRS Report R46767, China's New Semiconductor Policies: Issues for Congress and CRS Report R47558, Semiconductors and the CHIPS Act: The Global Context .
+ 4 .
+ U.S. exports of semiconductor manufacturing equipment (SME) increased four-fold between 2014, when China launched its national semiconductor industrial policy, and 2021. SME exports went from $1.4 billion in 2014 to $6.8 billion in 2021. U.S. SME exports to China in 2022 were $5.1 billion (2022); $4.4 billion (2023); and $4.2 billion (2024). U.S. Census Bureau data via China Trade Monitor; does not include U.S. sales to China via third markets.
+ 5 .
+ Also see CRS Report R47508, Semiconductors and the Semiconductor Industry . 
+ 6 .
+ Other chips used for AI training and applications include neural processing units and tensor processing units.
+ 7 .
+ See CRS Report R47508, Semiconductors and the Semiconductor Industry and Chris Musso et al., "Creating a Thriving Chemical Semiconductor Supply Chain in America," McKinsey & Company, March 25, 2025.
+ 8 .
+ Other PRC firms added to the BIS EL included Semiconductor Manufacturing International Corporation (SMIC), Hisilicon, Chengdu Haiguang (Higon), Sugong, and Yangtze Memory Technologies (YMTC) The EL is at https://www.bis.gov/regulations/ear/744#supplement-4-744 .
+ 9 .
+ BIS, "Export Administration Regulations (EAR): Amendments to General Prohibition Three (Foreign-Produced Direct Product Rule) and the Entity List," 85 Federal Register 29849, May 19, 2020.
+ 10 .
+ BIS, "Addition of 'Military End User' (MEU) List to the Regulations and Addition of Entities to the MEU," 85 FR 83793, December 23, 2020.
+ 11 .
+ Gregory C. Allen and Emily Benson, "Clues to the U.S.-Dutch-Japanese Semiconductor Export Controls Deal Are Hiding in Plain Sight," Center for Strategic and International Studies (CSIS) , March 1, 2023.
+ 12 .
+ BIS, "Implementation of Additional Export Controls: Certain Advanced Computing and Semiconductor Manufacturing Items; Supercomputer and Semiconductor End Use; Entity List Modification," 87 Federal Register 62186 , October 13, 2022.
+ 13 .
+ BIS, "Entity List Additions," 88 Federal Register 71991, October 19, 2023. 
+ 14 .
+ BIS, "Implementation of Additional Export Controls: Certain Advanced Computing Items; Supercomputer and Semiconductor End Use; Updates and Corrections," 88 Federal Register 73458, October 25, 2023; and "Export Controls on Semiconductor Manufacturing Items," 88 Federal Register 73424, October 25, 2023.
+ 15 .
+ Hanna Dohmen and Jacob Feldgoise, "A Bigger Yard, A Higher Fence: Understanding BIS's Expanded Controls on Advanced Computing Exports," Center for Security and Emerging Technology (CSET), December 4, 2023.
+ 16 .
+ Treasury Department, "Provisions Pertaining to U.S. Investments in Certain National Security Technologies and Products in Countries of Concern," 89 Federal Register 90398, November 15, 2024.
+ 17 .
+ BIS, "Additions and Modifications to the Entity List; Removals from the Validated End-User (VEU) Program," 89 Federal Register 96830, December 5, 2024.
+ 18 .
+ BIS, "Foreign-Produced Direct Product Rule Additions, and Refinements to Controls for Advanced Computing and Semiconductor Manufacturing Items," 89 Federal Register 96790, December 5, 2024; and Gregory C. Allen, "Understanding the Biden Administration's Updated Export Controls," CSIS , December 11, 2024.
+ 19 .
+ BIS created the VEU program in 2007 to allow approved U.S. exporters to ship designated items to pre-approved entities in China under a general authorization instead of individual export licenses. For the current VEU list, see https://www.ecfr.gov/current/title-15/subtitle-B/chapter-VII/subchapter-C/part-748#Supplement-No.-7-to-Part-748 .
+ 20 .
+ BIS, "Framework for Artificial Intelligence Diffusion," 90 Federal Register 4544 , January 15, 2025.
+ 21 .
+ Applicants would likely be U.S. firms (Amazon, Google, Microsoft, and Meta) as the top global operators of data centers. Felix Richter, "Amazon and Microsoft Stay Ahead in Global Cloud Market," Statistica , February 27, 2025.
+ 22 .
+ BIS defined model weights as "numerical parameter[s] within an AI model" that "help determine the model's outputs in response to inputs" and created a new Export Control Classification Number, ECCN 4E091, to control the export of model weights of any closed-weight AI model that have been trained on more than 10 26 computational operations. BIS, "Framework for Artificial Intelligence Diffusion," 90 Federal Register 4544, January 15, 2025.
+ 23 .
+ BIS, "Additions and Modifications to the Entity List," 90 Federal Register 14032, March 28, 2025; BIS, "Additions and Revisions to the Entity List," 90 Federal Register 44496, September 16, 2025; and Nvidia Corporation, Form 8-K, U.S. Securities and Exchange Commission, April 9, 2025. 
+ 24 .
+ BIS, "Guidance on Application of General Prohibition 10 (GP10) to People's Republic of China (PRC) Advanced-Computing Integrated Circuits (ICs)," May 13, 2025.
+ 25 .
+ Synopsys, "Synopsys Issues Statement in Connection with BIS Letter," press release, May 29, 2025; Karen Freifeld, "U.S. Curbs Chip Design Software, Chemicals, Other Shipments," Reuters , May 29, 2025.
+ 26 .
+ BIS, "Revocation of Validated End-User Authorizations in the People's Republic of China," 90 Federal Register 42321, September 2, 2025.
+ 27 .
+ The White House reportedly intends to replace the Diffusion Rule. BIS, "Department of Commerce Announces Rescission of Biden-Era Artificial Intelligence Diffusion Rule, Strengthens Chip-Related Export Controls," press release, May 13, 2025; and Office of the White House, Winning the AI Race: American AI Action Plan , July 2025.
+ 28 .
+ Demetri Sevastopulo, "Donald Trump Freezes Export Controls to Secure Trade Deal with China," Financial Times , July 28, 2025.
+ 29 .
+ Sherry Qin, "U.S. Eases Some Chip Software Curbs on China," Wall Street Journal , July 3, 2025.
+ 30 .
+ Demetri Sevastopulo and Michael Acton, "US Licenses Nvidia to Export Chips to China after CEO Meets Trump," Financial Times , August 8, 2025; and Samantha Subin, "AMD to Resume MI308 AI Chip Exports to China," CNBC , July 15, 2025; Demetri Sevastopulo and Michael Acton, "Nvidia and AMD to Pay 15% of China Chip Sale Revenues to US Government," Financial Times , August 10, 2025.
+ 31 .
+ BIS is reportedly preparing to extend EL controls to subsidiaries that are 50% or more owned by entities on the EL or MEU, or subject to sanctions. See, for example, Steptoe, "New BIS 50% Rule Will Significantly Impact US Businesses Exporting Advanced Technology and Components," Stepwise Risk Outlook , July 9, 2025.
+ 32 .
+ John Moolenaar, Chairman, House Select Committee on the CCP, Letter to Secretary of Commerce Gina Raimondo, December 4, 2024; and Senators Elizabeth Warren and Josh Hawley, Letter to Secretary of Commerce Howard Lutnick, February 3, 2025.
+ 33 .
+ BIS, "Additions and Revisions to the Entity List," 90 Federal Register 44496, September 16, 2025.
+ 34 .
+ Scott Livingston, "Huawei, HONOR, and China's Evolving State Capitalist Tool Kit," CSIS Brief, December 2020; Chen Qingqing and Shen Weiduo, "Update: Former Chief Executive of Honor Zhao Ming becomes CEO of 'New' Company After Sub-brand Sold by Huawei," Global Times , November 17, 2020; and "Huawei Officially Sold Glory to Shenzhen Zhixinxin: The Shareholder Structure Behind it is Disclosed," Sina Technology , November 17, 2020.
+ 35 .
+ Scott Livingston, "Huawei, HONOR, and China's Evolving State Capitalist Tool Kit," CSIS Brief, December 2020; Chen Qingqing and Shen Weiduo, "Update: Former Chief Executive of Honor Zhao Ming becomes CEO of 'New' Company After Sub-brand Sold by Huawei," Global Times , November 17, 2020; and "Huawei Officially Sold Glory to Shenzhen Zhixinxin: The Shareholder Structure Behind it is Disclosed," Sina Technology , November 17, 2020.
+ 36 .
+ Zhao Juecheng and Shen Weiduo, "Honor 50 Series Handset Powered with Qualcomm Chips Launched in Shanghai," Global Times , June 16, 2021; and Celia Chen, "Exclusive: Honor CEO Speaks Out: Unburdened by U.S. Sanctions on Huawei, the Budget Smartphone Brand Looks to Take on Apple and Former Parent," South China Morning Post , January 27, 2021
+ 37 .
+ Stephen Nelis and Jane Lee, "Nvidia Tweaks Flagship H100 Chip for Export to China as H800," Reuters , March 21, 2023; Tobias Mann, "AMD Says It'll Jump Through Uncle Sam's Hoops to Sell AI Ships to China," The Register , August 3, 3023.
+ 38 .
+ Dylan Patel et al., "Fab Whack-a-Mole: Chinese Companies are Evading U.S. Sanctions," SemiAnalysis blog, October 28, 2024.
+ 39 .
+ Karen Freifeld, "Exclusive: Applied Materials under US criminal probe for shipments to China's SMIC," Reuters, November 17, 2023.
+ 40 .
+ U.S. Department of Justice, "Cadence Design Systems Agrees to Plead Guilty and Pay Over $140 Million for Unlawfully Exporting Semiconductor Design Tools to a Restricted PRC Military University," press release, July 28, 2025; and BIS, "Addition of Certain Persons to the Entity List; and Removal of Person from the Entity List Based on a Removal Request," 80 Federal Register 8524, February 18, 2025.
+ 41 .
+ Guidance for SMIC restricts below the 10 nm node while technology at and above 14 nm does not require a license. Guidance for Huawei restricts 5G but not 4G, 6G, or other technologies. Between November 2020 and April 2021, BIS reportedly licensed exports valued at over $100 billion for Huawei and SMIC. Between January and March 2022, BIS reportedly licensed exports valued at over $25 billion to EL firms. House Foreign Affairs Committee, "BIS Approved More than $23B of Tech Licenses to Blacklisted Companies," press release, February 23, 2023.
+ 42 .
+ Ian King and Debby Wu, "Huawei Building Secret Network for Chips, Trade Group Warns," Bloomberg , August 23, 2023. 
+ 43 .
+ King and Wu, "Huawei Building Secret Network for Chips." 
+ 44 .
+ Dylan Patel et al., "Fab Whack-a-Mole: Chinese Companies are Evading U.S. Sanctions," SemiAnalysis , October 28, 2024.
+ 45 .
+ BIS, "Additions and Modifications to the Entity List; Removals from the Validated End-User (VEU) Program," 89 Federal Register 96830, December 5, 2024.
+ 46 .
+ Jacky Wong, "China Is Stockpiling for Next Phase of the Chip Wars," Wall Street Journal , February 26, 2024; Charles Mok, "Taking Stock of the DeepSeek Shock," Cyber Policy Center, Stanford University, February 5, 2025.
+ 47 .
+ Anton Shilov, "Patent Reveals Huawei's Quad-Chiplet Rival for Nvidia's Rubin AI GPUs Could Use Packaging Tech that Rivals TSMC—Ascend 910D Rumors Have Seemingly Solid Foundation," Tom's Hardware , June 14, 2025.
+ 48 .
+ In 2016, AMD optimized its x86 chip architecture to contribute to a JV with PRC firms now on the EL. In 2023, Intel said it would partner with Inspur, a PRC firm on the EL to produce an advanced chip. In May 2025, Nvidia announced plans for an R&D center in China. Dashveenjit Kaur, "Intel Joins Nvidia in Tackling the U.S. Ban with an AI Chip for China," TechWire Asia , July 14, 2023; Kate O'Keeffe and Brian Spegele, "How a Big U.S. Chip Maker Gave China the 'Keys to the Kingdom'," Wall Street Journal , June 27, 2019; and Raffaele Huang, "Nvidia to Set Up Research Center in Shanghai, Maintaining Foothold in China," Wall Street Journal , May 16, 2025.
+ 49 .
+ "Deepseek Unmasked: Exposing the CCP's Latest Tool for Spying, Stealing and Subverting U.S. Export Control Restrictions, House Select Committee on the CCP, April 16, 2025.
+ 50 .
+ Huawei has used design firms as third parties to circumvent the FDPR and fabricate its Ascend chips at TSMC. Karen Freifeld and Fanny Potkin, "Exclusive: US ordered TSMC to Halt shipments to China of Chips Used in AI Applications," Reuters, November 10, 2024.
+ 51 .
+ Karen M. Sutter, "Foreign Technology Transfer Through Commerce," in William C. Hannas and Didi Kirsten Tatlow, eds., China's Quest for Foreign Technology: Beyond Espionage (New York, N.Y.: Routledge, 2021). 
+ 52 .
+ Ian Cohen, "Commerce Officials Talk Export Enforcement, End-Use Checks with China," International Trade Today , August 31, 2025.
+ 53 .
+ In December 2024, China opened an antitrust investigation against Nvidia. In September 2025, China's Ministry of Commerce initiated an antidumping investigation on U.S. analog chips. Meaghan Tobin et al., "China Opens Investigation into Nvidia Over Potential Antitrust Violations," New York Times , December 9, 2024; PRC Ministry of Commerce, Trade Remedies Bureau, "Announcement of the Launch of an Antidumping Investigation into Imported Analog Chips Originating from the United States," Announcement No. 27 of 2025, September 13, 2025.
+ 54 .
+ In 2020, China complicated Applied Material's bid for Kokusai Electric and Nvidia's bid for SoftBank-controlled ARM, a semiconductor IP design firm. In 2022, PRC authorities delayed a review of Intel's bid for Tower, effectively killing a deal that was part of Intel's effort to shift into contract chip production. "Applied Materials Terminates $2.2 Billion Deal for Japan's Kokusai Electric," Reuters, March 29, 2021; "Nvidia's Acquisition of ARM Throws Company into Tech Spat Between U.S. and China," Reuters, September 14, 2020; Ryan McMorrow and Richard Waters, "Nvidia Asks Chinese Regulators to Approve $40bn Arm Deal," Financial Times, June 8, 2021; Doug O'Laughlin, "China's Revenge: The Tower Semiconductor Deal is in a Tough Place," Fabricated Knowledge Blog, November 8, 2022; and Lingling Wei and Asa Fitch, "China's New Tech Weapon: Dragging Its Feet on Global Merger Approvals," Wall Street Journal, April 4, 2023.
+ 55 .
+ SAMR set terms for Nvidia's acquisition of Mellanox in 2020, Intel's sale of its NAND and Solid-State Drive (SSD) businesses to SK Hynix between 2021 and 2025, and AMD's acquisition of Xilinx in 2022 among other reviews of semiconductor deals. PRC SAMR, " Announcement on Approving the Anti-Monopoly Review Decision of AMD's Acquisition of Xilinx's Equity with Additional Restrictive Conditions," January 27, 2022; PRC SAMR "Antitrust Review Decision on Approving SK Hynix Co., Ltd.'s Acquisition of Part of Intel Corporation's Business with Additional Restrictive Conditions," December 22, 2021; and PRC SAMR "Announcement on Approving the Anti-Monopoly Review Decisions of Approval of Nvidia's Acquisition of Equity in Mellanox Technologies Co., Ltd. with Additional Restrictive Conditions," April 16, 2025. 
+ 56 .
+ Demetri Sevastopulo, "China Wants U.S. to Relax Export Controls on Chips as Part of Trade Deal," Financial Times , August 10, 2025; Raffaele Huang, "Beijing Puts Nvidia on a Blacklist," Wall Street Journal , September 18 2025; and Dylan Patel et al., "Scaling the Memory Wall: The Rise and Roadmap of HBM," SemiAnalysis , August 12, 2025.
+ 57 .
+ Sherry Qin, "China's Cybersecurity Regulator Summons Nvidia Over Chip-Security Issue," Wall Street Journal , July 31, 2025; and "China Urges Firms to Avoid Nvidia H20 Chips After Trump Resumes Sales," Bloomberg , August 12, 2025. 
+ 58 .
+ Senators Jim Banks and Elizabeth Warren, Letter to Jensen Huang, President & Chief Executive Officer, NVIDIA Corporation, May 28, 2025.
+ 59 .
+ PRC SAMR, "Nvidia Violated the Anti-Monopoly Law and the State Administration for Market Regulation has Decided to Conduct Further Investigation," Announcement, September 15, 2025.
+ 60 .
+ Lingling Wei et al., "With Billions at Risk, Nvidia CEO Buys His Way Out of the Trade Battle," Wall Street Journal , August 11, 2025. 
+ 61 .
+ Kif Leswing, "Commerce Secretary Lutnick says China is only getting Nvidia's '4 th best' AI chip," CNBC , July 15, 2025; Eva Dou, Trump's Retreat on China Chip Ban Triggers Policy Spat, Washington Post , July 28, 2025; and Economist , "America is Easing Chip-Export Controls at Exactly the Wrong Time," July 31, 2025.
+ 62 .
+ Kristina Partsinevelos and Chris Eudaily, "Jensen Huang Says U.S. Chip Restrictions Have Cut Nvidia's China Market Share Nearly in Half," CNBC , May 22, 2025; Liza Lin, "China Intensifies Push to 'Delete America' From Its Technology," Wall Street Journal , March 7 2024; Alex Rubin et al, "The Huawei Moment, CSET, July 2020; James McGregor, "China's Drive for 'Indigenous Innovation': A Web of Industrial Policies," U.S. Chamber of Commerce, APCO Worldwide, July 2010; Xi Jinping, "Speech at the National Science and Technology Conference, the National Science and Technology Award Conference, and the Academician Conference of the Chinese Academy of Sciences and the Chinese Academy of Sciences," June 24, 2024; CRS Report R46767, China's New Semiconductor Policies: Issues for Congress .
+ 63 .
+ Eva Dou, "Trump's Retreat on China Chip Ban Triggers Policy Spat," Washington Post , July 28, 2025. Senators Mark W. Warner, Jack Reed, Elizabeth Warren, Christopher A Coons, and Charles E. Schumer, Letter to Secretary of Commerce Howard W. Lutnick, July 28, 2025; and John Moolenaar, Chairman, House Select Committee on the CCP, Letter to Secretary of Commerce Howard W. Lutnick, July 18, 2025. 
+ 64 .
+ Eva Dou and Grace Moon, "Nvidia, AMD Agree to Pay U.S. government 15% of AI Chip Sales to China," Washington Post , August 11, 2025; and Jill Lawless and Ken Moritsugu, "The US and China Say They Have Agreed on a Framework to Resolve their Trade Disputes," Reuters, June 11, 2025.
+ 65 .
+ For archived reports up until 2022, see https://www.bis.doc.gov/index.php/statistical-reports/country-analysis/1787 .
+ Download PDF 
+ Download EPUB 
+ Revision History
+ Sep. 19, 2025
+ HTML 
+ · 
+ PDF 
+ 12% changed
+ Aug. 22, 2025
+ HTML 
+ · 
+ PDF 
+ Metadata
+ Topic areas
+ Foreign Affairs 
+ Report Type: Reports
+ Source: Congress.gov 
+ Raw Metadata: JSON 
+ About 
+ Bulk Download 
+ GitHub 
+ Privacy 
+ Donate 
+ Search powered by 
+ 

@@ -1,0 +1,19 @@
+# PRC statutes and party/state primary texts
+prc_export_control_law.html|https://www.gov.cn/xinwen/2020-10/18/content_5552192.htm
+prc_anti_secession_law.html|https://www.gov.cn/ziliao/flfg/2005-06/21/content_8545.htm
+prc_anti_foreign_sanctions.html|https://www.gov.cn/xinwen/2021-06/10/content_5616927.htm
+mofcom_dec2024.html|http://exportcontrol.mofcom.gov.cn/article/gndt/202412/1071.html
+mofa_arms_sales_dec2024.html|https://www.mfa.gov.cn/eng/xw/fyrbt/202412/t20241222_11514772.html
+# US executive and congressional
+ustr_301_report.pdf|https://ustr.gov/sites/default/files/Section%20301%20FINAL.PDF
+crs_phase_one.html|https://www.congress.gov/crs-product/IF12125
+crs_sta.html|https://www.congress.gov/crs-product/IF12510
+# Think tank / analytic layer
+csis_quarantine.html|https://features.csis.org/chinapower/china-quarantine-taiwan/
+csis_lights_out.html|https://www.csis.org/analysis/lights-out-wargaming-blockade-taiwan
+csis_sta.html|https://www.csis.org/analysis/us-china-science-and-technology-cooperation-agreement-not-yet-obsolete
+brookings_fentanyl.html|https://www.brookings.edu/articles/us-china-relations-and-fentanyl-and-precursor-cooperation-in-2024/
+brookings_nss.html|https://www.brookings.edu/articles/breaking-down-trumps-2025-national-security-strategy/
+brookings_busan.html|https://www.brookings.edu/articles/what-happened-when-trump-met-xi/
+cfr_red_lines.html|https://www.cfr.org/articles/unpacking-chinas-four-red-lines-and-its-warning-trump
+forum_arms_trade.html|https://www.forumarmstrade.org/ustaiwan.html

@@ -1,0 +1,280 @@
+ 
+ U.S. Export Controls and China - EveryCRSReport.com 
+ Internet Explorer version 8 or any modern web browser is required to use this website, sorry. 
+ Toggle navigation 
+ EveryCRSReport.com 
+ All Reports 
+ Topic Areas 
+ About 
+ Donate 
+ U.S. Export Controls and China
+ August 21, 2020 –
+ March 24, 2022
+ IF11627 
+Updated March 24, 2022
+ U.S. Export Controls and China 
+Since 2018, Congress and the executive branch have 
+specific destinations, end use, and end user controls. On the 
+revised—through legislation, regulation, and licensing 
+CCL, national security (NS) controlled items are on the 
+practices—the U.S. export control system that regulates 
+Wassenaar Arrangement’s multilateral control list. The 
+dual-use exports (goods and technology that may have both 
+EAR presumes denial for license applications of NS items 
+civilian and military uses). Much of the legislative reform 
+that would make a direct and significant contribution to 
+has focused on controlling emerging and foundational 
+China’s military. Separate statutes and regulations control 
+technologies, strengthening other technology controls and 
+nuclear materials and technology and defense articles and 
+licensing practices, engaging multilaterally to ensure U.S. 
+services. U.S. law has prohibited arms sales to China since 
+controls are effective, and considering the impact of 
+1989. Congress has also mandated a policy of denial for 
+controls on the U.S. economy, including the foreign 
+exports of satellite and space equipment to China. 
+availability of U.S. products subject to control. Many of 
+these changes were efforts to address concerns about the 
+ Figure 1. 2020 U.S. Exports to China and BIS Actions 
+People’s Republic of China’s (PRC or China) pursuit of 
+civilian and military leadership in advanced technologies 
+through U.S. commercial ties. Congress plays a key role in 
+overseeing the reforms it enacted and shaping the U.S. 
+export control regime to address U.S. national security and 
+foreign policy concerns, including those posed by China. 
+ China’s Industrial Policies 
+China’s 
+state-led industrial policies, such as Made in China 
+ Source: CRS with reporting data from BIS. 
+ 2025 ( MIC 2025 ), seek to create competitive advantages for 
+ Note: EAR99 items are subject to the EAR, but are not control ed. 
+China in strategic industries, in part by obtaining 
+Percentages are based on the value of U.S. exports. 
+technology from U.S. and foreign firms. MIC 2025 aims to 
+establish China’s leadership in emerging technologies 
+critical to future commercial, government, and military 
+ U.S. Licensing Approach 
+capabilities. Priority areas include advanced manufacturing, 
+The U.S. government only controls or restricts a small 
+aerospace, artificial intelligence, information technology, 
+percentage of U.S. technology exports to China in practice. 
+new materials, robotics, and semiconductors. China’s 
+BIS has removed from the CCL or waived licensing 
+military-civil fusion (MCF) program also seeks to leverage 
+requirements for much of U.S. technology trade to China 
+ MIC 2025 technological advancements for military 
+since the 1990s as certain technologies have become more 
+development. Some experts say that China’s approach blurs 
+widely available globally and in response to U.S. business 
+commercial and military distinctions and may challenge the 
+interests in the China market. Before new rules in May 
+U.S. export control regime’s ability to distinguish between 
+2020, BIS waived license requirements for NS items 
+military and civilian end use and end users. China’s policies 
+destined for civilian end use in China in sectors such as 
+in strategic sectors often require a PRC partner, frequently 
+aerospace, computing, and semiconductors. An estimated 
+state-tied, to own or otherwise control U.S. technology that 
+18.1% of $124.6 billion in U.S. exports to China in 2020 
+is transferred to China, potentially increasing risks that U.S. 
+($22.6 billion) involved dual-use technologies on the CCL 
+technology could support China’s military. 
+and subject to controls. BIS required licenses for 2.1%, or 
+$478 million of these CCL technology exports. Most CCL 
+ U.S. Dual-Use Export Controls 
+technology exports—97.9% or $22.1 billion—went to 
+The Export Control Reform Act of 2018 (ECRA) (P.L. 115-
+China without a license. ( Figure 1 ). 
+232) reestablished nonemergency authority for the 
+President to control dual-use exports for national security 
+Separately, BIS reported that it reviewed $112 billion in 
+and foreign policy reasons and to coordinate with 
+licenses for U.S. software and technology exports to China 
+multilateral export control regimes, and provided policy 
+in 2020 and denied 2.2% ($471 million). The $112 billion 
+requirements for setting controls. The Bureau of Industry 
+in licenses in 2020 increased from $6.9 billion in 2019; the 
+and Security (BIS) of the Department of Commerce 
+increase might reflect licenses, including for EAR 99 items, 
+administers dual-use export controls and chairs an 
+required for PRC firms added to the EL since 2019. EAR 
+interagency process that includes the Departments of 
+99 includes nonsensitive products and potentially sensitive 
+Defense (DOD), State, and Energy. BIS administers these 
+technologies in light of China’s dual-use programs. ECRA 
+controls through the Export Administration Regulations 
+called for a review of the CCL and EAR99 to determine 
+(EAR, 15 C.F.R. 730 et seq. ), which includes the 
+whether some EAR99 technologies should be added to the 
+Commerce Control List (CCL) of dual-use technologies 
+CCL. In 2020, BIS denied three of 482 licenses to release 
+subject to controls. The EAR sets licensing policy for 
+U.S.-controlled technology and knowhow to PRC nationals. 
+https://crsreports.congress.gov 
+ U.S. Export Controls and China 
+ BIS Entity List 
+ Clarifying that existing U.S. controls apply to re-
+Since 2018, the U.S. government has increased use of the 
+exports, regardless of the structure of the underlying 
+BIS Entity List (EL) to restrict some dual-use trade with 
+transaction, including identifying and considering any 
+China by placing certain PRC firms of concern on the list. 
+foreign party to a license with a significant ownership 
+The EL identifies persons involved, or with the potential to 
+interest. This requires more detail on ultimate end users 
+be involved, in activities contrary to U.S. national security 
+and scrutiny of joint ventures. Additionally, after the 
+or foreign policy interests. BIS typically requires a license 
+U.S. government decision in June 2020 to no longer 
+for any U.S. export of EAR items to those listed. EL listings 
+treat Hong Kong separately from China, BIS imposed 
+often presume an export denial, but licensing guidance—
+new licensing conditions for U.S. exports to Hong Kong 
+such as narrow or low technology thresholds, partial listing 
+and re-exports from Hong Kong to mainland China. 
+of firms, and case-by-case approval—appears to facilitate 
+ Requiring the President to create an interagency process 
+the export of some U.S. technology and CCL items to PRC 
+to create controls on “emerging and foundational 
+firms on the EL. A lack of restrictions on 4G, 6G, cloud, 
+technologies” of concern—including through a review 
+and, until recently, undersea cable technologies has allowed 
+of the CCL—and regulate their release to foreign 
+Huawei to purchase U.S. technology. In 2020, Huawei sold 
+persons by, at a minimum, requiring an export license. 
+its Honor 5G mobile business to the PRC government. BIS 
+has not added Honor to the EL to extend Huawei 
+ Reviewing the interagency dispute resolution process 
+restrictions to the firm. EL restrictions for China’s foundry, 
+and requiring BIS to work with DOD on commodity 
+Semiconductor Manufacturing International Corporation 
+classifications to determine when a license is required. 
+(SMIC), apply to technology below 10 nanometers (nm), 
+ Adding a role for the Director of National Intelligence 
+allowing trade at and above 14 nm to continue. In October 
+and considering the U.S. industrial base in setting 
+2021, the House Foreign Affairs Committee released BIS 
+controls and in licensing decisions. 
+licensing data for Huawei and SMIC from November 2020 
+to April 2021. Much of it involved semiconductor 
+ Defining dual-use to include law-enforcement 
+technology: BIS approved 113 licenses for Huawei ($61.4 
+applications. Relatedly, crime control equipment exports 
+billion); and returned 48 ($29.8 billion) without action. BIS 
+to China require a license. Concerns about China’s 
+approved 188 licenses for SMIC ($41.9 billion), and 
+human rights abuses and surveillance activities have led 
+returned 17 ($1.2 billion) without action. 
+to tighter scrutiny of these exports to China. 
+In August 2020, BIS amended the foreign-direct product 
+ Issues for Congress 
+rule to restrict Huawei’s ability to acquire chips from any 
+Some Members have expressed concerns about a slow pace 
+source using U.S.-controlled equipment or software, such as 
+of implementing some of the reforms required by statute. 
+TSMC in Taiwan; other PRC firms are not restricted. In 
+For example, while BIS has initiated a rulemaking process 
+April 2021, BIS added PRC firm Pythium to the EL for the 
+for emerging technologies and proposed an approach for 
+firm’s role in China’s hypersonic weapons program—BIS 
+foundational technologies, it has established few new 
+does not appear to restrict Pythium’s and other PRC firms’ 
+controls. This, some argue, could impede congressional 
+use of U.S. open source technology platforms and U.S. 
+reforms that expanded the authority of the Committee on 
+software tools to design and test advanced chips for China’s 
+Foreign Investment in the United States (CFIUS) to review 
+strategic advanced computing programs. In December 
+PRC and other foreign investments in critical and emerging 
+2021, BIS added China’s Academy of Military Medical 
+technologies below thresholds of foreign control. Issues for 
+Sciences and eleven of its institutes to the EL; these 
+possible oversight or legislative action include: 
+controls may not pertain to U.S. research ties with China. 
+ The status of ECRA implementation and whether the pace and 
+scope of actions are sufficient without greater oversight or 
+ Military-Tied Firms 
+changes to the export control regime. 
+In late 2020, BIS extended licensing requirements for PRC 
+ The impact of the pace and scope of ECRA’s implementation 
+firms identified as military-end users; it presumed denial for 
+on other congressional reforms like CFIUS. 
+certain, but not all, CCL exports to these firms. Many PRC 
+ The global context of export controls and practices to ascertain 
+military firms do not appear to be on the BIS military-end 
+whether to pursue more multilateral controls and reforms. 
+users list or the EL. The BIS lists include a subset of the 
+ The status of controlling emerging and existing technologies, 
+PRC military firms that Congress requires DOD to identify 
+and reforming the process for classification determinations and 
+in accordance with Section 1260H of the National Defense 
+licensing decisions, including for escalated cases. 
+Authorization Act for Fiscal Year 2021 (P.L. 116-283). In 
+ The operating committee’s current voting structure and BIS’s 
+some cases, BIS lists only parts of these firms. 
+role as chair in determining licensing decision outcomes. 
+ The level of congressional scrutiny of licensing decisions, 
+ ECRA Reforms 
+justifications, waivers, and exceptions, and whether to pursue 
+ECRA has provisions—which impact U.S. dual-use exports 
+more frequent and regularized reporting to Congress to 
+to China—to reform or augment export control decision- 
+strengthen its oversight of export controls in practice. 
+making, licensing, and technology controls, including: 
+
+ Karen M. Sutter , Specialist in Asian Trade and Finance 
+ Determining foreign availability by considering 
+ Christopher A. Casey , Analyst in International Trade and 
+comparable quality in ascertaining whether a global 
+Finance 
+alternative is comparable to a U.S. technology. Foreign 
+availability determinations can affect decisions on 
+ IF11627 
+whether to apply specific or general controls. 
+https://crsreports.congress.gov 
+ U.S. Export Controls and China 
+ Disclaimer 
+This document was prepared by the Congressional Research Service (CRS). CRS serves as nonpartisan shared staff to 
+congressional committees and Members of Congress. It operates solely at the behest of and under the direction of Congress. 
+Information in a CRS Report should not be relied upon for purposes other than public understanding of information that has 
+been provided by CRS to Members of Congress in connection with CRS’s institutional role. CRS Reports, as a work of the 
+United States Government, are not subject to copyright protection in the United States. Any CRS Report may be 
+reproduced and distributed in its entirety without permission from CRS. However, as a CRS Report may include 
+copyrighted images or material from a third party, you may need to obtain the permission of the copyright holder if you 
+wish to copy or otherwise use copyrighted material. 
+ https://crsreports.congress.gov | IF11627 · VERSION 5 · UPDATED 
+ Download PDF 
+ Download EPUB 
+ Revision History
+ Mar. 24, 2022
+ HTML 
+ · 
+ PDF 
+ Jan. 15, 2021
+ HTML 
+ · 
+ PDF 
+ Jan. 14, 2021
+ HTML 
+ · 
+ PDF 
+ Aug. 21, 2020
+ HTML 
+ · 
+ PDF 
+ Metadata
+ Topic areas
+ Asian Affairs 
+ Foreign Affairs 
+ Industry and Trade 
+ National Defense 
+ Report Type: CRS In Focus
+ Source: CRSReports.Congress.gov 
+ Raw Metadata: JSON 
+ About 
+ Bulk Download 
+ GitHub 
+ Privacy 
+ Donate 
+ Search powered by 
+ 

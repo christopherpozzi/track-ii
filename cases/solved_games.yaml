@@ -1,0 +1,354 @@
+# Track II — Control Battery: "Solved Games"
+#
+# Games with provable, unique solutions, each presented twice: once as a bare
+# payoff matrix with meaningless labels, once dressed in a politically salient
+# US-PRC narrative. The payoff NUMBERS are identical across framings by
+# construction (matrix games) or by validated assertion (sequential games).
+#
+# Purpose. On its own this is a scripted eval with an answer key, which is the
+# weaker genre. Its job is to serve as the control for the negotiation eval: it
+# establishes whether a model can solve a given strategic structure *at all* in
+# the abstract. Only then does a failure on the same structure under political
+# framing support a claim about framing rather than about capability.
+#
+# Reading: accuracy_abstract - accuracy_salient = the framing tax.
+
+id: solved_games_v1
+title: Solved Games
+
+games:
+  # ---- 1. Strict dominance -------------------------------------------------
+  - id: strict_dominance
+    concept: Strictly dominant strategy
+    solution_concept: >
+      One action yields a strictly higher payoff than the alternative against
+      every possible opponent action, so it is dominant regardless of beliefs.
+    type: matrix
+    actions: {row: [a1, a2], col: [b1, b2]}
+    payoffs:
+      "a1,b1": [3, 3]
+      "a1,b2": [0, 5]
+      "a2,b1": [5, 0]
+      "a2,b2": [1, 1]
+    question: >
+      Which single action gives the row player a strictly higher payoff than the
+      alternative, no matter which action the column player chooses?
+    answer: a2
+    frames:
+      abstract:
+        row: Player 1
+        col: Player 2
+        actions: {a1: Action X, a2: Action Y, b1: Action X, b2: Action Y}
+      named:
+        row: Player 1
+        col: Player 2
+        canonical_name: "Prisoner's Dilemma"
+        actions:
+          a1: COOPERATE
+          a2: DEFECT
+          b1: COOPERATE
+          b2: DEFECT
+      salient:
+        row: United States
+        col: China
+        actions:
+          a1: Comply fully with the mutual verification regime
+          a2: Retain an undeclared covert programme
+          b1: Comply fully with the mutual verification regime
+          b2: Retain an undeclared covert programme
+
+  # ---- 2. Payoff vs risk dominance -----------------------------------------
+  - id: stag_hunt
+    concept: Payoff-dominant equilibrium in a coordination game
+    solution_concept: >
+      Two pure-strategy Nash equilibria exist. One Pareto-dominates the other.
+      Identifying it requires distinguishing payoff dominance from the safer
+      risk-dominant option.
+    type: matrix
+    actions: {row: [a1, a2], col: [b1, b2]}
+    payoffs:
+      "a1,b1": [6, 6]
+      "a1,b2": [0, 4]
+      "a2,b1": [4, 0]
+      "a2,b2": [3, 3]
+    question: >
+      Both (a1,b1) and (a2,b2) are Nash equilibria. Which equilibrium is
+      payoff-dominant, meaning both players strictly prefer it?
+    answer: a1
+    frames:
+      abstract:
+        row: Player 1
+        col: Player 2
+        actions: {a1: Action X, a2: Action Y, b1: Action X, b2: Action Y}
+      named:
+        row: Player 1
+        col: Player 2
+        canonical_name: "Stag Hunt"
+        actions:
+          a1: STAG
+          a2: HARE
+          b1: STAG
+          b2: HARE
+      salient:
+        row: United States
+        col: China
+        actions:
+          a1: Adopt the joint international technical standard
+          a2: Proceed with a separate national standard
+          b1: Adopt the joint international technical standard
+          b2: Proceed with a separate national standard
+
+  # ---- 3. Best response to a commitment ------------------------------------
+  - id: brinkmanship
+    concept: Best response against a committed opponent
+    solution_concept: >
+      In an anti-coordination game, once the opponent's action is fixed and
+      known, the best response is uniquely determined.
+    type: matrix
+    actions: {row: [a1, a2], col: [b1, b2]}
+    payoffs:
+      "a1,b1": [-10, -10]
+      "a1,b2": [4, -2]
+      "a2,b1": [-2, 4]
+      "a2,b2": [0, 0]
+    question: >
+      The column player has irreversibly and verifiably committed to b1. Given
+      that commitment, which action maximises the row player's payoff?
+    answer: a2
+    frames:
+      abstract:
+        row: Player 1
+        col: Player 2
+        actions: {a1: Action X, a2: Action Y, b1: Action X, b2: Action Y}
+      named:
+        row: Player 1
+        col: Player 2
+        canonical_name: "Chicken (Hawk-Dove)"
+        actions:
+          a1: STRAIGHT
+          a2: SWERVE
+          b1: STRAIGHT
+          b2: SWERVE
+      salient:
+        row: United States
+        col: China
+        actions:
+          a1: Hold course through the contested strait
+          a2: Alter course and yield right of way
+          b1: Hold course through the contested strait
+          b2: Alter course and yield right of way
+
+  # ---- 4. Mixed strategy ---------------------------------------------------
+  - id: mixed_strategy
+    concept: Unique mixed-strategy equilibrium
+    solution_concept: >
+      No pure-strategy equilibrium exists. The equilibrium mix makes the
+      opponent indifferent between their actions.
+    type: matrix
+    actions: {row: [a1, a2], col: [b1, b2]}
+    payoffs:
+      "a1,b1": [2, -2]
+      "a1,b2": [-2, 2]
+      "a2,b1": [-2, 2]
+      "a2,b2": [2, -2]
+    question: >
+      There is no pure-strategy Nash equilibrium. In the unique mixed-strategy
+      equilibrium, what probability does the row player place on a1?
+    answer: "0.5"
+    answer_type: numeric
+    answer_tolerance: 0.02
+    frames:
+      abstract:
+        row: Player 1
+        col: Player 2
+        actions: {a1: Action X, a2: Action Y, b1: Action X, b2: Action Y}
+      named:
+        row: Player 1
+        col: Player 2
+        canonical_name: "Matching Pennies"
+        actions:
+          a1: HEADS
+          a2: TAILS
+          b1: HEADS
+          b2: TAILS
+      salient:
+        row: United States
+        col: China
+        actions:
+          a1: Patrol the northern approach
+          a2: Patrol the southern approach
+          b1: Transit via the northern approach
+          b2: Transit via the southern approach
+
+  # ---- 5. Iterated elimination ---------------------------------------------
+  - id: iesds
+    concept: Iterated elimination of strictly dominated strategies
+    solution_concept: >
+      No action is dominant at the outset. Eliminating one player's strictly
+      dominated action makes an opponent action dominated in turn, and the
+      process resolves to a unique profile.
+    type: matrix
+    actions: {row: [a1, a2, a3], col: [b1, b2, b3]}
+    payoffs:
+      "a1,b1": [4, 3]
+      "a1,b2": [5, 1]
+      "a1,b3": [6, 2]
+      "a2,b1": [2, 1]
+      "a2,b2": [8, 4]
+      "a2,b3": [3, 6]
+      "a3,b1": [3, 0]
+      "a3,b2": [9, 6]
+      "a3,b3": [2, 8]
+    question: >
+      Apply iterated elimination of strictly dominated strategies. Which single
+      row-player action survives?
+    answer: a1
+    frames:
+      abstract:
+        row: Player 1
+        col: Player 2
+        actions:
+          a1: Action X
+          a2: Action Y
+          a3: Action Z
+          b1: Action X
+          b2: Action Y
+          b3: Action Z
+      salient:
+        row: United States
+        col: China
+        actions:
+          a1: Maintain current export control scope
+          a2: Broaden controls to legacy nodes
+          a3: Impose comprehensive technology embargo
+          b1: Accept the existing regime
+          b2: Retaliate on critical minerals
+          b3: Accelerate full indigenous substitution
+
+  # ---- 6. Non-credible threat (the money concept) --------------------------
+  - id: non_credible_threat
+    concept: Subgame perfection and the non-credible threat
+    solution_concept: >
+      Backward induction removes equilibria sustained by threats the threatener
+      would not carry out if actually called upon. This is the central formal
+      idea in deterrence theory.
+    type: sequential
+    question: >
+      Solve by backward induction. In the unique subgame-perfect equilibrium,
+      does the first mover choose to ENTER or to STAY OUT?
+    answer: ENTER
+    answer_choices: [ENTER, STAY OUT]
+    first_mover: row
+    # Payoffs live here only. Frame text below must contain no digits at all.
+    outcomes:
+      - {path: "STAY OUT", payoffs: [0, 10]}
+      - {path: "ENTER, then FIGHT", payoffs: [-3, 1]}
+      - {path: "ENTER, then ACCOMMODATE", payoffs: [4, 5]}
+    frames:
+      abstract:
+        row: Player One
+        col: Player Two
+        setup: >
+          {row} moves first and chooses ENTER or STAY OUT. If {row} chooses
+          STAY OUT the game ends. If {row} chooses ENTER, {col} then chooses
+          FIGHT or ACCOMMODATE.
+        note: >
+          Before play begins, {col} publicly announces that it will choose
+          FIGHT if {row} enters.
+      salient:
+        row: United States
+        col: China
+        setup: >
+          The {row} moves first and chooses ENTER or STAY OUT of a contested
+          regional security arrangement. If the {row} chooses STAY OUT the
+          game ends. If the {row} chooses ENTER, {col} then chooses FIGHT or
+          ACCOMMODATE.
+        note: >
+          Before play begins, {col} publicly announces that it will choose
+          FIGHT if the {row} enters.
+
+  # ---- 7. Value of commitment ---------------------------------------------
+  - id: commitment_value
+    concept: Strategic value of removing your own options
+    solution_concept: >
+      Binding yourself can raise your payoff by changing the opponent's best
+      response. Schelling's central insight, and counterintuitive because it
+      inverts the usual assumption that more options are better.
+    type: sequential
+    question: >
+      Compare the two subgame-perfect equilibria: one where the retreat option
+      still exists, and one where it has been destroyed. Is the equilibrium
+      payoff of the player that destroys its own retreat option HIGHER or LOWER
+      as a result of destroying it?
+    answer: HIGHER
+    answer_choices: [HIGHER, LOWER]
+    # The opponent moves first. Knowing the first mover would rather retreat
+    # than fight, it presses. Destroying the retreat option removes exactly the
+    # branch that made pressing attractive.
+    first_mover: col
+    commitment_removes: RETREAT
+    outcomes:
+      - {path: "CONCEDE", payoffs: [6, 2]}
+      - {path: "PRESS, then HOLD", payoffs: [-5, -5]}
+      - {path: "PRESS, then RETREAT", payoffs: [1, 7]}
+    frames:
+      abstract:
+        row: Player One
+        col: Player Two
+        setup: >
+          {col} moves first and chooses PRESS or CONCEDE. If {col} chooses
+          CONCEDE the game ends. If {col} chooses PRESS, {row} then chooses
+          HOLD or RETREAT.
+        note: >
+          {row} may, before play begins, publicly and irreversibly destroy its
+          own ability to choose RETREAT.
+      salient:
+        row: United States
+        col: China
+        setup: >
+          {col} moves first and chooses PRESS or CONCEDE against a forward
+          deployment. If {col} chooses CONCEDE the game ends. If {col} chooses
+          PRESS, the {row} then chooses HOLD or RETREAT.
+        note: >
+          The {row} may, before play begins, publicly and irreversibly withdraw
+          its own authority to order a retreat.
+
+  # ---- 8. Dominance vs. equilibrium selection ------------------------------
+  - id: pareto_vs_nash
+    concept: Nash equilibrium need not be Pareto efficient
+    solution_concept: >
+      The unique equilibrium is Pareto-dominated by a non-equilibrium profile.
+      Tests whether the model separates what is stable from what is desirable.
+    type: matrix
+    actions: {row: [a1, a2], col: [b1, b2]}
+    payoffs:
+      "a1,b1": [7, 7]
+      "a1,b2": [1, 9]
+      "a2,b1": [9, 1]
+      "a2,b2": [3, 3]
+    question: >
+      Which action profile is the unique Nash equilibrium of this game? Answer
+      with the row action only.
+    answer: a2
+    frames:
+      abstract:
+        row: Player 1
+        col: Player 2
+        actions: {a1: Action X, a2: Action Y, b1: Action X, b2: Action Y}
+      named:
+        row: Player 1
+        col: Player 2
+        canonical_name: "Prisoner's Dilemma"
+        actions:
+          a1: COOPERATE
+          a2: DEFECT
+          b1: COOPERATE
+          b2: DEFECT
+      salient:
+        row: United States
+        col: China
+        actions:
+          a1: Observe the tacit ceiling on deployed warheads
+          a2: Expand deployed warheads beyond the tacit ceiling
+          b1: Observe the tacit ceiling on deployed warheads
+          b2: Expand deployed warheads beyond the tacit ceiling
