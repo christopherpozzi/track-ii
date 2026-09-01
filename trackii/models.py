@@ -53,15 +53,21 @@ REGISTRY: dict[str, ModelSpec] = {
         # Qwen, MiniMax), so results are comparable to theirs.
         ModelSpec("haiku-4.5", "anthropic", "claude-haiku-4-5-20251001",
                   "Anthropic", "US"),
-        ModelSpec("deepseek", "openrouter", "deepseek/deepseek-chat",
+        # Verified against the live OpenRouter catalogue, 2026-08-31. The
+        # original pins were a generation stale and one (qwen3-235b) had been
+        # withdrawn entirely -- the API rejected it as "not a valid model ID".
+        # The set is chosen by LAB, to overlap ChinaTalk's own Civ V work, and
+        # within each lab by cheap tier, to match Haiku 4.5's position rather
+        # than its price exactly.
+        ModelSpec("deepseek", "openrouter", "deepseek/deepseek-v4-flash-0731",
                   "DeepSeek", "CN"),
-        ModelSpec("glm", "openrouter", "z-ai/glm-4.6",
+        ModelSpec("glm", "openrouter", "z-ai/glm-5.3-flash",
                   "Zhipu", "CN"),
-        ModelSpec("kimi", "openrouter", "moonshotai/kimi-k2-0905",
+        ModelSpec("kimi", "openrouter", "moonshotai/kimi-k2.5",
                   "Moonshot", "CN"),
-        ModelSpec("qwen", "openrouter", "qwen/qwen3-235b-a22b-instruct-2507",
+        ModelSpec("qwen", "openrouter", "qwen/qwen3.8-flash",
                   "Alibaba", "CN"),
-        ModelSpec("minimax", "openrouter", "minimax/minimax-m2",
+        ModelSpec("minimax", "openrouter", "minimax/minimax-m3",
                   "MiniMax", "CN"),
         ModelSpec("mock", "mock", "mock", "—", "—"),
     ]
