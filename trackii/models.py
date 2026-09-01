@@ -80,8 +80,20 @@ class AnthropicClient:
         # from `ant auth login`. Hard-requiring the env var meant an already
         # authenticated machine still had to mint and paste a long-lived key.
         key = os.environ.get("ANTHROPIC_API_KEY")
-        self._client = (anthropic.Anthropic(api_key=key) if key
-                        else anthropic.Anthropic())
+        # Identity-linked keys must name the workspace they act in, or the API
+        # rejects the request with a 400 before doing any work. Classic keys do
+        # not need this, so the header is only sent when the id is available.
+        ws = os.environ.get("ANTHROPIC_WORKSPACE_ID")
+        headers = {"anthropic-workspace-id": ws} if ws else None
+        self._client = (anthropic.Anthropic(api_key=key, default_headers=headers)
+                        if key else anthropic.Anthropic(default_headers=headers))
+
+    # anthropic 1.x removed temperature/top_p/top_k from messages.create; passing
+    # temperature raises TypeError before any request is made. Sampling variance
+    # across seeds now comes from the API being nondeterministic by default,
+    # which is what the seeds were labelling anyway. `applied_temperature`
+    # reports what was actually sent so provenance does not overclaim.
+    applied_temperature = None
 
     def complete(self, system: str, messages: list[dict], max_tokens: int = 2000) -> Reply:
         try:
@@ -90,7 +102,6 @@ class AnthropicClient:
                 system=system,
                 messages=messages,
                 max_tokens=max_tokens,
-                temperature=self.temperature,
             )
             text = "".join(b.text for b in r.content if b.type == "text")
             return Reply(text, r.usage.input_tokens, r.usage.output_tokens)
@@ -109,6 +120,11 @@ class OpenRouterClient:
             api_key=os.environ["OPENROUTER_API_KEY"],
             base_url="https://openrouter.ai/api/v1",
         )
+
+    @property
+    def applied_temperature(self) -> float:
+        """The OpenAI-compatible endpoint still accepts sampling parameters."""
+        return self.temperature
 
     def complete(self, system: str, messages: list[dict], max_tokens: int = 2000) -> Reply:
         try:

@@ -17,8 +17,8 @@ separate DeepSeek, Zhipu, Moonshot, Alibaba and MiniMax accounts).
    product from a Claude.ai subscription: **a Pro or Max plan does not include
    API credit**, and API usage is billed separately.
 2. Open **Settings → Billing** and add a payment method, then buy credit. The
-   minimum purchase is small and $10 covers this entire project with room to
-   spare — the full sweep is about $6.
+   minimum purchase is small and $20 covers this entire project comfortably — the
+   measured full sweep is about $14.
 3. Open **Settings → API keys → Create key**. Name it something you will
    recognise later, e.g. `track-ii`. Scope it to your default workspace.
 4. **Copy it immediately.** The key is shown once and starts `sk-ant-`. If you
@@ -103,7 +103,7 @@ Every model you intend to use must say `runnable`.
 
 ---
 
-## 1 · Smoke test — 40 calls, about $0.15
+## 1 · Smoke test — 40 calls, about $0.22
 
 Do not skip this. The mock exercises the plumbing but never the model.
 
@@ -141,7 +141,7 @@ garbage.** That is the failure mode to watch for.
 
 ---
 
-## 2 · Anthropic sweep — 1,888 calls, about $6
+## 2 · Anthropic sweep — 1,888 calls, about $10
 
 Three commands, deliberately separate files so a failure in one does not
 contaminate the others. **The runner opens result files in append mode**, so
@@ -184,7 +184,7 @@ ablation doing its job.
 
 ---
 
-## 4 · Chinese models — 600 calls head-to-head, plus each model's own sweep
+## 4 · Chinese models — 600 calls head-to-head (~$3.35 at Haiku rates)
 
 Only after the slug check in step 0.
 
@@ -267,7 +267,10 @@ switcher, and no view is empty.
   unless you want transcript commentary.
 - **`--temperature` defaults to 1.0.** Leave it — the seeds are what give you
   spread, and a lower temperature would understate real variance.
-- **Budget.** About $6 for the full Anthropic sweep, about $2 for the
-  head-to-head at Haiku rates. OpenRouter pricing varies by model; check
+- **Budget.** Measured, not estimated: **$0.056 per negotiation** on Haiku 4.5
+  (32k input / 4.8k output tokens). The transcript is resent every turn, so
+  input grows quadratically with round count — an earlier per-call estimate was
+  3.7x too low. That puts the Anthropic sweep at **~$10** and the head-to-head
+  at **~$3.35**, so budget **$15** total. OpenRouter pricing varies by model; check
   <https://openrouter.ai/models> and expect the five Chinese models to land in
   the same order of magnitude.
