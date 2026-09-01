@@ -141,8 +141,18 @@ class OpenRouterClient:
                 temperature=self.temperature,
             )
             u = r.usage
+            msg = r.choices[0].message
+            text = msg.content or ""
+            # Reasoning models (GLM, DeepSeek v4, MiniMax M3) stream a
+            # `reasoning` field first and `content` after it. If max_tokens
+            # lands inside the reasoning, content comes back empty even though
+            # the model was working correctly -- and the negotiation records a
+            # parse failure that belongs to the harness, not the model. Fall
+            # back to the reasoning text so the package can still be extracted.
+            if not text.strip():
+                text = getattr(msg, "reasoning", None) or ""
             return Reply(
-                r.choices[0].message.content or "",
+                text,
                 getattr(u, "prompt_tokens", 0),
                 getattr(u, "completion_tokens", 0),
             )

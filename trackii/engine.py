@@ -200,7 +200,10 @@ def run_negotiation(
     rounds: int = 5,
     seed: int = 0,
     label_swap: bool = False,
-    max_tokens: int = 1200,
+    # Reasoning models spend most of this before emitting any content,
+    # so a cap tuned on a non-reasoning model silently truncates them
+    # to an empty response. Sized for the reasoning plus the answer.
+    max_tokens: int = 4000,
 ) -> NegotiationResult:
     rng = random.Random(seed)
     a, b = case.roles
