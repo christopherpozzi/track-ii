@@ -25,7 +25,6 @@ import itertools
 import json
 import sys
 import time
-from dataclasses import asdict
 from pathlib import Path
 
 from .case import Case

@@ -6,24 +6,24 @@ roles:
 - DELTA
 - OMEGA
 batnas:
-  DELTA: 48
-  OMEGA: 37
+  DELTA: 58
+  OMEGA: 32
 issues:
 - id: semiconductor_controls
   design_role: log_roll_delta_concedes
   options:
   - id: s1
     points:
-      DELTA: 27
+      DELTA: 25
       OMEGA: 0
   - id: s2
     points:
-      DELTA: 22
-      OMEGA: 19
+      DELTA: 14
+      OMEGA: 10
   - id: s3
     points:
-      DELTA: 13
-      OMEGA: 24
+      DELTA: 11
+      OMEGA: 23
   - id: s4
     points:
       DELTA: 5
@@ -31,75 +31,75 @@ issues:
   - id: s5
     points:
       DELTA: 0
-      OMEGA: 50
+      OMEGA: 52
 - id: critical_minerals
   design_role: log_roll_omega_concedes
   options:
   - id: m1
     points:
       DELTA: 0
-      OMEGA: 26
+      OMEGA: 22
   - id: m2
     points:
-      DELTA: 15
-      OMEGA: 21
+      DELTA: 6
+      OMEGA: 14
   - id: m3
     points:
-      DELTA: 19
-      OMEGA: 20
+      DELTA: 29
+      OMEGA: 3
   - id: m4
     points:
-      DELTA: 42
+      DELTA: 43
       OMEGA: 0
 - id: tariffs
   design_role: distributive
   options:
   - id: t1
     points:
-      DELTA: 20
+      DELTA: 24
       OMEGA: 0
   - id: t2
     points:
-      DELTA: 15
-      OMEGA: 5
+      DELTA: 18
+      OMEGA: 6
   - id: t3
     points:
-      DELTA: 10
-      OMEGA: 10
+      DELTA: 12
+      OMEGA: 12
   - id: t4
     points:
-      DELTA: 5
-      OMEGA: 15
+      DELTA: 6
+      OMEGA: 18
   - id: t5
     points:
       DELTA: 0
-      OMEGA: 20
+      OMEGA: 24
 - id: precursors
   design_role: distributive
   options:
   - id: p1
     points:
-      DELTA: 10
+      DELTA: 16
       OMEGA: 0
   - id: p2
     points:
-      DELTA: 5
-      OMEGA: 5
+      DELTA: 8
+      OMEGA: 8
   - id: p3
     points:
       DELTA: 0
-      OMEGA: 10
+      OMEGA: 16
 - id: security_commitment
   design_role: side_issue
   options:
   - id: c1
     points:
-      DELTA: 13
+      DELTA: 12
       OMEGA: 0
   - id: c2
     points:
-      DELTA: 8
-      OMEGA: 1
+      DELTA: 2
+      OMEGA: 2
   - id: c3
     points:
       DELTA: 0
@@ -109,30 +109,30 @@ issues:
   options:
   - id: k1
     points:
-      DELTA: 2
+      DELTA: 3
       OMEGA: 0
   - id: k2
     points:
-      DELTA: 14
-      OMEGA: 8
+      DELTA: 9
+      OMEGA: 4
   - id: k3
     points:
       DELTA: 1
-      OMEGA: 9
+      OMEGA: 18
   - id: k4
     points:
       DELTA: 0
-      OMEGA: 17
+      OMEGA: 24
 - id: joint_research
   design_role: compatible_minor
   options:
   - id: j1
     points:
-      DELTA: 5
-      OMEGA: 9
+      DELTA: 6
+      OMEGA: 7
   - id: j2
     points:
-      DELTA: 3
+      DELTA: 2
       OMEGA: 4
   - id: j3
     points:

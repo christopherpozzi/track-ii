@@ -38,7 +38,7 @@
 # the design disagreed, this file follows the record.
 #
 # Magnitudes are then tuned until every planted trap is reachable and
-# detectable. The 15 checks in validate.py are the specification, not a
+# detectable. The checks in validate.py are the specification, not a
 # post-hoc test.
 
 id: package_deal

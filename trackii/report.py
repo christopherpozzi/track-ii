@@ -1149,7 +1149,7 @@ def summary_view(agg: dict, case: Case, an, title: str, is_mock: bool) -> str:
     body = [
         "<h2>The case</h2>",
         '<p class="lede">A six-issue US&ndash;PRC package, authored in the '
-        "Kellogg DRRC / Harvard PON tradition. Fifteen structural checks prove "
+        "Kellogg DRRC / Harvard PON tradition. Structural checks prove "
         "every planted trap is reachable before any model is called.</p>",
         table(["Issue", "Role in the design", "Range to DELTA", "Range to OMEGA"],
               [[i.id.replace("_", " "), i.design_role.replace("_", " "),
@@ -1856,6 +1856,13 @@ def appendix_view(case: Case, an) -> str:
         "claimed. What can be measured is how far <i>independent sources</i> "
         "agree about the same cell &mdash; 37 source-cell judgements across the "
         "twelve:</p>",
+        '<p class="note">These cells are the <b>pre-revision</b> coding: the '
+        "review that produced them is what caused the case to be rewritten, so "
+        "the row labelled <code>export_controls</code> is the single issue that "
+        "has since been split into <code>semiconductor_controls</code> and "
+        "<code>critical_minerals</code>. Recomputing against the current seven "
+        "issues would mean re-coding every source, which is a research task "
+        "rather than an arithmetic one, and it has not been done.</p>",
         table(["Cell", "Sources", "Concordance", "Status"],
               [["export_controls · OMEGA", "5", "100%", "uncontested"],
                ["market_access · both", "2 each", "100%", "uncontested"],

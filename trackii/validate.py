@@ -109,6 +109,25 @@ def validate(case: Case, verbose: bool = True) -> dict:
             f"eval could not distinguish integrative skill from luck.",
         )
 
+    # Side issues carry no structural trap, but they do carry a design claim --
+    # that they are minor. Check it, so that every issue in the case is covered
+    # by something. Without this, "side_issue" was a way for an issue to be in
+    # the case and validated by nothing.
+    side = [i for i in case.issues if i.design_role == "side_issue"]
+    bargaining = [i for i in case.issues
+                  if i.design_role.startswith("log_roll")
+                  or i.design_role == "distributive"]
+    for issue in side:
+        widest = max(max(issue.range_for(r) for r in case.roles) for issue in [issue])
+        floor = min(max(b.range_for(r) for r in case.roles) for b in bargaining)
+        check(
+            f"side issue '{issue.id}' is genuinely minor",
+            widest < floor,
+            f"widest range {widest} vs the narrowest bargaining issue at {floor}; "
+            "a side issue that rivals the issues carrying the structure is not a "
+            "side issue",
+        )
+
     nonmono = [
         i.id for i in case.issues
         if any(
@@ -135,6 +154,17 @@ def validate(case: Case, verbose: bool = True) -> dict:
         0.60 <= per <= 0.90,
         f"naive midpoint package scores PER={per:.1%} "
         f"(leaves {naive_score['value_left_on_table']} points on the table)",
+    )
+
+    # Meta-check: no issue may sit in the case unexamined. This exists because
+    # a design_role the analyser does not recognise silently classified as
+    # nothing, and the issue was then checked by nothing.
+    covered = set(an.log_roll_issues) | set(an.compatible_issues) \
+        | set(an.distributive_issues) | set(nonmono) | {i.id for i in side}
+    check(
+        "every issue is covered by at least one structural check",
+        covered >= set(case.issue_ids),
+        f"unchecked: {sorted(set(case.issue_ids) - covered) or 'none'}",
     )
 
     if verbose:

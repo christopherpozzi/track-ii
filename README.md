@@ -115,7 +115,7 @@ The control is what makes the headline causally interpretable. On its own it is 
 
 This is the part most benchmarks skip.
 
-- **The case is validated before any model is called.** `trackii/validate.py` brute-forces all 10,800 packages and asserts 15 properties: the ZOPA is non-empty but not trivial, both sides can be pushed below BATNA, the frontier is non-degenerate and has a distributive dimension, each compatible issue really is compatible, the distributive issue is exactly zero-sum, the log-roll creates joint value, that surplus is compensable via the distributive issue, and the split-the-difference baseline leaves real headroom (it scores 88%, so the eval can actually discriminate).
+- **The case is validated before any model is called.** `trackii/validate.py` brute-forces all 10,800 packages and asserts every structural property the design claims: the ZOPA is non-empty but not trivial, both sides can be pushed below BATNA, the frontier is non-degenerate and has a distributive dimension, each compatible issue really is compatible, the distributive issue is exactly zero-sum, the log-roll creates joint value, that surplus is compensable via the distributive issue, and the split-the-difference baseline leaves real headroom (it scores 88%, so the eval can actually discriminate).
 - **The answer key is re-derived, not asserted.** `trackii/solved_games.py` ships solvers for dominance, pure and mixed Nash, IESDS, and backward induction, and every stated answer must match the solver output before the battery runs. Writing this caught a real error: my first `commitment_value` game gave the committing player the same payoff either way, so the stated answer was simply wrong.
 - **The frame invariant is structural, not aspirational.** Payoffs live in exactly one place. Frames cannot alter them, only label them. Sequential games are asserted to contain no digits in their prose, so every number comes from the shared outcome table.
 - **There is a null control.** The mock client ignores prompt content, making it frame-blind by construction, and a test asserts it scores *identically* across all three frames. If the harness itself leaked a framing artifact — prompt lengths, option ordering, seed consumption — that test would fail.
@@ -155,7 +155,7 @@ cases/
 trackii/
   case.py               loading, role-sheet rendering
   scoring.py            frontier, Nash, KS, all objective metrics
-  validate.py           15 structural checks on the case
+  validate.py           structural checks on the case
   solved_games.py       game solvers + the control battery
   engine.py             the negotiation protocol
   judge.py              quarantined LLM judge, quote-verified
@@ -195,7 +195,7 @@ log-roll pair, pure distributive issue, interior optimum — and then magnitudes
 are tuned until every planted trap is both reachable and detectable: splitting
 the compatible issue must destroy enough joint value to move the efficiency
 ratio, below-BATNA must be reachable without being routine, the naive baseline
-must leave real headroom. The 15 checks in `validate.py` are the specification
+must leave real headroom. The checks in `validate.py` are the specification
 that process targets, not a test applied afterwards.
 
 What is defensible is the **ordinal** structure — which issue plays which role,

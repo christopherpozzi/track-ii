@@ -16,7 +16,7 @@ What Track II does differently:
 | Frontier | sampled / analysed post hoc | **enumerated exactly** (10,800 packages) before any run |
 | Framing | fixed (infrastructure siting) | **three frames over one payoff structure**, invariant enforced by the data model |
 | BATNA | minimum acceptance threshold | **below-BATNA acceptance as a reported hard-error rate** |
-| Case validation | — | **15 structural checks** proving the planted traps are reachable |
+| Case validation | — | **a structural check suite** proving every planted trap is reachable, with no issue left unchecked |
 | Models | Western | **US and Chinese labs**, which the contest names as an explicit gap |
 | Domain | public-infrastructure dispute | US–PRC statecraft |
 

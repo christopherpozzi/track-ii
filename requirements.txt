@@ -1,4 +1,13 @@
+# Runtime — the harness itself
 anthropic>=0.40
-openai>=1.50
+openai>=1.50          # OpenAI-compatible client, used for OpenRouter
 PyYAML>=6.0
+
+# Tests
 pytest>=8.0
+
+# Research tooling (research/*.py, and rebuilding the corpus per
+# research/MANIFEST.md). cryptography is required because several source PDFs
+# are AES-encrypted and pypdf cannot open them without it.
+pypdf>=5.0
+cryptography>=3.1

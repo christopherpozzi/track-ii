@@ -41,7 +41,7 @@
 # issue is assigned a structural role from the negotiation-teaching tradition
 # (compatible / log-roll / distributive / interior-optimum), then magnitudes
 # are tuned until every planted trap is both reachable and detectable. The
-# 15 checks in validate.py are the specification, not a post-hoc test.
+# checks in validate.py are the specification, not a post-hoc test.
 #
 # What is defensible is the ORDINAL structure -- which issue plays which role,
 # and which side cares more about what. The cardinal values are not claims;

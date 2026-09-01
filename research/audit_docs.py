@@ -92,7 +92,16 @@ for q, f in quotes:
     body = re.sub(r"\s+", " ", (corpus / f).read_text(errors="replace"))
     check(f"{q[:34]!r} present in {f}", re.sub(r"\s+", " ", q) in body)
 
-print("\n=== 5. cross-document consistency ===")
+print("\n=== 5. repo scripts actually run ===")
+import subprocess
+for script in ["research/probe.py", "research/concordance.py",
+               "research/audit_mechanics.py"]:
+    r = subprocess.run([sys.executable, script], capture_output=True,
+                       text=True, timeout=180, cwd=".")
+    check(f"{script} exits clean", r.returncode == 0,
+          (r.stderr.strip().splitlines() or [""])[-1][:70])
+
+print("\n=== 6. cross-document consistency ===")
 check("PROPOSAL marked implemented",
       "Status: IMPLEMENTED" in text.get("PROPOSAL.md", ""))
 check("CHANGELOG exists and names both cases",
