@@ -2427,6 +2427,19 @@ def main(argv: list[str] | None = None) -> int:
 
     recs = load(path)
 
+    # Mock and live records must not share a chart. The mock exists so the site
+    # builds with no API keys; once real runs exist it is a distraction at best
+    # and a misreading at worst, so live wins whenever both are present.
+    live = [r for r in recs if r.get("live") is True]
+    if live:
+        dropped = len(recs) - len(live)
+        recs = live
+        if dropped:
+            print(f"using {len(recs)} live records; ignoring {dropped} mock/"
+                  f"unattributed records (set `live` provenance to include them)")
+    else:
+        print(f"no live records found — reporting {len(recs)} mock records")
+
     # Every case the repo defines, unless told otherwise. Cases with no runs yet
     # still appear -- their structure and computed optimum are worth showing.
     if args.case:

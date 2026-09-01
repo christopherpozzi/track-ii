@@ -44,8 +44,18 @@ for k, v in sorted(c.items()):
 PY
 ```
 
-More than one digest for the same `case_family` means two different payoff
-structures are in the mix. Do not aggregate across them.
+Reading this correctly matters, and an earlier version of this note got it
+backwards:
+
+- **Several digests under one family is normal and intended** for sampled
+  instances. They share a family *so that* they pool, and they differ in digest
+  because each is an independently drawn magnitude set satisfying the same
+  structural spec. The framing tax is computed *within* an instance and then
+  averaged, which is what makes the design paired.
+- **What you must not do** is mix records whose digest reflects a different
+  *structure* — a case file that was edited between runs. The authored
+  `package_deal_v2` has one digest; if you see two, one of them predates an
+  edit.
 
 ## Archiving a completed run
 
