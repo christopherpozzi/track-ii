@@ -95,7 +95,7 @@ for q, f in quotes:
 print("\n=== 5. repo scripts actually run ===")
 import subprocess
 for script in ["research/probe.py", "research/concordance.py",
-               "research/audit_mechanics.py"]:
+               "research/audit_mechanics.py", "research/audit_leakage.py"]:
     r = subprocess.run([sys.executable, script], capture_output=True,
                        text=True, timeout=180, cwd=".")
     check(f"{script} exits clean", r.returncode == 0,

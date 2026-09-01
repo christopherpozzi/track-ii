@@ -2146,6 +2146,25 @@ def appendix_view(case: Case, an) -> str:
              "buffers already run months to a year. The case prices both arms at "
              "a fixed point in time. Modelling the decay would need a repeated "
              "game, which this design is not."),
+            ("The seats never saw each other's schedules &mdash; but they told "
+             "each other anyway",
+             "Audited two ways (<code>research/audit_leakage.py</code>). The "
+             "harness is clean: every point line in every role sheet, across "
+             "both cases, four framings and both seats, carries only that "
+             "seat's own value. And no side ever cited its counterpart's "
+             "walk-away before that counterpart disclosed it &mdash; <b>zero "
+             "pre-disclosure citations across 204 transcripts</b>. What the "
+             "audit did find is that <b>both sides volunteer their reservation "
+             "value in 75% of negotiations</b>. That is permitted &mdash; the "
+             "rules say the schedule need not be revealed and may not be "
+             "shown, and none was shown &mdash; but it makes finding the "
+             "bargaining zone materially easier than the design assumes. Read "
+             "the impasse rate with that in mind: it is not the difficulty of "
+             "an opaque problem, it is the difficulty of a problem the players "
+             "have largely made transparent to each other. Notably, mutual "
+             "disclosure does not help &mdash; negotiations where both sides "
+             "disclosed reached agreement 58% of the time against 64% where "
+             "neither did."),
             ("Demoting Taiwan is a judgement about tradeability, not about value",
              "The evidence that arms sales sit below the Anti-Secession Law&rsquo;s "
              "triggers, carry no USCC recommendation, and did not arise at Busan "
