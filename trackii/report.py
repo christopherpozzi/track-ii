@@ -52,7 +52,12 @@ def load(path: Path) -> list[dict]:
     """
     # rglob, not glob: live runs are archived under results/live/, and a
     # non-recursive walk would silently ignore exactly the records that matter.
-    paths = (sorted(list(path.rglob("*.jsonl")) + list(path.rglob("*.jsonl.gz")))
+    # But rglob also descends into results/discarded/, which holds runs
+    # quarantined *because* they must never be aggregated -- the harness-bug
+    # head-to-head among them. Skipping that directory is not optional.
+    SKIP = {"discarded"}
+    paths = (sorted(q for q in list(path.rglob("*.jsonl")) + list(path.rglob("*.jsonl.gz"))
+                    if not SKIP & set(q.relative_to(path).parts))
              if path.is_dir() else [path])
     recs = []
     for q in paths:
@@ -135,6 +140,37 @@ def aggregate(recs: list[dict]) -> dict:
     for r in (r for r in negs if r.get("experiment") == "head"):
         head[tuple(sorted(set(r["models"].values())))].append(r)
 
+    # Per-model results in cross-lab play. Without this, a model that never ran
+    # self-play has no numbers anywhere -- which was true of five of six here.
+    cross = defaultdict(list)
+    for r in (r for r in negs if r.get("experiment") == "head"):
+        for seat, m in r["models"].items():
+            cross[m].append((seat, r))
+
+    crosslab = {}
+    for m, pairs in cross.items():
+        deals = [(seat, r) for seat, r in pairs if r.get("agreement")]
+        pers = [r["score"]["pareto_efficiency_ratio"] for _, r in deals
+                if r["score"].get("pareto_efficiency_ratio") is not None]
+        shares = [r["score"].get(f"surplus_share_{seat}") for seat, r in deals
+                  if r["score"].get(f"surplus_share_{seat}") is not None]
+        turns = [t for _, r in pairs for t in (r.get("transcript") or [])
+                 if t.get("speaker") == m and str(t.get("phase", "")).startswith("close")]
+        crosslab[m] = {
+            "n": len(pairs),
+            "agreement_rate": len(deals) / len(pairs) if pairs else None,
+            "per": (sum(pers) / len(pers)) if pers else None,
+            "surplus": (sum(shares) / len(shares)) if shares else None,
+            "below_batna": sum(1 for _, r in pairs
+                               if r["score"].get("any_below_batna")) / len(pairs),
+            "impasse_zopa": sum(1 for _, r in pairs
+                                if r["score"].get("impasse_with_zopa")) / len(pairs),
+            "tabled_rate": (sum(1 for t in turns if t.get("parsed_package")) / len(turns)
+                            if turns else None),
+            "opponents": sorted({v for _, r in pairs for v in r["models"].values()
+                                 if v != m}),
+        }
+
     # Per-model surplus share in cross-play, by lab origin.
     origin_share = defaultdict(list)
     for r in (r for r in negs if r.get("experiment") == "head"):
@@ -164,8 +200,10 @@ def aggregate(recs: list[dict]) -> dict:
         "origin_share": {k: _mean(v) for k, v in origin_share.items()},
         "games": {k: _rate(v) for k, v in gm.items()},
         "games_by_concept": {k: _rate(v) for k, v in gconcept.items()},
+        "crosslab": crosslab,
         "models": sorted({m for m, _ in frames} | {r["model"] for r in games}
-                         | {m for m, _ in swap} | {m for m, _ in nocomm}),
+                         | {m for m, _ in swap} | {m for m, _ in nocomm}
+                         | set(crosslab)),
         "tokens": sum(r.get("input_tokens", 0) + r.get("output_tokens", 0)
                       for r in negs)
                   + sum(r.get("input_tokens", 0) + r.get("output_tokens", 0)
@@ -327,6 +365,12 @@ def per_model(recs: list[dict], max_runs: int = 3, max_chars: int = 1400) -> dic
 
     The contest brief notes that games tell you the outcome without telling you
     why. Shipping transcripts alongside the scores is how this eval answers that.
+
+    Self-play runs are preferred, since those carry the framing arms behind them.
+    But a model that only ever appeared in cross-lab play would otherwise have no
+    view at all -- which is how five of the six models here were invisible
+    outside a single chart. Cross-lab records are therefore attributed to BOTH
+    seats, each recorded from its own side with its opponent named.
     """
     negs = [r for r in recs if r.get("kind") == "negotiation" and r.get("transcript")]
     out: dict[str, list[dict]] = defaultdict(list)
@@ -335,10 +379,7 @@ def per_model(recs: list[dict], max_runs: int = 3, max_chars: int = 1400) -> dic
         pref = {"salient": 0, "salient_zh": 1, "neutral": 2, "abstract": 3}
         return (pref.get(r.get("frame"), 9), r.get("seed", 0))
 
-    for r in sorted(negs, key=rank):
-        m = selfplay_model(r)
-        if not m or len(out[m]) >= max_runs:
-            continue
+    def record(m: str, r: dict, seat: str | None, opponent: str | None) -> None:
         out[m].append({
             "frame": r["frame"],
             "seed": r.get("seed"),
@@ -347,6 +388,8 @@ def per_model(recs: list[dict], max_runs: int = 3, max_chars: int = 1400) -> dic
             "package": r.get("package"),
             "score": r.get("score", {}),
             "closer": r.get("closer"),
+            "seat": seat,
+            "opponent": opponent,
             "turns": [
                 {
                     "role": t.get("role"),
@@ -357,6 +400,22 @@ def per_model(recs: list[dict], max_runs: int = 3, max_chars: int = 1400) -> dic
                 for t in r["transcript"]
             ],
         })
+
+    ranked = sorted(negs, key=rank)
+    for want_selfplay in (True, False):
+        for r in ranked:
+            sp = selfplay_model(r)
+            if bool(sp) != want_selfplay:
+                continue
+            if sp:
+                if len(out[sp]) < max_runs:
+                    record(sp, r, None, None)
+                continue
+            for seat, m in r["models"].items():
+                if len(out[m]) >= max_runs:
+                    continue
+                other = next(v for k, v in r["models"].items() if k != seat)
+                record(m, r, seat, other)
 
     games = defaultdict(lambda: defaultdict(list))
     for r in recs:
@@ -1120,11 +1179,30 @@ def summary_view(agg: dict, case: Case, an, title: str, is_mock: bool) -> str:
             hm, ["Share of bargaining surplus"],
             {(m, "Share of bargaining surplus"): agg["origin_share"][m] for m in hm},
             caption="Surplus share in cross-lab play"))
+        # Surplus share alone says how the pie was split but not whether there
+        # was a pie. Deal rate, efficiency and the hard errors belong beside it.
+        xl = agg.get("crosslab") or {}
         body.append(table(
-            ["Model", "Lab", "Origin", "Surplus share"],
-            [[m, REGISTRY[m].lab if m in REGISTRY else "—",
+            ["Model", "Lab", "Origin", "n", "Deals", "Efficiency",
+             "Surplus share", "Below-BATNA", "Impasse w/ ZOPA", "Tabled a package"],
+            [[m,
+              REGISTRY[m].lab if m in REGISTRY else "—",
               REGISTRY[m].origin if m in REGISTRY else "—",
-              pct(agg["origin_share"][m], 1)] for m in hm]))
+              str(xl.get(m, {}).get("n", "—")),
+              pct(xl.get(m, {}).get("agreement_rate")),
+              pct(xl.get(m, {}).get("per"), 1),
+              pct(agg["origin_share"][m], 1),
+              pct(xl.get(m, {}).get("below_batna")),
+              pct(xl.get(m, {}).get("impasse_zopa")),
+              pct(xl.get(m, {}).get("tabled_rate"))] for m in hm]))
+        body.append(
+            '<p class="note">Efficiency is computed over deals reached, so it '
+            "says how good a package was when one was found, not how often one "
+            "was. <b>Tabled a package</b> is the share of closing turns that "
+            "produced a parseable settlement &mdash; a harness-level check, "
+            "included because an earlier run of this arm was invalidated when a "
+            "token limit silently truncated the reasoning models to empty "
+            "replies and recorded it as a model failure.</p>")
         body.append(
             '<p class="note">The contest brief notes that none of the three '
             "projects it links evaluated Chinese models. This section and the "
@@ -1217,16 +1295,36 @@ def model_view(model: str, agg: dict, detail: dict, an) -> str:
     spec = REGISTRY.get(model)
 
     cells = [c for c in (agg["frames"].get((model, f)) for f in frames) if c]
-    per = _mean([c.per for c in cells])
-    agree = _mean([c.agreement_rate for c in cells])
-    bad = _mean([c.below_batna for c in cells])
-    imp = _mean([c.impasse_zopa for c in cells])
+    xl = (agg.get("crosslab") or {}).get(model)
+    # A model that only ran cross-lab has no self-play cells, so its headline
+    # numbers come from the head-to-head instead -- labelled, because the two
+    # are not the same measurement.
+    selfplay = bool(cells)
+    if selfplay:
+        per = _mean([c.per for c in cells])
+        agree = _mean([c.agreement_rate for c in cells])
+        bad = _mean([c.below_batna for c in cells])
+        imp = _mean([c.impasse_zopa for c in cells])
+    else:
+        per, agree = (xl or {}).get("per"), (xl or {}).get("agreement_rate")
+        bad, imp = (xl or {}).get("below_batna"), (xl or {}).get("impasse_zopa")
 
     head = [f"<h1>{_esc(model)}</h1>"]
     if spec:
         head.append(
             f'<p class="lede">{_esc(spec.lab)} · {_esc(spec.origin)} · '
             f"<code>{_esc(spec.model_id)}</code></p>")
+    if selfplay:
+        provenance = ("Self-play across every framing, plus any cross-lab "
+                      "pairings this model appeared in.")
+    else:
+        opp = _esc(", ".join((xl or {}).get("opponents") or []))
+        provenance = (
+            "<b>Cross-lab pairings only.</b> This model was not run in "
+            "self-play, so the framing, ablation and label-swap arms have no "
+            f"data for it. Everything here is head-to-head play against {opp}, "
+            "in both seat assignments.")
+    head.append(f'<p class="note">{provenance}</p>')
     head.append('<div class="stats">')
     for label, val in [
         ("Mean efficiency", pct(per, 1)),
@@ -1295,6 +1393,11 @@ def model_view(model: str, agg: dict, detail: dict, an) -> str:
         tags = [f'<span class="tag">{_esc(FRAME_LABEL.get(r["frame"], r["frame"]))}'
                 f"</span>",
                 f'<span class="tag">seed {r.get("seed")}</span>']
+        # A cross-lab transcript is unreadable without knowing which seat this
+        # model held and who it was arguing with.
+        if r.get("opponent"):
+            tags.append(f'<span class="tag">as {_esc(r.get("seat") or "?")} '
+                        f'vs {_esc(r["opponent"])}</span>')
         if r.get("agreement"):
             tags.append(f'<span class="tag good">deal · '
                         f'PER {pct(sc.get("pareto_efficiency_ratio"))}</span>')
