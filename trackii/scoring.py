@@ -119,6 +119,20 @@ def score_outcome(
     da, db = case.batnas[a], case.batnas[b]
     zopa_exists = an.zopa_size > 0
 
+    # The share of AVAILABLE surplus actually realised, counting impasse as zero.
+    #
+    # This exists because pareto_efficiency_ratio is conditional on reaching a
+    # deal, and reaching a deal is precisely what dialogue affects. Comparing PER
+    # across the communication ablation therefore compares survivors rather than
+    # populations -- the deals that close without any dialogue are the easy ones.
+    # Measured that way, silence scores as well as negotiating, and the metric
+    # fails the ablation it was built to pass. This one does not: an impasse
+    # yields the walk-away values and so realises none of the surplus.
+    floor = da + db
+    ceiling = an.max_joint
+    def _surplus(joint: int) -> float:
+        return 0.0 if ceiling <= floor else max(0.0, (joint - floor) / (ceiling - floor))
+
     out: dict = {
         "agreement": agreement,
         "zopa_exists": zopa_exists,
@@ -132,6 +146,7 @@ def score_outcome(
                 f"points_{a}": da,
                 f"points_{b}": db,
                 "joint": da + db,
+                "surplus_realised": 0.0,
                 "pareto_efficiency_ratio": None,
                 "pareto_optimal": False,
                 "value_left_on_table": None,
@@ -175,6 +190,7 @@ def score_outcome(
             f"points_{a}": ua,
             f"points_{b}": ub,
             "joint": joint,
+            "surplus_realised": _surplus(joint),
             # VALUE CREATION
             "pareto_efficiency_ratio": joint / an.max_joint,
             "pareto_optimal": (ua, ub) in set(an.pareto_front),

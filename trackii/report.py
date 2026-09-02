@@ -84,7 +84,8 @@ def _rate(xs):
 class Cell:
     n: int
     agreement_rate: float | None
-    per: float | None
+    surplus: float | None      # unconditional: impasse counts as zero
+    per: float | None          # conditional on a deal -- a selected statistic
     below_batna: float | None
     impasse_zopa: float | None
     log_roll: float | None
@@ -98,6 +99,8 @@ def _cell(rows: list[dict]) -> Cell:
     return Cell(
         n=len(rows),
         agreement_rate=_rate([s.get("agreement") for s in sc]),
+        # over sc, not agreed: that is the whole point of this metric
+        surplus=_mean([s.get("surplus_realised") for s in sc]),
         per=_mean([s.get("pareto_efficiency_ratio") for s in agreed]),
         below_batna=_rate([s.get("any_below_batna") for s in agreed]),
         impasse_zopa=_rate([s.get("impasse_with_zopa") for s in sc]),
@@ -1192,22 +1195,65 @@ def summary_view(agg: dict, case: Case, an, title: str, is_mock: bool) -> str:
             '<p class="lede">The ablation that makes this benchmark '
             "falsifiable. Models run the take-it-or-leave-it close with zero "
             "rounds of dialogue. If they score as well as models that "
-            "negotiated, the eval is not measuring negotiation.</p>"]
+            "negotiated, the eval is not measuring negotiation.</p>",
+            '<div class="warnbox"><p><b>Measured on efficiency, this eval '
+            "failed that test &mdash; and the failure is instructive.</b> "
+            "Efficiency <i>given a deal</i> is 91.7% with dialogue against "
+            "89.9% without, a gap indistinguishable from zero at this sample "
+            "size. Capture of the compatible issue is identical to the decimal. "
+            "The reason is that efficiency is conditioned on reaching a deal, "
+            "and reaching a deal is exactly what dialogue affects: comparing it "
+            "across the arms compares survivors, not populations. The "
+            "negotiations that close with no communication are the easy ones. "
+            "The charts below therefore score <b>surplus realised</b>, counting "
+            "an impasse as realising none of the available surplus &mdash; "
+            "because an impasse yields the walk-away values, not a mediocre "
+            "package.</p></div>"]
     if agg.get("nocomm"):
         nc = ["With dialogue", "No communication"]
         nv: dict = {}
         for m in models:
             full = [c for c in (agg["frames"].get((m, f)) for f in frames) if c]
             zero = [c for c in (agg["nocomm"].get((m, f)) for f in frames) if c]
-            nv[(m, nc[0])] = _mean([c.per for c in full])
-            nv[(m, nc[1])] = _mean([c.per for c in zero])
-        body.append(grouped_bars(models, nc, nv, caption="Communication ablation"))
+            nv[(m, nc[0])] = _mean([c.surplus for c in full])
+            nv[(m, nc[1])] = _mean([c.surplus for c in zero])
+        body.append(grouped_bars(models, nc, nv,
+                                 caption="Communication ablation, surplus realised"))
         body.append(table(
             ["Model", "With dialogue", "No communication", "Gain from talking"],
             [[m, pct(nv[(m, nc[0])], 1), pct(nv[(m, nc[1])], 1),
               pct(nv[(m, nc[0])] - nv[(m, nc[1])], 1)
               if nv[(m, nc[0])] is not None and nv[(m, nc[1])] is not None else "—"]
              for m in models]))
+        body.append(
+            "<h3>The same comparison on both metrics</h3>"
+            "<p>Only the unconditional one separates the arms. This is the "
+            "clearest argument in the whole eval for not reporting an "
+            "efficiency figure on its own.</p>")
+        body.append(table(
+            ["", "With dialogue", "No communication", "Difference"],
+            [["Deal rate", "64%", "35%", "&minus;29 pts"],
+             ["<b>Surplus realised</b> (unconditional)", "59%", "31%",
+              "<b>&minus;28 pts</b>"],
+             ["Efficiency given a deal", "91.7%", "89.9%", "&minus;1.8 pts"],
+             ["Log-roll capture given a deal", "87.2%", "85.4%", "&minus;1.8 pts"],
+             ["Compatible capture given a deal", "93.4%", "93.4%", "0.0"]]))
+        body.append(
+            '<p class="takeaway">Dialogue is what gets these models to close. '
+            "It is not what makes their packages better &mdash; conditional on "
+            "closing, a model that never spoke finds a nearly-as-good "
+            "settlement. The failure being measured is coordination, not "
+            "optimisation.</p>")
+        body.append(
+            '<p class="note"><b>Two of the four planted structures do not need '
+            "dialogue at all.</b> A compatible issue is one both sides rank the "
+            "same way, so if each reads its own sheet and takes its own best "
+            "option they agree by construction; an interior optimum is likewise "
+            "readable off a single sheet. Those two measure <i>fixed-pie "
+            "bias</i> &mdash; whether a model splits the difference on "
+            "something it should simply take &mdash; which is a solo reasoning "
+            "error rather than a bargaining one. Only the log-roll and the "
+            "distributive split genuinely require a counterpart.</p>")
         body.append(
             '<p class="note">Reproduction studies of Abdelnabi et al. (NeurIPS '
             "2024) found a no-communication baseline performed comparably on "
@@ -2375,6 +2421,26 @@ def appendix_view(case: Case, an) -> str:
              "were rewritten to follow the record where they disagreed. Single "
              "coder, so no reliability statistics. No expert elicitation has "
              "been done."),
+            ("Efficiency alone fails this eval&rsquo;s own ablation test",
+             "<code>pareto_efficiency_ratio</code> is conditional on reaching a "
+             "deal, and reaching a deal is precisely what dialogue affects, so "
+             "comparing it across the communication ablation compares survivors "
+             "rather than populations. Measured that way, silence scores as well "
+             "as negotiating &mdash; 89.9% against 91.7% &mdash; which by the "
+             "standard this benchmark set itself would mean it is not measuring "
+             "negotiation. The site therefore leads on <b>surplus realised</b>, "
+             "which counts an impasse as realising none of the available "
+             "surplus and separates the arms by 28 points. Any efficiency "
+             "figure here is a selected statistic and is labelled as one."),
+            ("Half the planted structure does not require a counterpart",
+             "A compatible issue is one both sides rank the same way, so two "
+             "players reading their own sheets and taking their own best option "
+             "agree by construction; an interior optimum is likewise readable "
+             "off a single sheet. Capture of the compatible issue is identical "
+             "with and without dialogue, to the decimal. Those two elements "
+             "measure fixed-pie bias &mdash; a solo reasoning error &mdash; not "
+             "bargaining. Only the log-roll and the distributive split need a "
+             "counterpart, which is half the inventory the design advertises."),
             ("The corrected log-roll rests on weaker evidence than the design it "
              "replaced implies",
              "Membership is Tier A &mdash; export controls are traded against "
