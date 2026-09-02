@@ -190,19 +190,32 @@ def grouped_bars(
     # 230 left too little room in a scroll-snap section once the heading,
     # legend and table were counted. 196 keeps the bars legible and the
     # whole section on one screen.
-    height: int = 196,
+    height: int = 240,
     caption: str = "",
 ) -> str:
     """Grouped bar chart. Direct value labels on every bar (relief rule)."""
     if not groups:
         return '<p class="empty">No data.</p>'
 
-    pad_l, pad_r, pad_t, pad_b = 46, 12, 16, 52
-    gw = 108 * len(groups)
-    w = pad_l + gw + pad_r
+    # The canvas is a FIXED width, not a function of group count. Sizing it as
+    # 108px per group meant a one-group chart authored a 166-wide viewBox, which
+    # then letterboxed to a small drawing floating inside a 780px box. Groups
+    # are distributed across a constant canvas instead, so every chart fills the
+    # column and renders its type at 1:1 regardless of how many bars it has.
+    pad_l, pad_r, pad_t, pad_b = 46, 14, 16, 52
+    # Canvas width tracks the group count but is CLAMPED. Unclamped (the
+    # original 108-per-group) a one-group chart authored a 166-wide viewBox and
+    # rendered as a small drawing lost in a wide box; fixed at 620 the bars
+    # instead huddled in the middle of an empty canvas. The floor keeps sparse
+    # charts substantial, the ceiling keeps dense ones inside the column.
+    w = int(min(620, max(430, 104 * len(groups) + pad_l + pad_r)))
+    gw = w - pad_l - pad_r
     plot_h = height - pad_t - pad_b
     band = gw / len(groups)
-    bw = min(30.0, (band - 16) / max(len(series), 1))
+    # Bars stay a sensible width when a chart has few groups, rather than
+    # stretching into slabs, and stay legible when it has many.
+    # Bars fill their band rather than sitting as tokens inside it.
+    bw = max(14.0, min(72.0, (band - 24) / max(len(series), 1)))
 
     # Never scale a chart below 1:1. The viewBox is authored in CSS pixels, so
     # rendering narrower than its own width shrinks every label with it -- a
@@ -210,10 +223,13 @@ def grouped_bars(
     # 5px. Floor the width at the viewBox and let .scroll handle the overflow;
     # max-height then stops a one-group chart ballooning the other way. Both
     # ends of the range now render type at roughly its authored size.
-    min_w = int(min(w, 780))
+    # Pin the rendered width to the canvas width: never scaled up on a wide
+    # screen, never squeezed on a narrow one -- it scrolls instead. That is what
+    # keeps label sizes identical everywhere.
+    min_w = w
     out = [
         f'<svg viewBox="0 0 {w} {height}" role="img" class="chart" '
-        f'style="min-width:{min_w}px;max-height:{height}px" '
+        f'style="min-width:{min_w}px;max-width:{min_w}px" '
         f'preserveAspectRatio="xMinYMid meet">'
     ]
     if caption:
