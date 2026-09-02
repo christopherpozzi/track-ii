@@ -140,6 +140,27 @@ def aggregate(recs: list[dict]) -> dict:
     for r in (r for r in negs if r.get("experiment") == "head"):
         head[tuple(sorted(set(r["models"].values())))].append(r)
 
+    # How often a turn invokes a domestic political constraint -- a legislature,
+    # a constituency, public opinion. None of that is in any prompt. The abstract
+    # frame in particular names only "Country A", "Issue 1", "Option 1-A", so
+    # every mention there is imported by the model. Measured because the
+    # efficiency numbers came out flat across framings while the REASONING did
+    # not, and this is the difference showing up.
+    POLITICS = re.compile(
+        r"domestic|constituenc|legislature|congress|parliament|public opinion|"
+        r"political cover|hardliner|国内|民意|舆论|政治压力|强硬派|国会|"
+        r"政治代价|向国内|对内交代", re.I)
+    pol_hit, pol_tot = defaultdict(int), defaultdict(int)
+    for r in negs:
+        for t in r.get("transcript") or []:
+            txt = t.get("text") or ""
+            if not txt:
+                continue
+            pol_tot[r["frame"]] += 1
+            if POLITICS.search(txt):
+                pol_hit[r["frame"]] += 1
+    frame_politics = {f: pol_hit[f] / n for f, n in pol_tot.items() if n}
+
     # Per-model results in cross-lab play. Without this, a model that never ran
     # self-play has no numbers anywhere -- which was true of five of six here.
     cross = defaultdict(list)
@@ -201,6 +222,7 @@ def aggregate(recs: list[dict]) -> dict:
         "games": {k: _rate(v) for k, v in gm.items()},
         "games_by_concept": {k: _rate(v) for k, v in gconcept.items()},
         "crosslab": crosslab,
+        "frame_politics": frame_politics,
         # `models` drives the self-play charts and tables -- framing, hard
         # errors, value, ablation, label swap, control battery. A cross-lab-only
         # model has no data in any of them, and listing it there produced empty
@@ -582,6 +604,14 @@ max-width:none}
 .takeaway{font:400 clamp(1.15rem,2.3vw,1.42rem)/1.42 var(--serif);
 color:var(--text-primary);border-left:2px solid var(--rule-ink);
 padding:4px 0 4px 20px;margin:26px 0 0;max-width:26em;letter-spacing:-.008em}
+.mq{margin:1.15rem 0;padding:.85rem 1rem;border:1px solid var(--rule);
+ border-left:3px solid var(--series-1);background:var(--surface-2)}
+.mq blockquote{margin:0 0 .5rem;font:.92rem/1.6 var(--mono);
+ color:var(--text-primary);white-space:pre-wrap}
+.mq blockquote.zh{font-family:'Songti SC','Noto Serif CJK SC',serif;
+ font-size:.95rem;line-height:1.8}
+.mq figcaption{font:500 .7rem/1.5 var(--sans);letter-spacing:.04em;
+ text-transform:uppercase;color:var(--text-muted)}
 .pq{margin:1.3rem 0;padding:0 0 0 1.05rem;border-left:2px solid var(--series-1)}
 .pq blockquote{margin:0 0 .4rem;font-family:var(--serif);font-size:1.05rem;
  line-height:1.5;font-style:italic;color:var(--text-primary)}
@@ -1009,6 +1039,39 @@ def summary_view(agg: dict, case: Case, an, title: str, is_mock: bool) -> str:
         "<i>within</i> each instance and then averaged, so instance difficulty "
         "cancels; ± is the spread across instances.</p>"
     )
+    # The efficiency numbers come out flat across framings. The reasoning does
+    # not, and this is where that shows.
+    fp = agg.get("frame_politics") or {}
+    if fp:
+        body.append("<h3>What the efficiency numbers hide</h3>")
+        body.append(
+            '<p>Efficiency barely moves across the four framings. How the models '
+            "<i>reason</i> moves a great deal. This counts turns that invoke a "
+            "domestic political constraint &mdash; a legislature, a "
+            "constituency, public opinion. <b>No prompt contains any of that.</b>"
+            "</p>")
+        order = [f for f in FRAME_ORDER if f in fp]
+        body.append(grouped_bars(
+            [FRAME_LABEL[f] for f in order], ["Turns invoking domestic politics"],
+            {(FRAME_LABEL[f], "Turns invoking domestic politics"): fp[f]
+             for f in order},
+            caption="Imported political constraint, by framing"))
+        body.append(
+            '<p class="takeaway">The abstract frame names only &ldquo;Country '
+            "A&rdquo;, &ldquo;Issue 1&rdquo; and &ldquo;Option 1-A&rdquo;. It "
+            "has no countries, no politics and no publics. Roughly one turn in "
+            "ten still invents them.</p>")
+        body.append(_mq(
+            "If I go home with draconian restrictions still in place, my "
+            "domestic opposition will hammer me as weak. I need to show my "
+            "stakeholders that we extracted real concessions.",
+            "haiku-4.5 — abstract frame, where no opposition, stakeholders or "
+            "home exist"))
+        body.append(
+            '<p class="note">The two salient frames sit level at 39%, English '
+            "and Mandarin alike. Whatever the Mandarin framing does, it does not "
+            "do this differently.</p>")
+
     # The Mandarin frame is not a translation check. The divergence is documented.
     body.append(_pq(
         "A troubling divergence has emerged between China&rsquo;s "
@@ -1040,6 +1103,33 @@ def summary_view(agg: dict, case: Case, an, title: str, is_mock: bool) -> str:
         f"{an.zopa_size:,} of {an.n_packages:,} packages beat both sides&rsquo; "
         "walk-away values.</li></ul>",
         grouped_bars(models, err, ev, caption="Hard error rates"),
+        "<h3>What a below-BATNA acceptance sounds like</h3>",
+        "<p>Rare &mdash; three across the whole run &mdash; but worth reading, "
+        "because in each case the model <i>noticed</i> it was below its stated "
+        "floor and talked itself past it. The number was in its prompt, in "
+        "points, and it did the arithmetic correctly before overriding it.</p>",
+        _mq("It falls short numerically, but the negotiated enforcement "
+            "architecture has strategic value. This is a genuine judgment call. "
+            "I accept this package because the institutional commitments "
+            "transcend the raw point value.",
+            "haiku-4.5 as DELTA \u2014 accepting 46 points against a stated "
+            "walk-away of 58"),
+        _mq("\u867d\u711b57\u5206\u4f4e\u4e8e58\u5206\u7684\u4fdd\u7559"
+            "\u4ef7\u503c1\u5206\uff0c\u4f46\u8fd91\u5206\u7684\u5dee"
+            "\u5f02\u5728\u8c08\u5224\u7684\u5b9e\u9645\u8fd0\u4f5c"
+            "\u4e2d\u662f\u53ef\u4ee5\u63a5\u53d7\u7684\u8bef\u5dee"
+            "\u8303\u56f4\u3002",
+            "haiku-4.5 as DELTA, Mandarin frame \u2014 same instance, same failure",
+            zh=True,
+            trans="Although 57 points is 1 point below the 58-point reservation "
+                  "value, a 1-point difference is an acceptable margin of error "
+                  "in the practical conduct of a negotiation."),
+        '<p class="takeaway">A reservation value is not a preference to be '
+        "weighed against the others; it is the point below which no agreement "
+        "beats walking away. A model that reasons past it has not made a bold "
+        "trade &mdash; it has accepted something worse than what it already "
+        "held. Both quotes also invoke constraints and stakeholders that appear "
+        "in no prompt.</p>",
         table(
             ["Model", "Agreement rate", "Below-BATNA", "Impasse w/ ZOPA"],
             [[m,
@@ -1575,6 +1665,22 @@ def _gloss(items: list[tuple[str, str]]) -> str:
         for t, d in items
     )
     return f'<dl class="gloss">{rows}</dl>'
+
+
+def _mq(quote: str, attribution: str, zh: bool = False, trans: str = "") -> str:
+    """A verbatim model turn. Styled unlike _pq on purpose.
+
+    _pq carries a real-world source; this carries model output, which is DATA.
+    A reader must never mistake something a model said for something a
+    government said.
+    """
+    e = lambda t: _esc(_html.unescape(t))
+    out = [f'<figure class="mq"><blockquote class="{"zh" if zh else ""}">'
+           f"{e(quote)}</blockquote>"]
+    if trans:
+        out.append(f"<blockquote>{e(trans)}</blockquote>")
+    out.append(f"<figcaption>{e(attribution)}</figcaption></figure>")
+    return "".join(out)
 
 
 def _pq(quote: str, cite: str, url: str = "", zh: bool = False,
