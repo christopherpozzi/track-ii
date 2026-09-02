@@ -61,7 +61,11 @@ REGISTRY: dict[str, ModelSpec] = {
         # than its price exactly.
         ModelSpec("deepseek", "openrouter", "deepseek/deepseek-v4-flash-0731",
                   "DeepSeek", "CN"),
-        ModelSpec("glm", "openrouter", "z-ai/glm-5.3-flash",
+        # GLM-5.3 and 5.3-flash reject reasoning:{enabled:false} outright
+        # ("Reasoning is mandatory") and, left on, burn past 4,000 tokens of
+        # reasoning on a full role sheet without ever tabling a package. 4.6 is
+        # the newest Zhipu model that can answer directly.
+        ModelSpec("glm", "openrouter", "z-ai/glm-4.6",
                   "Zhipu", "CN"),
         ModelSpec("kimi", "openrouter", "moonshotai/kimi-k2.5",
                   "Moonshot", "CN"),
@@ -134,12 +138,24 @@ class OpenRouterClient:
 
     def complete(self, system: str, messages: list[dict], max_tokens: int = 2000) -> Reply:
         try:
-            r = self._client.chat.completions.create(
+            # Reasoning off. Every current Chinese model on OpenRouter is a
+            # reasoning model, and left alone they spend the whole token budget
+            # thinking and return empty content -- 45-102s per call, frequently
+            # with no answer at all. The Anthropic side is called without
+            # extended thinking, so disabling it here makes the head-to-head
+            # like-for-like rather than less so. Models that refuse the flag are
+            # retried without it.
+            kw = dict(
                 model=self.spec.model_id,
                 messages=[{"role": "system", "content": system}, *messages],
                 max_tokens=max_tokens,
                 temperature=self.temperature,
             )
+            try:
+                r = self._client.chat.completions.create(
+                    **kw, extra_body={"reasoning": {"enabled": False}})
+            except Exception:
+                r = self._client.chat.completions.create(**kw)
             u = r.usage
             msg = r.choices[0].message
             text = msg.content or ""
