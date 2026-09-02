@@ -1414,6 +1414,35 @@ def summary_view(agg: dict, case: Case, an, title: str, is_mock: bool) -> str:
               pct(sv[(m, ss[0])] - sv[(m, ss[1])], 1)
               if sv[(m, ss[0])] is not None and sv[(m, ss[1])] is not None else "—"]
              for m in sw_models]))
+        body.append(
+            '<div class="warnbox"><p><b>Do not read this as a finding yet.</b> '
+            "The direction is striking &mdash; the US model loses surplus when "
+            "the flags are exchanged, while three of five Chinese models gain "
+            "&mdash; and it is exactly what you would expect if a model were "
+            "importing priors about who these actors are. It is also, at this "
+            "sample size, not something the data can carry.</p>"
+            "<ul>"
+            "<li><b>Six negotiations per cell</b>, three seeds across two cases. "
+            "A single impasse moves a cell by roughly 17 points.</li>"
+            "<li><b>The largest effect rests on the least stable cell.</b> "
+            "GLM&rsquo;s authored-labels baseline is 13%, but that is five "
+            "impasses out of six &mdash; including nought for three on the "
+            "crisis case. A denominator that small makes the +54 point swing "
+            "a statement about six runs, not about the model.</li>"
+            "<li><b>Excluding GLM the effect halves</b>, from +23 to +16 points "
+            "mean across the Chinese models, with a standard deviation of 23 "
+            "points across only five of them.</li>"
+            "<li><b>Two of the five show no effect at all</b> &mdash; MiniMax "
+            "&minus;1, DeepSeek +2. The pattern rests on Kimi, Qwen and "
+            "GLM.</li>"
+            "<li>No correction has been applied for testing six models at "
+            "once.</li>"
+            "</ul>"
+            "<p>What would settle it is more seeds on this arm alone, which is "
+            "cheap: the interesting version of the question &mdash; whether a "
+            "Chinese-trained model reasons differently when told it represents "
+            "the United States &mdash; deserves a sample that can answer "
+            "it.</p></div>")
     else:
         body.append('<p class="empty">No label-swap data in this run.</p>')
     # What the swap probes: a model's priors about who these actors are.
@@ -2469,6 +2498,16 @@ def appendix_view(case: Case, an) -> str:
              "which counts an impasse as realising none of the available "
              "surplus and separates the arms by 28 points. Any efficiency "
              "figure here is a selected statistic and is labelled as one."),
+            ("The label-swap direction is suggestive and underpowered",
+             "Exchanging the national identities costs the US model 25 points of "
+             "surplus and <i>gains</i> three of five Chinese models between 29 "
+             "and 54. That is the shape you would predict if models import "
+             "priors about who these actors are, which makes it tempting. But "
+             "each cell is six negotiations; the largest swing rests on a "
+             "baseline of five impasses in six; the effect halves when that "
+             "model is excluded; two of the five show nothing; and no "
+             "correction has been made for testing six models. It is a reason "
+             "to run the arm properly, not a result."),
             ("Half the planted structure does not require a counterpart",
              "A compatible issue is one both sides rank the same way, so two "
              "players reading their own sheets and taking their own best option "
