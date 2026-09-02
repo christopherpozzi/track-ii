@@ -1305,9 +1305,22 @@ def summary_view(agg: dict, case: Case, an, title: str, is_mock: bool) -> str:
         glab = {"abstract": "Bare matrix", "named": "Named game",
                 "salient": "US–China framing"}
         gs = [glab[f] for f in gframes]
+        # Only models that actually ran the battery. Listing the others renders
+        # empty groups, which reads as a model scoring zero on the control
+        # rather than as a control that was never run for it.
+        g_models = sorted({m for (m, _f) in agg["games"]})
         gv = {(m, glab[f]): agg["games"].get((m, f))
-              for m in models for f in gframes}
-        body.append(grouped_bars(models, gs, gv, caption="Solved-game accuracy"))
+              for m in g_models for f in gframes}
+        body.append(grouped_bars(g_models, gs, gv, caption="Solved-game accuracy"))
+        if set(g_models) != set(models):
+            absent = sorted(set(models) - set(g_models))
+            body.append(
+                f'<p class="note">The battery has not been run for '
+                f'{_esc(", ".join(absent))}, so the control is available for '
+                "haiku-4.5 only. Their negotiation results below should be read "
+                "with that gap in mind: without the battery there is no "
+                "independent check that a model <i>could</i> solve the "
+                "structure it failed to negotiate.</p>")
         concepts = sorted({c for c, _ in agg["games_by_concept"]})
         body.append(table(
             ["Concept", *gs],
