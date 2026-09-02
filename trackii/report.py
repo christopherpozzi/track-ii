@@ -201,9 +201,16 @@ def aggregate(recs: list[dict]) -> dict:
         "games": {k: _rate(v) for k, v in gm.items()},
         "games_by_concept": {k: _rate(v) for k, v in gconcept.items()},
         "crosslab": crosslab,
+        # `models` drives the self-play charts and tables -- framing, hard
+        # errors, value, ablation, label swap, control battery. A cross-lab-only
+        # model has no data in any of them, and listing it there produced empty
+        # chart groups and rows of em-dashes. `all_models` is the superset, used
+        # only for the view switcher, where every model that ran deserves a tab.
         "models": sorted({m for m, _ in frames} | {r["model"] for r in games}
-                         | {m for m, _ in swap} | {m for m, _ in nocomm}
-                         | set(crosslab)),
+                         | {m for m, _ in swap} | {m for m, _ in nocomm}),
+        "all_models": sorted({m for m, _ in frames} | {r["model"] for r in games}
+                             | {m for m, _ in swap} | {m for m, _ in nocomm}
+                             | set(crosslab)),
         "tokens": sum(r.get("input_tokens", 0) + r.get("output_tokens", 0)
                       for r in negs)
                   + sum(r.get("input_tokens", 0) + r.get("output_tokens", 0)
@@ -2494,7 +2501,7 @@ def case_set(case: Case, agg: dict, detail: dict, title: str, active: bool) -> s
         views.append(f'<div class="view" data-view="{vid}" hidden>'
                      f"{role_view(case, role, an)}</div>")
 
-    for m in models:
+    for m in agg.get("all_models") or models:
         vid = "m-" + re.sub(r"[^a-z0-9]+", "-", m.lower())
         tabs.append(f'<button data-view="{vid}" aria-selected="false">'
                     f"{_esc(m)}</button>")
