@@ -187,7 +187,10 @@ def grouped_bars(
     values: dict[tuple[str, str], float | None],
     fmt=lambda v: f"{v:.0%}",
     ymax: float = 1.0,
-    height: int = 230,
+    # 230 left too little room in a scroll-snap section once the heading,
+    # legend and table were counted. 196 keeps the bars legible and the
+    # whole section on one screen.
+    height: int = 196,
     caption: str = "",
 ) -> str:
     """Grouped bar chart. Direct value labels on every bar (relief rule)."""
@@ -201,8 +204,16 @@ def grouped_bars(
     band = gw / len(groups)
     bw = min(30.0, (band - 16) / max(len(series), 1))
 
+    # Never scale a chart below 1:1. The viewBox is authored in CSS pixels, so
+    # rendering narrower than its own width shrinks every label with it -- a
+    # six-group chart squeezed into a phone column was putting axis text at
+    # 5px. Floor the width at the viewBox and let .scroll handle the overflow;
+    # max-height then stops a one-group chart ballooning the other way. Both
+    # ends of the range now render type at roughly its authored size.
+    min_w = int(min(w, 780))
     out = [
         f'<svg viewBox="0 0 {w} {height}" role="img" class="chart" '
+        f'style="min-width:{min_w}px;max-height:{height}px" '
         f'preserveAspectRatio="xMinYMid meet">'
     ]
     if caption:
@@ -546,13 +557,16 @@ text-transform:uppercase;letter-spacing:.13em}
 
 /* ---- charts: hairline chrome, sans labels ---- */
 .scroll{overflow-x:auto;-webkit-overflow-scrolling:touch;margin:10px 0 4px}
-svg.chart{display:block;min-width:330px;width:100%;height:auto;max-width:780px}
+svg.chart{display:block;width:100%;height:auto;max-width:780px}
+/* min-width is set per chart by grouped_bars(), scaled to the group count, so a
+   six-model chart cannot shrink to illegible type inside a narrow column. It
+   scrolls horizontally in the .scroll wrapper it already sits in. */
 .grid{stroke:var(--rule);stroke-width:1}
 .axisline{stroke:var(--rule-ink);stroke-width:1}
 text{font-family:var(--sans)}
-.axis{font-size:9.5px;fill:var(--text-muted);letter-spacing:.04em}
-.glabel{font-size:10.5px;fill:var(--text-secondary)}
-.vlabel{font-size:10.5px;fill:var(--text-primary);font-weight:600;
+.axis{font-size:9px;fill:var(--text-muted);letter-spacing:.04em}
+.glabel{font-size:10px;fill:var(--text-secondary)}
+.vlabel{font-size:10px;fill:var(--text-primary);font-weight:600;
 font-variant-numeric:tabular-nums}
 .nodata{font-size:10.5px;fill:var(--text-muted)}
 .legend{display:flex;flex-wrap:wrap;gap:18px;margin:4px 0 10px;
