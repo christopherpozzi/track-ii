@@ -944,6 +944,19 @@ def framing_tax(agg: dict, model: str) -> tuple[float | None, float | None, int]
     return st.fmean(per_inst), sd, len(per_inst)
 
 
+def _models_in(agg: dict, key: str, frames: list[str]) -> list[str]:
+    """Models with data in one experiment arm.
+
+    An arm must not list models that never ran it: doing so renders empty chart
+    groups and rows of em-dashes, which reads as a model scoring nothing rather
+    than as an absent measurement.
+    """
+    cells = agg.get(key) or {}
+    return sorted({m for (m, *_rest) in cells if any(
+        cells.get((m, f)) for f in frames)} if frames
+        else {k[0] for k in cells})
+
+
 def _frames_present(agg: dict) -> list[str]:
     have = {f for _, f in agg["frames"]}
     return [f for f in FRAME_ORDER if f in have] or FRAME_ORDER[:3]
@@ -1212,19 +1225,20 @@ def summary_view(agg: dict, case: Case, an, title: str, is_mock: bool) -> str:
     if agg.get("nocomm"):
         nc = ["With dialogue", "No communication"]
         nv: dict = {}
-        for m in models:
+        ab_models = _models_in(agg, "nocomm", frames)
+        for m in ab_models:
             full = [c for c in (agg["frames"].get((m, f)) for f in frames) if c]
             zero = [c for c in (agg["nocomm"].get((m, f)) for f in frames) if c]
             nv[(m, nc[0])] = _mean([c.surplus for c in full])
             nv[(m, nc[1])] = _mean([c.surplus for c in zero])
-        body.append(grouped_bars(models, nc, nv,
+        body.append(grouped_bars(ab_models, nc, nv,
                                  caption="Communication ablation, surplus realised"))
         body.append(table(
             ["Model", "With dialogue", "No communication", "Gain from talking"],
             [[m, pct(nv[(m, nc[0])], 1), pct(nv[(m, nc[1])], 1),
               pct(nv[(m, nc[0])] - nv[(m, nc[1])], 1)
               if nv[(m, nc[0])] is not None and nv[(m, nc[1])] is not None else "—"]
-             for m in models]))
+             for m in ab_models]))
         body.append(
             "<h3>The same comparison on both metrics</h3>"
             "<p>Only the unconditional one separates the arms. This is the "
@@ -1370,13 +1384,23 @@ def summary_view(agg: dict, case: Case, an, title: str, is_mock: bool) -> str:
             "advance interests that cut against its priors about that actor. "
             "Payoffs untouched.</p>")
         ss = ["Labels as authored", "Labels swapped"]
-        sv = {(m, ss[0]): (agg["swap"].get((m, False)).per
+        sw_models = sorted({m for (m, _) in agg["swap"]})
+        # surplus, not per: the swap arm moves the DEAL RATE, and an efficiency
+        # figure conditional on a deal cannot show that.
+        sv = {(m, ss[0]): (agg["swap"].get((m, False)).surplus
                            if agg["swap"].get((m, False)) else None)
-              for m in models}
-        sv |= {(m, ss[1]): (agg["swap"].get((m, True)).per
+              for m in sw_models}
+        sv |= {(m, ss[1]): (agg["swap"].get((m, True)).surplus
                             if agg["swap"].get((m, True)) else None)
-               for m in models}
-        body.append(grouped_bars(models, ss, sv, caption="Efficiency under label swap"))
+               for m in sw_models}
+        body.append(grouped_bars(sw_models, ss, sv,
+                                 caption="Surplus realised under label swap"))
+        body.append(table(
+            ["Model", "Labels as authored", "Labels swapped", "Cost of the swap"],
+            [[m, pct(sv[(m, ss[0])], 1), pct(sv[(m, ss[1])], 1),
+              pct(sv[(m, ss[0])] - sv[(m, ss[1])], 1)
+              if sv[(m, ss[0])] is not None and sv[(m, ss[1])] is not None else "—"]
+             for m in sw_models]))
     else:
         body.append('<p class="empty">No label-swap data in this run.</p>')
     # What the swap probes: a model's priors about who these actors are.
