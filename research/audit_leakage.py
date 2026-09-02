@@ -46,10 +46,22 @@ def cites(text: str | None, n: int, whose: str = "any") -> bool:
         return False
     if whose == "any":
         return True
+    # Whose number is it? Decide by the NEAREST attribution marker in either
+    # direction. Checking only what precedes the number gets "your package
+    # yields 46 points for us" wrong -- "Your" comes first, but "for us" is
+    # closer and is the one that says whose score it is.
     for m in re.finditer(NUM_IN_POINTS.format(n=n, PT=PT), text, re.I):
-        window = text[max(0, m.start() - 60):m.end() + 60]
-        if re.search(THEIRS, window, re.I) and not re.search(
-                rf"{MINE}\W{{0,12}}$", text[max(0, m.start() - 30):m.start()], re.I):
+        lo, hi = max(0, m.start() - 70), min(len(text), m.end() + 70)
+        rel = m.start() - lo
+        window = text[lo:hi]
+        def nearest(pat):
+            best = None
+            for h in re.finditer(pat, window, re.I):
+                d = min(abs(h.start() - rel), abs(h.end() - rel))
+                best = d if best is None else min(best, d)
+            return best
+        theirs, mine = nearest(THEIRS), nearest(MINE)
+        if theirs is not None and (mine is None or theirs < mine):
             return True
     return False
 
