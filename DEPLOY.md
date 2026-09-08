@@ -9,7 +9,7 @@ The CLI is not installed here and there is no authenticated session, so the
 login step has to be yours — it opens a browser or emails a code.
 
 ```bash
-cd /Users/Chris/Documents/situation-room-eval/site
+cd path/to/situation-room-eval/site
 npx vercel login      # once
 npx vercel --prod     # deploys this directory
 ```

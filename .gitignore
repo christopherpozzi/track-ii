@@ -40,3 +40,6 @@ research/*_flat.txt
 # are committed compressed under results/live/. Raw working files are not.
 results/*.jsonl
 !results/mock.jsonl
+
+# Vendored JS deps for essay-gen.js. Reinstall with `npm install`.
+node_modules/

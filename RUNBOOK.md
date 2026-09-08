@@ -49,7 +49,7 @@ model ids.
 ### Put them in your shell
 
 ```bash
-cd /Users/Chris/Documents/situation-room-eval
+cd path/to/situation-room-eval
 export ANTHROPIC_API_KEY=sk-ant-...
 export OPENROUTER_API_KEY=sk-or-v1-...
 ```

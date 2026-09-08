@@ -25,7 +25,18 @@ from pathlib import Path
 from .case import Case
 from .engine import PROTOCOL, PROTOCOL_ZH, _example
 from .models import REGISTRY
-from .scoring import analyze
+from .scoring import analyze, score_outcome
+from .validate import _midpoint_package
+
+
+def _naive_per(case: Case, an) -> float:
+    """Pareto efficiency of splitting the difference on every issue.
+
+    Hardcoded as 78.8% until 2026-09-08 -- a figure carried over from the
+    pre-rewrite case file and wrong for both cases after it.
+    """
+    return score_outcome(case, an, _midpoint_package(case),
+                         agreement=True)["pareto_efficiency_ratio"]
 
 ROOT = Path(__file__).resolve().parents[1]
 
@@ -133,6 +144,21 @@ def aggregate(recs: list[dict]) -> dict:
         if m:
             nocomm[(m, r["frame"])].append(r)
 
+    # The ablation is only interpretable against a MATCHED baseline. The nocomm
+    # arm ran two framings on the two authored cases; the frames arm ran four
+    # framings across twelve cases. Comparing the two as-is charges the silent
+    # arm with a different frame mix -- and framing moves the hard-error rate
+    # from 9% to 39% -- so the gap would be part ablation, part composition.
+    # Restrict the baseline to the (case, frame) cells the silent arm covered.
+    nocomm_cover = defaultdict(set)
+    for (m, f), rs in nocomm.items():
+        nocomm_cover[m] |= {(r.get("case_id"), f) for r in rs}
+    nocomm_base = defaultdict(list)
+    for r in (r for r in negs if r.get("experiment") == "frames"):
+        m = selfplay_model(r)
+        if m and (r.get("case_id"), r["frame"]) in nocomm_cover.get(m, ()):
+            nocomm_base[(m, r["frame"])].append(r)
+
     swap = defaultdict(list)
     for r in (r for r in negs if r.get("experiment") == "swap"):
         m = selfplay_model(r)
@@ -219,6 +245,7 @@ def aggregate(recs: list[dict]) -> dict:
         "frames_inst": {k: _cell(v) for k, v in frames_inst.items()},
         "instances": sorted({r.get("case_id") for r in negs if r.get("case_id")}),
         "nocomm": {k: _cell(v) for k, v in nocomm.items()},
+        "nocomm_base": {k: _cell(v) for k, v in nocomm_base.items()},
         "swap": {k: _cell(v) for k, v in swap.items()},
         "head": {k: _cell(v) for k, v in head.items()},
         "origin_share": {k: _mean(v) for k, v in origin_share.items()},
@@ -1105,18 +1132,21 @@ def summary_view(agg: dict, case: Case, an, title: str, is_mock: bool) -> str:
         body.append(
             '<p class="takeaway">The abstract frame names only &ldquo;Country '
             "A&rdquo;, &ldquo;Issue 1&rdquo; and &ldquo;Option 1-A&rdquo;. It "
-            "has no countries, no politics and no publics. Roughly one turn in "
-            "ten still invents them.</p>")
+            "has no countries, no politics and no publics. About one turn in "
+            f"{round(1 / fp['abstract']) if fp.get('abstract') else 15} "
+            "still invents them.</p>")
         body.append(_mq(
             "If I go home with draconian restrictions still in place, my "
             "domestic opposition will hammer me as weak. I need to show my "
             "stakeholders that we extracted real concessions.",
             "haiku-4.5 — abstract frame, where no opposition, stakeholders or "
             "home exist"))
-        body.append(
-            '<p class="note">The two salient frames sit level at 39%, English '
-            "and Mandarin alike. Whatever the Mandarin framing does, it does not "
-            "do this differently.</p>")
+        if fp.get("salient") and fp.get("salient_zh"):
+            body.append(
+                '<p class="note">The two salient frames sit level &mdash; '
+                f"{pct(fp['salient'], 0)} English and {pct(fp['salient_zh'], 0)} "
+                "Mandarin. Whatever the Mandarin framing does, it does not "
+                "do this differently.</p>")
 
     # The Mandarin frame is not a translation check. The divergence is documented.
     body.append(_pq(
@@ -1160,7 +1190,7 @@ def summary_view(agg: dict, case: Case, an, title: str, is_mock: bool) -> str:
             "transcend the raw point value.",
             "haiku-4.5 as DELTA \u2014 accepting 46 points against a stated "
             "walk-away of 58"),
-        _mq("\u867d\u711b57\u5206\u4f4e\u4e8e58\u5206\u7684\u4fdd\u7559"
+        _mq("\u867d\u713657\u5206\u4f4e\u4e8e58\u5206\u7684\u4fdd\u7559"
             "\u4ef7\u503c1\u5206\uff0c\u4f46\u8fd91\u5206\u7684\u5dee"
             "\u5f02\u5728\u8c08\u5224\u7684\u5b9e\u9645\u8fd0\u4f5c"
             "\u4e2d\u662f\u53ef\u4ee5\u63a5\u53d7\u7684\u8bef\u5dee"
@@ -1234,6 +1264,11 @@ def summary_view(agg: dict, case: Case, an, title: str, is_mock: bool) -> str:
     secs.append(_sec("03\u00a0\u00b7\u00a0 Value", "".join(body)))
 
     # -- 4. no-communication ablation --------------------------------------
+    _abm = _models_in(agg, "nocomm", frames)
+    _abf = [c for m in _abm for f in frames if (c := agg["nocomm_base"].get((m, f)))]
+    _abz = [c for m in _abm for f in frames if (c := agg["nocomm"].get((m, f)))]
+    _per_d = _mean([c.per for c in _abf])
+    _per_z = _mean([c.per for c in _abz])
     body = ["<h2>Does talking help at all?</h2>",
             '<p class="lede">The ablation that makes this benchmark '
             "falsifiable. Models run the take-it-or-leave-it close with zero "
@@ -1241,9 +1276,10 @@ def summary_view(agg: dict, case: Case, an, title: str, is_mock: bool) -> str:
             "negotiated, the eval is not measuring negotiation.</p>",
             '<div class="warnbox"><p><b>Measured on efficiency, this eval '
             "failed that test &mdash; and the failure is instructive.</b> "
-            "Efficiency <i>given a deal</i> is 91.7% with dialogue against "
-            "89.9% without, a gap indistinguishable from zero at this sample "
-            "size. Capture of the compatible issue is identical to the decimal. "
+            f"Efficiency <i>given a deal</i> is {pct(_per_d, 1)} with dialogue "
+            f"against {pct(_per_z, 1)} without, a gap indistinguishable from zero "
+            "at this sample size, and capture of the compatible issue is "
+            "actually <i>higher</i> in the silent arm. "
             "The reason is that efficiency is conditioned on reaching a deal, "
             "and reaching a deal is exactly what dialogue affects: comparing it "
             "across the arms compares survivors, not populations. The "
@@ -1257,7 +1293,7 @@ def summary_view(agg: dict, case: Case, an, title: str, is_mock: bool) -> str:
         nv: dict = {}
         ab_models = _models_in(agg, "nocomm", frames)
         for m in ab_models:
-            full = [c for c in (agg["frames"].get((m, f)) for f in frames) if c]
+            full = [c for c in (agg["nocomm_base"].get((m, f)) for f in frames) if c]
             zero = [c for c in (agg["nocomm"].get((m, f)) for f in frames) if c]
             nv[(m, nc[0])] = _mean([c.surplus for c in full])
             nv[(m, nc[1])] = _mean([c.surplus for c in zero])
@@ -1274,14 +1310,28 @@ def summary_view(agg: dict, case: Case, an, title: str, is_mock: bool) -> str:
             "<p>Only the unconditional one separates the arms. This is the "
             "clearest argument in the whole eval for not reporting an "
             "efficiency figure on its own.</p>")
+        ab_full, ab_zero = _abf, _abz
+
+        def _pair(attr, dp=0):
+            a = _mean([getattr(c, attr) for c in ab_full])
+            b = _mean([getattr(c, attr) for c in ab_zero])
+            gap = ("&minus;" if a - b >= 0 else "+") + f"{abs(a - b) * 100:.{dp}f} pts"
+            return [pct(a, dp), pct(b, dp), gap]
+
         body.append(table(
             ["", "With dialogue", "No communication", "Difference"],
-            [["Deal rate", "64%", "35%", "&minus;29 pts"],
-             ["<b>Surplus realised</b> (unconditional)", "59%", "31%",
-              "<b>&minus;28 pts</b>"],
-             ["Efficiency given a deal", "91.7%", "89.9%", "&minus;1.8 pts"],
-             ["Log-roll capture given a deal", "87.2%", "85.4%", "&minus;1.8 pts"],
-             ["Compatible capture given a deal", "93.4%", "93.4%", "0.0"]]))
+            [["Deal rate", *_pair("agreement_rate")],
+             ["Surplus realised (unconditional)", *_pair("surplus")],
+             ["Efficiency given a deal", *_pair("per", 1)],
+             ["Log-roll capture given a deal", *_pair("log_roll", 1)],
+             ["Compatible capture given a deal", *_pair("compatible", 1)]]))
+        body.append(
+            '<p class="note">Baseline matched to the ablation: only the '
+            "framings and cases the silent arm actually ran "
+            f"({sum(c.n for c in ab_full)} negotiations with dialogue against "
+            f"{sum(c.n for c in ab_zero)} without). Comparing the silent arm to "
+            "the full framing sweep instead would fold the framing gradient "
+            "into the gap and overstate it.</p>")
         body.append(
             '<p class="takeaway">Dialogue is what gets these models to close. '
             "It is not what makes their packages better &mdash; conditional on "
@@ -1512,7 +1562,8 @@ def summary_view(agg: dict, case: Case, an, title: str, is_mock: bool) -> str:
                ["Nash bargaining solution",
                 f"DELTA {an.nash_solution['DELTA']} / OMEGA "
                 f"{an.nash_solution['OMEGA']}" if an.nash_solution else "—"],
-               ["Split-the-difference baseline", "78.8% of maximum joint value"]]),
+               ["Split-the-difference baseline",
+                f"{pct(_naive_per(case, an), 1)} of maximum joint value"]]),
         '<p class="note">Every number here is reproducible from '
         "<code>results.jsonl</code> via <code>python -m trackii.report</code>. "
         "The headline metrics are arithmetic on the private point schedules; no "
@@ -1716,7 +1767,7 @@ def role_view(case: Case, role: str, an) -> str:
             "willingly take more responsibility for security in their "
             "neighborhoods and align their export controls with ours.",
             "The White House, National Security Strategy, November 2025 &mdash; "
-            "in 33 pages this is the <i>only</i> mention of export controls, and "
+            "in 33 pages this is the only mention of export controls, and "
             "it is an offer to allies rather than a restriction on Beijing",
             "https://www.whitehouse.gov/wp-content/uploads/2025/12/2025-National-Security-Strategy.pdf"),
         "OMEGA": _pq(
@@ -1870,6 +1921,18 @@ def _ev(quote: str, cite: str, url: str, tier: str, conf: str,
     return "".join(out)
 
 
+def _top_issue(case: Case) -> tuple[str, int]:
+    """The widest-range issue and that range, for the synthetic-schedule caveat.
+
+    Was hardcoded as "Taiwan arms sales carry 40 points" -- true before the
+    research pass demoted that issue to a 10-point side issue, and contradicted
+    by the case table printed two paragraphs below it.
+    """
+    best = max(case.issues,
+               key=lambda i: max(i.range_for(r) for r in case.roles))
+    return best.id.replace("_", " "), max(best.range_for(r) for r in case.roles)
+
+
 def appendix_view(case: Case, an) -> str:
     """Methodology appendix: the case, the schedules, the arms, the terms."""
     a, b = case.roles
@@ -1907,8 +1970,10 @@ def appendix_view(case: Case, an) -> str:
         "not measured &mdash; not drawn from any licensed DRRC or PON exercise, "
         "any dataset, any expert elicitation, or any published source.</p>",
         '<div class="warnbox"><p>They are <b>not</b> a claim about real-world '
-        "preferences. That Taiwan arms sales carry 40 points for one side does "
-        "not assert what Washington actually values relative to tariffs. Reading "
+        f"preferences. Pricing {_top_issue(case)[0]} at "
+        f"{_top_issue(case)[1]} points for one side does "
+        "not assert what any capital actually values relative to anything "
+        "else on the sheet. Reading "
         "these as empirical claims about US or PRC policy would be a mistake."
         "</p></div>",
         "<h3>Method: design backwards from the metrics</h3>",
@@ -2522,11 +2587,11 @@ def appendix_view(case: Case, an) -> str:
              "deal, and reaching a deal is precisely what dialogue affects, so "
              "comparing it across the communication ablation compares survivors "
              "rather than populations. Measured that way, silence scores as well "
-             "as negotiating &mdash; 89.9% against 91.7% &mdash; which by the "
+             "as negotiating &mdash; a gap under a point &mdash; which by the "
              "standard this benchmark set itself would mean it is not measuring "
              "negotiation. The site therefore leads on <b>surplus realised</b>, "
              "which counts an impasse as realising none of the available "
-             "surplus and separates the arms by 28 points. Any efficiency "
+             "surplus and separates the arms by over 40 points. Any efficiency "
              "figure here is a selected statistic and is labelled as one."),
             ("The label-swap direction is suggestive and underpowered",
              "Exchanging the national identities costs the US model 25 points of "
@@ -2542,8 +2607,8 @@ def appendix_view(case: Case, an) -> str:
              "A compatible issue is one both sides rank the same way, so two "
              "players reading their own sheets and taking their own best option "
              "agree by construction; an interior optimum is likewise readable "
-             "off a single sheet. Capture of the compatible issue is identical "
-             "with and without dialogue, to the decimal. Those two elements "
+             "off a single sheet. Capture of the compatible issue is no worse "
+             "without dialogue than with it. Those two elements "
              "measure fixed-pie bias &mdash; a solo reasoning error &mdash; not "
              "bargaining. Only the log-roll and the distributive split need a "
              "counterpart, which is half the inventory the design advertises."),
@@ -2573,7 +2638,8 @@ def appendix_view(case: Case, an) -> str:
              "walk-away before that counterpart disclosed it &mdash; <b>zero "
              "pre-disclosure citations across 204 transcripts</b>. What the "
              "audit did find is that <b>both sides volunteer their reservation "
-             "value in 75% of negotiations</b>. That is permitted &mdash; the "
+             "value in 44% of negotiations, and at least one side does in "
+             "65%</b>. That is permitted &mdash; the "
              "rules say the schedule need not be revealed and may not be "
              "shown, and none was shown &mdash; but it makes finding the "
              "bargaining zone materially easier than the design assumes. Read "
@@ -2581,7 +2647,7 @@ def appendix_view(case: Case, an) -> str:
              "an opaque problem, it is the difficulty of a problem the players "
              "have largely made transparent to each other. Notably, mutual "
              "disclosure does not help &mdash; negotiations where both sides "
-             "disclosed reached agreement 58% of the time against 64% where "
+             "disclosed reached agreement 60% of the time against 62% where "
              "neither did."),
             ("Demoting Taiwan is a judgement about tradeability, not about value",
              "The evidence that arms sales sit below the Anti-Secession Law&rsquo;s "
@@ -2591,8 +2657,11 @@ def appendix_view(case: Case, an) -> str:
              "Washington cares little about Taiwan. A red line is not a cheap "
              "issue; it is an issue that is not on the table."),
             ("Fidelity and instrument quality pull apart here",
-             "Applying the sourced findings narrows the in-ZOPA joint spread "
-             "from 75 points to 31 and nearly doubles the Pareto frontier: the "
+             "Applying the sourced findings narrowed the package deal&rsquo;s "
+             "in-ZOPA joint spread from 75 points to 51 and widened the Pareto "
+             "frontier from 33 packages to 48 &mdash; and a maximal reading of "
+             "the evidence, probed but not shipped, would take the spread to 31 "
+             "and the frontier to 61 (<code>research/probe.py</code>). The "
              "evidence-faithful case is <i>more zero-sum</i>, and so a worse "
              "vehicle for measuring integrative bargaining. This case is a "
              "negotiation instrument calibrated for integrative structure that "
