@@ -19,21 +19,3 @@ AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
 LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
-
----
-
-Scope note: the MIT grant above covers the material authored in this
-repository -- the harness under `trackii/`, the tests, the research and audit
-scripts under `research/`, the case files under `cases/`, the generated site,
-and the documentation.
-
-It does not and cannot extend to the third-party documents reproduced under
-`corpus/`. Those are source texts, committed so that quotations in the
-methodology can be checked against them. They are US Government works in the
-public domain (Congressional Research Service, USTR, USCC, the National
-Security Strategy) and official texts of the People's Republic of China
-(Ministry of Commerce and Ministry of Foreign Affairs statements, the
-Anti-Secession Law, the Export Control Law, the Anti-Foreign Sanctions Law,
-white papers). Each carries whatever status its own origin gives it. Copyrighted
-third-party analysis is deliberately not redistributed here; `research/MANIFEST.md`
-and `research/CORPUS.sha256` let you fetch and verify those yourself.
