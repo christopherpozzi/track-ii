@@ -42,7 +42,7 @@ Crucially, it splits performance into two independent axes that ordinary "who wo
 
 Pointing this apparatus at LLMs is not itself new — Abdelnabi et al. (NeurIPS 2024) built a scoreable multi-issue testbed on *Harborco*, a Harvard PON case, with per-role secret scores and Pareto analysis. What is new here is exactness and control: **two** parties rather than six, so the frontier is enumerated rather than sampled; a single payoff structure held invariant across four framings, one of them Mandarin, so the effect of political salience is measurable rather than inferred and prompt language is separated from model origin; below-BATNA acceptance reported as a hard-error rate; and Chinese models alongside US ones, which the contest post names as a gap in all three projects it links. Applied this way, it dissolves the dead end CFPD declared unsolvable: you get tendencies *and* a performance score, out of the same run, with no rubric and no human judge.
 
-**In one sentence:** two models negotiate a six-issue diplomatic package under private point schedules, and the deal they reach is scored against the computable Pareto frontier.
+**In one sentence:** two models negotiate a multi-issue diplomatic package under private point schedules, and the deal they reach is scored against the computable Pareto frontier.
 
 ## The cases
 

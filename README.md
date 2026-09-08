@@ -149,7 +149,7 @@ The first is deal-making; the second is crisis management. Both carry the same p
 
 ```
 cases/
-  package_deal.yaml     six-issue grand bargain: payoffs once, four frames of labels
+  package_deal.yaml     seven-issue grand bargain: payoffs once, four frames of labels
   quarantine.yaml       five-issue crisis case, low BATNAs
   solved_games.yaml     eight provable games, up to three framings each
 trackii/

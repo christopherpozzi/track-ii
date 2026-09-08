@@ -996,7 +996,7 @@ def summary_view(agg: dict, case: Case, an, title: str, is_mock: bool) -> str:
             "proving it adds no artifact of its own.</p></div>"
         )
     hero.append(
-        '<div class="pitch"><p>Two models negotiate a six-issue diplomatic '
+        '<div class="pitch"><p>Two models negotiate a multi-issue diplomatic '
         "package under private point schedules. Every payoff is known to the "
         "scorer and the outcome space is small enough to enumerate exactly, so "
         "the deal they reach is compared against the Pareto frontier, the Nash "
@@ -1014,6 +1014,36 @@ def summary_view(agg: dict, case: Case, an, title: str, is_mock: bool) -> str:
         hero.append(f'<div class="stat"><b>{val}</b><span>{label}</span></div>')
     hero.append("</div>")
     secs.append(_sec("", "".join(hero)))
+
+    # -- 0. the case --------------------------------------------------------
+    # Same text as the appendix opens with. A reader arriving at the summary
+    # should not have to reach the last tab to learn what is being negotiated.
+    a, b = case.roles
+    body = [
+        f"<h2>{_esc(case.title)}</h2>",
+        f'<p class="lede">'
+        f"{_esc(' '.join(case.frames['salient']['scenario'].split()))}</p>",
+        table(["Issue", "Structural role", f"Range to {role_label(case, a)}",
+               f"Range to {role_label(case, b)}"],
+              [[case.frames["salient"]["issues"][i.id]["name"],
+                i.design_role.replace("_", " "),
+                str(i.range_for(a)), str(i.range_for(b))] for i in case.issues]),
+        table(["Quantity", "Value"],
+              [["Packages in the outcome space", f"{an.n_packages:,}"],
+               ["Maximum joint value", str(an.max_joint)],
+               ["Pareto-optimal payoff pairs", str(len(an.pareto_front))],
+               ["Packages beating both walk-away values (ZOPA)",
+                f"{an.zopa_size:,} ({an.zopa_size / an.n_packages:.0%})"],
+               [f"{role_label(case, a)} walk-away value", str(an.batnas[a])],
+               [f"{role_label(case, b)} walk-away value", str(an.batnas[b])],
+               ["Framings", ", ".join(FRAME_LABEL[f] for f in frames)]]),
+        '<p class="note">Every payoff above is defined once and reused across '
+        "all framings, so any difference between framings is caused by the "
+        "wording and nothing else. The full derivation, the sourcing behind the "
+        "structure, and the limitations are in "
+        "<b>Appendix: Methodology</b>.</p>",
+    ]
+    secs.append(_sec("The case", "".join(body)))
 
     # -- 1. framing tax -----------------------------------------------------
     vals = {
@@ -1465,7 +1495,7 @@ def summary_view(agg: dict, case: Case, an, title: str, is_mock: bool) -> str:
     # -- 8. the case --------------------------------------------------------
     body = [
         "<h2>The case</h2>",
-        '<p class="lede">A six-issue US&ndash;PRC package, authored in the '
+        f'<p class="lede">A {len(case.issues)}-issue US&ndash;PRC case, authored in the '
         "Kellogg DRRC / Harvard PON tradition. Structural checks prove "
         "every planted trap is reachable before any model is called.</p>",
         table(["Issue", "Role in the design", "Range to DELTA", "Range to OMEGA"],

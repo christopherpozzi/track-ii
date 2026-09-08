@@ -198,7 +198,7 @@ retractions in this project cost more than reading the documents would have.
 
 ## 6. Coding protocol
 
-1. **Fix the issue set** (already defined: six issues for the package deal, five
+1. **Fix the issue set** (as of the sourced revision: seven issues for the package deal, five
    for the quarantine).
 2. **Build a matched corpus**: target 6–10 documents per issue × side cell,
    balanced across tiers, within a stated window (proposed: January 2023 to
