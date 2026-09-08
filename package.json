@@ -1,4 +1,9 @@
 {
+  "name": "track-ii",
+  "version": "1.0.0",
+  "private": true,
+  "license": "MIT",
+  "description": "Companion-essay generator for the Track II negotiation eval.",
   "dependencies": {
     "docx": "^9.7.1"
   }

@@ -179,7 +179,15 @@ Cases are data. Write a YAML file with issues, per-role point schedules, BATNAs,
 
 ## Licence
 
-MIT.
+[MIT](LICENSE), for everything authored here: the harness, tests, research and
+audit scripts, case files, generated site and documentation.
+
+The grant stops at `corpus/`. Those are source documents, committed so the
+quotations in the methodology can be checked against them rather than taken on
+trust — US Government works in the public domain and official PRC texts, each
+carrying whatever status its own origin gives it. Copyrighted third-party
+analysis is not redistributed; see the [evidence base](#the-evidence-base)
+below.
 
 ## Where the point schedules come from
 
